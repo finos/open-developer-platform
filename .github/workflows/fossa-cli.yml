@@ -19,10 +19,3 @@ jobs:
         fossa init
         fossa report licenses --json > licenses.json
         cat licenses.json | jq '[.[] |  {package: .loc.package, licenses: [.Licenses[].LicenseID]}]'
-
-push:
-  paths:
-    - 'pom.xml'
-pull_request:
-  paths:
-    - 'pom.xml'
