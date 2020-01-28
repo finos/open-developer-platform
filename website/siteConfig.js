@@ -33,8 +33,8 @@ const siteConfig = {
     {doc: 'finos-home', label: 'Docs'},   
     {doc: 'odp-service-catalog', label: 'Use Cases'},
     {doc: 'finos-developer-identity', label: 'Get Involved'},
-    {doc: 'odp-service-catalog', label: 'Why ODP'}
-   //, {blog: true, label: 'News'}
+    {doc: 'odp-service-catalog', label: 'Why ODP'},
+    {blog: false}
   ],
 
   // If you have users set above, you add it here:
