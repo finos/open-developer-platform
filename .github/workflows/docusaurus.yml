@@ -22,16 +22,6 @@ env:
   resetScriptUrl: https://raw.githubusercontent.com/finos/open-developer-platform/master/scripts/reset-gh-pages.sh
 
 jobs:
-#   create-branch:
-#     runs-on: ubuntu-latest
-#     steps:
-#     - name: Create gh-pages branch
-#       uses: peterjgrainger/action-create-branch@v1.0.0
-#       with:
-#         branch: 'gh-pages'
-#     - name: My backup step
-#       if: failure()
-#       run: echo "gh-pages branch already exist!"
   website-build:
     runs-on: ubuntu-latest
     steps:
