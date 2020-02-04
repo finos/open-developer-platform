@@ -1,0 +1,69 @@
+name: Docusaurus-website-build
+
+on:
+  push:
+    branch: master
+    paths:
+      - '.github/workflows/main.yml'
+      - 'docs/**'
+      - 'website/**'
+  pull_request:
+    paths:
+      - '.github/workflows/main.yml'
+      - 'docs/**'
+      - 'website/**'
+
+env:
+  githubUserEmail: maurizio@finos.org
+  githubUserName: Maurizio Pillitu
+  repoName: ${{ github.event.repository.name }}
+
+jobs:
+  website-build:
+    runs-on: ubuntu-latest
+    steps:
+    # - on:
+    #   push:
+    #     paths:
+    #       - 'docs/**'
+    #       - 'website/**'
+    #   pull_request:
+    #     paths:
+    #       - 'docs/**'
+    #       - 'website/**'
+    - name: Checkout repo
+      uses: actions/checkout@v1
+    - run: mkdir -p public
+    - name: Install Node
+      uses: actions/setup-node@v1
+    - name: Install Website deps
+      run: npm install --prefix website
+    - name: Patch forked version
+      if: github.actor != 'finos'
+      run: ./patch-siteconfig.sh ${{ env.repoName }} ${{ github.actor }}
+    - name: Build Website
+      run: |
+        npm run build --prefix website
+        git checkout website/siteConfig.js
+    - name: Commit files
+      run: |
+        git checkout gh-pages
+        cp -Rf website/build/${{ env.repoName }}/* .
+        rm -rf website public
+        git add .
+        git config --local user.email "${{ env.githubUserEmail }}"
+        git config --local user.name "${{ env.githubUserName }}"
+        git commit -m "Docusaurus Action - pushing website changes" -a || true
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: gh-pages
+        force: true
+    - name: Add comment to PR
+      if: github.event_name == 'pull_request'
+      uses: unsplash/comment-on-pr@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        msg: "Website preview available at https://${{ github.actor }}.github.io/${{ env.repoName }}"
