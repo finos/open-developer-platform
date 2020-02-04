@@ -14,6 +14,7 @@ on:
       - 'website/**'
 
 env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   githubUserEmail: infra@finos.org
   githubUserName: finos-admin
   repoName: ${{ github.event.repository.name }}
@@ -21,6 +22,16 @@ env:
   resetScriptUrl: https://raw.githubusercontent.com/finos/open-developer-platform/master/scripts/reset-gh-pages.sh
 
 jobs:
+#   create-branch:
+#     runs-on: ubuntu-latest
+#     steps:
+#     - name: Create gh-pages branch
+#       uses: peterjgrainger/action-create-branch@v1.0.0
+#       with:
+#         branch: 'gh-pages'
+#     - name: My backup step
+#       if: failure()
+#       run: echo "gh-pages branch already exist!"
   website-build:
     runs-on: ubuntu-latest
     steps:
@@ -45,7 +56,7 @@ jobs:
         git checkout website/siteConfig.js
     - name: Commit files
       run: |
-        git checkout gh-pages
+        git checkout -b gh-pages || git checkout gh-pages
         curl ${{ env.resetScriptUrl }} |  bash -s
         if [ -d "website/build/${{ env.repoName }}" ]
         then cp -Rf website/build/${{ env.repoName }}/* .
@@ -59,13 +70,11 @@ jobs:
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        github_token: ${{ env.GITHUB_TOKEN }}
         branch: gh-pages
         force: true
     - name: Add comment to PR
       if: github.event_name == 'pull_request'
       uses: unsplash/comment-on-pr@master
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         msg: "Website preview available at https://${{ github.actor }}.github.io/${{ env.repoName }}"
