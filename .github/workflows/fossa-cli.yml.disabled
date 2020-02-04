@@ -1,0 +1,21 @@
+# name: license-scanning
+
+# on: [push]
+
+# jobs:
+#   build:
+#     runs-on: fossa/fossa-cli:buildtools
+    
+#     steps:
+#     - uses: actions/checkout@v1
+#     - name: Run a multi-line script
+#       run: |
+#         sudo apt-get install -y jq
+#         curl -L -O https://github.com/fossas/fossa-cli/releases/download/v1.0.3/fossa-cli_1.0.3_linux_amd64.tar.gz
+#         tar xvzf fossa-cli_1.0.3_linux_amd64.tar.gz
+#         export PATH=$PWD:$PATH
+#         git clone https://github.com/symphonyoss/symphony-java-client.git
+#         cd symphony-java-client
+#         fossa init
+#         fossa report licenses --json > licenses.json
+#         cat licenses.json | jq '[.[] |  {package: .loc.package, licenses: [.Licenses[].LicenseID]}]'

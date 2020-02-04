@@ -1,5 +1,6 @@
 {
   "docs": {
+    "Docusaurus Build Action": ["docusaurus-build-action"], 
     "Docusaurus": ["notes-2018-07-25"],
     "First Category": ["notes-2018-07-25"],
     "Second Category": ["notes-2018-07-25"]

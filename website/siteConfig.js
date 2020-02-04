@@ -15,26 +15,27 @@ const users = require('./data/users.json');
 const siteConfig = {
   title: 'Open Developer Platform', // Title for your website.
   tagline: 'Open Developer Platform',
-  url: 'https://your-docusaurus-test-site.com', // Your website URL
-  baseUrl: '/', // Base URL for your project */
+  url: 'https://finos.github.io/open-developer-platform', // Your website URL
+  baseUrl: '/open-developer-platform/', // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
   //   baseUrl: '/test-site/',
 
   // Used for publishing and more
-  projectName: 'ODP',
-  organizationName: 'FINOS',
+  projectName: 'open-developer-platform',
+  organizationName: 'finos',
   // For top-level user or org sites, the organization is still the same.
   // e.g., for the https://JoelMarcey.github.io site, it would be set like...
   //   organizationName: 'JoelMarcey'
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    {doc: 'finos-home', label: 'Docs'},   
-    {doc: 'odp-service-catalog', label: 'Use Cases'},
-    {doc: 'finos-developer-identity', label: 'Get Involved'},
-    {doc: 'odp-service-catalog', label: 'Why ODP'},
+    {doc: 'finos-home', label: 'Docs'},
+    {doc: 'docusaurus-build-action', label: 'Docusaurus Build Action'},
     {blog: false}
+    // {doc: 'odp-service-catalog', label: 'Use Cases'},
+    // {doc: 'finos-developer-identity', label: 'Get Involved'},
+    // {doc: 'odp-service-catalog', label: 'Why ODP'},
   ],
 
   // If you have users set above, you add it here:

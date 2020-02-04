@@ -4,7 +4,6 @@ title: ODP Service Catalog
 ---
 
 # Background and requirements
-
 The Open Developer Platform (ODP) is - as it stands today - a loose collection of services and tools that enable collaborative open source software development across FINOS members (and the financial services industry at large).
 
 The ODP Working Group allows build automation vendors to contribute services to ODP, assuming that:
