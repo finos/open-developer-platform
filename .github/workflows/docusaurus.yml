@@ -68,6 +68,7 @@ jobs:
         git config --local user.name "${{ env.githubUserName }}"
         git commit -m "Docusaurus Action - pushing website changes" -a || true
     - name: Push changes
+      if: github.event_name == 'push'
       uses: ad-m/github-push-action@master
       with:
         github_token: ${{ env.GITHUB_TOKEN }}
