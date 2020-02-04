@@ -14,6 +14,7 @@ on:
       - 'website/**'
 
 env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   githubUserEmail: infra@finos.org
   githubUserName: finos-admin
   repoName: ${{ github.event.repository.name }}
@@ -63,13 +64,11 @@ jobs:
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        github_token: ${{ env.GITHUB_TOKEN }}
         branch: gh-pages
         force: true
     - name: Add comment to PR
       if: github.event_name == 'pull_request'
       uses: unsplash/comment-on-pr@master
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         msg: "Website preview available at https://${{ github.actor }}.github.io/${{ env.repoName }}"
