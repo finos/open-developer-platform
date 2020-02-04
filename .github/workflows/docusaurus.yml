@@ -4,33 +4,26 @@ on:
   push:
     branch: master
     paths:
-      - '.github/workflows/main.yml'
+      - '.github/workflows/docusaurus.yml'
       - 'docs/**'
       - 'website/**'
   pull_request:
     paths:
-      - '.github/workflows/main.yml'
+      - '.github/workflows/docusaurus.yml'
       - 'docs/**'
       - 'website/**'
 
 env:
-  githubUserEmail: maurizio@finos.org
-  githubUserName: Maurizio Pillitu
+  githubUserEmail: infra@finos.org
+  githubUserName: finos-admin
   repoName: ${{ github.event.repository.name }}
+  patchScriptUrl: https://raw.githubusercontent.com/finos/open-developer-platform/master/scripts/patch-docusaurus-config.sh
+  resetScriptUrl: https://raw.githubusercontent.com/finos/open-developer-platform/master/scripts/reset-gh-pages.sh
 
 jobs:
   website-build:
     runs-on: ubuntu-latest
     steps:
-    # - on:
-    #   push:
-    #     paths:
-    #       - 'docs/**'
-    #       - 'website/**'
-    #   pull_request:
-    #     paths:
-    #       - 'docs/**'
-    #       - 'website/**'
     - name: Checkout repo
       uses: actions/checkout@v1
     - run: mkdir -p public
@@ -39,8 +32,13 @@ jobs:
     - name: Install Website deps
       run: npm install --prefix website
     - name: Patch forked version
-      if: github.actor != 'finos'
-      run: ./patch-siteconfig.sh ${{ env.repoName }} ${{ github.actor }}
+      run: |
+        REPO="${{ github.repository }}"
+        REPO_ORG=${REPO%"/"*}
+        if [ "$REPO_ORG" != "finos" ]
+        then echo "Repo organization is '$REPO_ORG', patching docusaurus configuration to work on a forked repo" ; curl ${{ env.patchScriptUrl }} |  bash -s -- ${{ env.repoName }} $REPO_ORG
+        else echo "Skipping patching, as this is the FINOS Organization"
+        fi
     - name: Build Website
       run: |
         npm run build --prefix website
@@ -48,7 +46,11 @@ jobs:
     - name: Commit files
       run: |
         git checkout gh-pages
-        cp -Rf website/build/${{ env.repoName }}/* .
+        curl ${{ env.resetScriptUrl }} |  bash -s
+        if [ -d "website/build/${{ env.repoName }}" ]
+        then cp -Rf website/build/${{ env.repoName }}/* .
+        else cp -Rf website/build/* .
+        fi
         rm -rf website public
         git add .
         git config --local user.email "${{ env.githubUserEmail }}"
