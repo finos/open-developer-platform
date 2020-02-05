@@ -27,7 +27,6 @@ jobs:
     steps:
     - name: Checkout repo
       uses: actions/checkout@v1
-    - run: mkdir -p public
     - name: Install Node
       uses: actions/setup-node@v1
     - name: Install Website deps
@@ -44,26 +43,12 @@ jobs:
       run: |
         npm run build --prefix website
         git checkout website/siteConfig.js
-    - name: Commit files
+    - name: Publish Website
       run: |
-        git checkout -b gh-pages || git checkout gh-pages
-        curl ${{ env.resetScriptUrl }} |  bash -s
-        if [ -d "website/build/${{ env.repoName }}" ]
-        then cp -Rf website/build/${{ env.repoName }}/* .
-        else cp -Rf website/build/* .
-        fi
-        rm -rf website public
-        git add .
-        git config --local user.email "${{ env.githubUserEmail }}"
-        git config --local user.name "${{ env.githubUserName }}"
-        git commit -m "Docusaurus Action - pushing website changes" -a || true
-    - name: Push changes
-      if: github.event_name == 'push'
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ env.GITHUB_TOKEN }}
-        branch: gh-pages
-        force: true
+        git config --local user.email "${{ github.actor }}@users.noreply.github.com"
+        git config --local user.name "${{ github.actor }}"
+        echo "machine github.com login ${{ github.actor }} password $GITHUB_TOKEN" > ~/.netrc
+        GIT_USER=${{ github.actor }} npm run publish-gh-pages --prefix website
     - name: Add comment to PR
       if: github.event_name == 'pull_request'
       uses: unsplash/comment-on-pr@master

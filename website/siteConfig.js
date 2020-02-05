@@ -15,7 +15,7 @@ const users = require('./data/users.json');
 const siteConfig = {
   title: 'Open Developer Platform', // Title for your website.
   tagline: 'Open Developer Platform',
-  url: 'https://finos.github.io/open-developer-platform', // Your website URL
+  url: 'https://finos.github.io', // Your website URL
   baseUrl: '/open-developer-platform/', // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
