@@ -19,7 +19,6 @@ env:
   githubUserName: finos-admin
   repoName: ${{ github.event.repository.name }}
   patchScriptUrl: https://raw.githubusercontent.com/finos/open-developer-platform/master/scripts/patch-docusaurus-config.sh
-  resetScriptUrl: https://raw.githubusercontent.com/finos/open-developer-platform/master/scripts/reset-gh-pages.sh
 
 jobs:
   website-build:
@@ -45,12 +44,13 @@ jobs:
         git checkout website/siteConfig.js
     - name: Publish Website
       run: |
-        git config --local user.email "${{ github.actor }}@users.noreply.github.com"
-        git config --local user.name "${{ github.actor }}"
+        git config --global user.email "${{ github.actor }}@users.noreply.github.com"
+        git config --global user.name "${{ github.actor }}"
         echo "machine github.com login ${{ github.actor }} password $GITHUB_TOKEN" > ~/.netrc
         GIT_USER=${{ github.actor }} npm run publish-gh-pages --prefix website
-    - name: Add comment to PR
-      if: github.event_name == 'pull_request'
-      uses: unsplash/comment-on-pr@master
-      with:
-        msg: "Website preview available at https://${{ github.actor }}.github.io/${{ env.repoName }}"
+    # TODO Getting 403 as described on https://github.com/danger/danger-js/issues/918
+    # - name: Add comment to PR
+    #   if: github.event_name == 'pull_request'
+    #   uses: unsplash/comment-on-pr@master
+    #   with:
+    #     msg: "Website preview available at https://${{ github.actor }}.github.io/${{ env.repoName }}"
