@@ -109,7 +109,7 @@ class Index extends React.Component {
             content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. [Pellentesque]() pellentesque id standard`,
             image: `${baseUrl}img/feature-blank.svg`,
             imageAlign: 'top',
-            title: 'Example 1',
+            title: 'Example 1 Test!',
           },
           {
             content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. [Pellentesque]() pellentesque id standard`,
