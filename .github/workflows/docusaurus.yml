@@ -43,8 +43,7 @@ jobs:
         else echo "Skipping patching, as this is the FINOS Organization"
         fi
     - name: Build Website
-      run: |
-        ./build-site.sh
+      run: npm run build --prefix website
     - name: Publish Website
       run: |
         REPO="${{ github.repository }}"
