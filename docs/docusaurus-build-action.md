@@ -9,8 +9,10 @@ If a `Push` event occurs on the a Docusaurus file (`website/**`, `docs/**` or `d
 
 If the `Push` event occurs on a fork of a repo with this action, the same workflow will follow, and the Docusaurus configuration (`siteConfig.js`) will be patched prior to the build, in order to serve the pages using the personal GitHub account that forked the repo.
 
-If a `Pull Request` is submitted (related to Docusaurus files) against a FINOS repository with this action, beyond following the process described above, the action also adds a comment to the PR with the link to the preview website, containing the changes to the PR.
+If a `Pull Request` is submitted (related to Docusaurus files) against a FINOS repository with this action, beyond following the process described above, the action also adds a comment to the PR with the link to the preview website, containing the changes to the PR (still work in progress).
 
-**IMPORTANT!** Make sure that the `gh-pages` branch exists, otherwise the action will fail.
+**IMPORTANT!** After forking the repository, make sure to enable the action, by accessing the `Actions` tab on your fork; Actions of forked repos are not enabled by default for security reasons.
+
+<TODO - add screenshot>
 
 No other configuration is needed (no Personal Tokens, as done in Travis CI), this should work out of the box; you can track builds on https://github.com/maoo/finos-fo/actions .

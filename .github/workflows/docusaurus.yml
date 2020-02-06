@@ -1,8 +1,13 @@
 name: Docusaurus-website-build
 
+# Only trigger on:
+# - master branch
+# - PR or Pull Request event types
+# - Docusaurus files: this file, docs/** and website/**
 on:
   push:
-    branch: master
+    branches:
+      - master
     paths:
       - '.github/workflows/docusaurus.yml'
       - 'docs/**'
@@ -14,30 +19,17 @@ on:
       - 'website/**'
 
 env:
+  # Used by docusaurus publish-site command and comment-on-pr action
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  githubUserEmail: infra@finos.org
-  githubUserName: finos-admin
-  repoName: ${{ github.event.repository.name }}
-  patchScriptUrl: https://raw.githubusercontent.com/finos/open-developer-platform/master/scripts/patch-docusaurus-config.sh
-  resetScriptUrl: https://raw.githubusercontent.com/finos/open-developer-platform/master/scripts/reset-gh-pages.sh
+  REPO_NAME: ${{ github.event.repository.name }}
+  PATCH_SCRIPT_URL: https://raw.githubusercontent.com/finos/open-developer-platform/master/scripts/patch-docusaurus-config.sh
 
 jobs:
-#   create-branch:
-#     runs-on: ubuntu-latest
-#     steps:
-#     - name: Create gh-pages branch
-#       uses: peterjgrainger/action-create-branch@v1.0.0
-#       with:
-#         branch: 'gh-pages'
-#     - name: My backup step
-#       if: failure()
-#       run: echo "gh-pages branch already exist!"
   website-build:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout repo
       uses: actions/checkout@v1
-    - run: mkdir -p public
     - name: Install Node
       uses: actions/setup-node@v1
     - name: Install Website deps
@@ -47,34 +39,26 @@ jobs:
         REPO="${{ github.repository }}"
         REPO_ORG=${REPO%"/"*}
         if [ "$REPO_ORG" != "finos" ]
-        then echo "Repo organization is '$REPO_ORG', patching docusaurus configuration to work on a forked repo" ; curl ${{ env.patchScriptUrl }} |  bash -s -- ${{ env.repoName }} $REPO_ORG
+        then echo "Repo organization is '$REPO_ORG', patching docusaurus configuration to work on a forked repo" ; curl ${{ env.PATCH_SCRIPT_URL }} |  bash -s -- ${{ env.REPO_NAME }} $REPO_ORG
         else echo "Skipping patching, as this is the FINOS Organization"
         fi
     - name: Build Website
+      run: npm run build --prefix website
+    - name: Publish Website
       run: |
-        npm run build --prefix website
-        git checkout website/siteConfig.js
-    - name: Commit files
-      run: |
-        git checkout -b gh-pages || git checkout gh-pages
-        curl ${{ env.resetScriptUrl }} |  bash -s
-        if [ -d "website/build/${{ env.repoName }}" ]
-        then cp -Rf website/build/${{ env.repoName }}/* .
-        else cp -Rf website/build/* .
+        REPO="${{ github.repository }}"
+        GIT_USERNAME=${REPO%/*}
+        if [ "$GIT_USERNAME" == "finos" ]
+        then GIT_USERNAME="${{ github.actor }}"
         fi
-        rm -rf website public
-        git add .
-        git config --local user.email "${{ env.githubUserEmail }}"
-        git config --local user.name "${{ env.githubUserName }}"
-        git commit -m "Docusaurus Action - pushing website changes" -a || true
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ env.GITHUB_TOKEN }}
-        branch: gh-pages
-        force: true
-    - name: Add comment to PR
-      if: github.event_name == 'pull_request'
-      uses: unsplash/comment-on-pr@master
-      with:
-        msg: "Website preview available at https://${{ github.actor }}.github.io/${{ env.repoName }}"
+        echo "Using $GIT_USERNAME as Git username"
+        git config --global user.email "$GIT_USERNAME@users.noreply.github.com"
+        git config --global user.name "$GIT_USERNAME"
+        echo "machine github.com login $GIT_USERNAME password $GITHUB_TOKEN" > ~/.netrc
+        GIT_USER=$GIT_USERNAME npm run publish-gh-pages --prefix website
+    # TODO Getting 403 as described on https://github.com/danger/danger-js/issues/918
+    # - name: Add comment to PR
+    #   if: github.event_name == 'pull_request'
+    #   uses: unsplash/comment-on-pr@master
+    #   with:
+    #     msg: "Website preview available at https://${{ github.actor }}.github.io/${{ env.REPO_NAME }}"
