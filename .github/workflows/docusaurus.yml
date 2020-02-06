@@ -54,7 +54,7 @@ jobs:
         if [ "$GIT_USERNAME" == "finos" ] && [ "${{github.event_name }}" == "push" ]
         then GIT_USERNAME="finos-admin"
         elif [ "$GIT_USERNAME" == "finos" ] && [ "${{github.event_name }}" == "pull_reqeust" ]
-        then GIT_USERNAME="${{ github.actor }}"
+        then echo "Skipping publish, as this is a PR, not a Push event" ; exit 0
         fi
         # Configure git client
         echo "Git repo - $REPO"
