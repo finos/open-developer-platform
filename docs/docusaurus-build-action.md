@@ -15,4 +15,6 @@ If a `Pull Request` is submitted (related to Docusaurus files) against a FINOS r
 
 ![Enable GitHub Actions on a forked repo](img/enable-actions.png)
 
+You will need to either update file in the `docs/` or `website/` folder (only on `master` branch) in order to trigger a build.
+
 No other configuration is needed (no Personal Tokens, as done in Travis CI), this should work out of the box; you can track builds on https://github.com/maoo/finos-fo/actions .
