@@ -13,6 +13,6 @@ If a `Pull Request` is submitted (related to Docusaurus files) against a FINOS r
 
 **IMPORTANT!** After forking the repository, make sure to enable the action, by accessing the `Actions` tab on your fork; Actions of forked repos are not enabled by default for security reasons.
 
-<TODO - add screenshot>
+![Enable GitHub Actions on a forked repo](img/enable-actions.png)
 
 No other configuration is needed (no Personal Tokens, as done in Travis CI), this should work out of the box; you can track builds on https://github.com/maoo/finos-fo/actions .
