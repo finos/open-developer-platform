@@ -6,7 +6,8 @@ name: Docusaurus-website-build
 # - Docusaurus files: this file, docs/** and website/**
 on:
   push:
-    branch: master
+    branches:
+      - master
     paths:
       - '.github/workflows/docusaurus.yml'
       - 'docs/**'
@@ -43,14 +44,18 @@ jobs:
         fi
     - name: Build Website
       run: |
-        npm run build --prefix website
-        git checkout website/siteConfig.js
+        ./build-site.sh
     - name: Publish Website
       run: |
-        git config --global user.email "${{ github.actor }}@users.noreply.github.com"
-        git config --global user.name "${{ github.actor }}"
-        echo "machine github.com login ${{ github.actor }} password $GITHUB_TOKEN" > ~/.netrc
-        GIT_USER=${{ github.actor }} npm run publish-gh-pages --prefix website
+        REPO="${{ github.repository }}"
+        GIT_USER=${REPO%/*}
+        if [ "$GIT_USER" == "finos" ]
+        then GIT_USER=${{ github.author }}
+        fi
+        git config --global user.email "$GIT_USER@users.noreply.github.com"
+        git config --global user.name "$GIT_USER"
+        echo "machine github.com login $GIT_USER password $GITHUB_TOKEN" > ~/.netrc
+        npm run publish-gh-pages --prefix website
     # TODO Getting 403 as described on https://github.com/danger/danger-js/issues/918
     # - name: Add comment to PR
     #   if: github.event_name == 'pull_request'
