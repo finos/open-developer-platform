@@ -66,6 +66,9 @@ const siteConfig = {
   },
   */
 
+  /* Remove /docs/ item from URL for all docs */
+  docsUrl: '',
+  
   // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
   copyright: `Copyright © ${new Date().getFullYear()} ODP`,  /* CHANGE THIS TO PROJECT / PROGRAM NAME */
 
