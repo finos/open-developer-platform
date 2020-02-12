@@ -17,6 +17,9 @@ title: ODP Home
   - [Backlog](#user-content-odp-development-board)
 
 # Working Group Charter
+
+This is james making a simple change.
+
 The Open Developer Platform Working Group is tasked with advising and prioritizing of the building and managing of FINOS infrastructure that FINOS members are able to access for communication and open source software development, also known as the Open Developer Platform (ODP); this includes capturing expressions of interest both for  consuming ODP components, and contributing new ones.
 
 The Working Group **collaboratively maintains a [prioritized backlog](https://finosfoundation.atlassian.net/secure/RapidBoard.jspa?projectKey=ODP&useStoredSettings=true&rapidView=10) of requirements**, and the FINOS Infra team - with the help of FINOS Community - independently works through that backlog in priority order.
