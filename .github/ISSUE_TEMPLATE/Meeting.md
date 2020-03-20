@@ -4,19 +4,18 @@ about: To track ODP meeting agenda and attendance
 ---
 
 ## Date
-Wednesday DD, MMM yyyy - 12pm EST
+Wednesday DD MMM yyyy - 12pm EST
 
 ## Untracked attendees
 - Fullname, Affiliation, (optional) GitHub username
 - ...
 
 ## Agenda
-- Convene & roll call
-- Walk through outstanding action items
-- [ODP Kanban](https://github.com/orgs/finos/projects/8) - Done in the last 2 weeks activity (archive Done issues)
-- [ODP Kanban](https://github.com/orgs/finos/projects/8) - Discuss In Progress and Prioritized issues
-- @maoo - Update on Alloy initiative
-- AOB, Q&A & Adjourn
+- [ ] Convene & roll call (5mins)
+- [ ] [ODP Kanban](https://github.com/orgs/finos/projects/8) - Done in the last 2 weeks activity and archival (10mins)
+- [ ] [ODP Kanban](https://github.com/orgs/finos/projects/8) - Discuss In Progress and Prioritized issues (10mins)
+- [ ] @maoo - Update on Alloy initiative (5mins)
+- [ ] AOB, Q&A & Adjourn (5mins)
 
 ## Decisions Made
 - [ ] Decision 1
