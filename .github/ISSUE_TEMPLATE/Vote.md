@@ -15,3 +15,9 @@ Do you approve ... ?
 
 ## Due to
 I'd ask you to cast your vote with 72h (3 days).
+
+## Binding votes
+- @maoo
+- @mcleo-d
+- @bingenito
+- @tschady
