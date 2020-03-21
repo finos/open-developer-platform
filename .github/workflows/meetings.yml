@@ -54,13 +54,13 @@ jobs:
         path: 'metadata-tool'
         ref: github-meeting-attendance
     - name: Checking out FINOS metadata
-      run: git clone https://maoo:$FINOS_TOKEN@github.com/finos-admin/metadata.git >/dev/null
+      run: git clone https://finos-admin:$FINOS_TOKEN@github.com/finos-admin/metadata.git >/dev/null
     - name: Downloading github-finos-meetings.csv
-      run: curl -s https://raw.githubusercontent.com/maoo/open-developer-platform/master/scripts/checkout-meeting-attendance.sh | bash
+      run: curl -s https://raw.githubusercontent.com/finos/open-developer-platform/master/scripts/checkout-meeting-attendance.sh | bash
     - name: Generating a new github-finos-meetings.csv
-      run: curl -s https://raw.githubusercontent.com/maoo/open-developer-platform/master/scripts/generate-meeting-attendance.sh | bash
+      run: curl -s https://raw.githubusercontent.com/finos/open-developer-platform/master/scripts/generate-meeting-attendance.sh | bash
     - name: Pushing github-finos-meetings.csv changes to Git
-      run: curl -s https://raw.githubusercontent.com/maoo/open-developer-platform/master/scripts/submit-meeting-attendance.sh | bash
+      run: curl -s https://raw.githubusercontent.com/finos/open-developer-platform/master/scripts/submit-meeting-attendance.sh | bash
     - name: Add label 'indexed' to issue
       if: github.event.action == 'labeled'
       run: |
