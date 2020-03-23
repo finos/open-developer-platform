@@ -1,0 +1,32 @@
+name: project-blueprint-action
+
+# This GitHub action checks all FINOS GitHub repositories against a list of validations, and opens an issue on the repository with the missing items.
+# If the issue already exists, it skips the repository
+on:
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron:  '0 0 1 * *'
+
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  FINOS_TOKEN: ${{ secrets.FINOS_TOKEN }}
+  ISSUE_TITLE: "[FINOS_PROJECT_BLUEPRINT] - Fixes to apply"
+
+jobs:
+  create-issues:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Install jq
+      run: sudo apt-get install jq
+    - name: Checking out metadata-tool
+      uses: actions/checkout@v2
+      with:
+        repository: 'finos/metadata-tool'
+        path: 'metadata-tool'
+        ref: blueprint-check
+    - name: Checking out FINOS metadata
+      run: git clone https://finos-admin:$FINOS_TOKEN@github.com/finos-admin/metadata.git >/dev/null
+    - name: Generating repository validation
+      run: curl -s https://raw.githubusercontent.com/finos/open-developer-platform/master/scripts/generate-repo-validation.sh | bash
+    - name: Checking existing issues
+      run: curl -s https://raw.githubusercontent.com/finos/open-developer-platform/master/scripts/check-existing-issues.sh | bash
