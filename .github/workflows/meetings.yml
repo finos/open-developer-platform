@@ -52,7 +52,6 @@ jobs:
       with:
         repository: 'finos/metadata-tool'
         path: 'metadata-tool'
-        ref: github-meeting-attendance
     - name: Checking out FINOS metadata
       run: git clone https://finos-admin:$FINOS_TOKEN@github.com/finos-admin/metadata.git >/dev/null
     - name: Downloading github-finos-meetings.csv
