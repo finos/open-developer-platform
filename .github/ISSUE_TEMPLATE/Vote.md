@@ -10,7 +10,9 @@ Do you approve ... ?
 
 ## Reactions
 👍 - approve
+
 👎 - deny (please add comment explaining why)
+
 👀 - abstained (please add comment explaining why)
 
 ## Due to
