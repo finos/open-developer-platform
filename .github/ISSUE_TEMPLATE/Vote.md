@@ -9,9 +9,9 @@ I am requesting a vote to ...
 Do you approve ... ?
 
 ## Reactions
-- 👍 - approve
-- 👎 - deny (please add comment explaining why)
-- 👀 - abstained (please add comment explaining why)
+- 👍 Approve
+- 👎 Deny (please add comment explaining why)
+- 👀 Abstain (please add comment explaining why)
 
 ## Due to
 I'd ask you to cast your vote with 72h (3 days).
