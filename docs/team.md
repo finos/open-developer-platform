@@ -13,10 +13,11 @@ The ODP Project was approved by the PMC on 21 June 2018.
 The team is composed by FINOS staff, bank institutions and software vendors, who help prioritizing, validating, testing and evangelizing the ODP features across FINOS community.
 - [Brian Ingenito](github.com/bingenito) (Morgan Stanley) - Project Lead
 - [Maurizio Pillitu](github.com/maoo) (DevOps Director, FINOS)
-- [Chen](github.com/) (FOSSA)
-- [Rhys](github.com/) (WhiteSource)
-- [Tom Schady](github.com/tschady) (GreenKey Technology)
 - [James McLeod](github.com/mcleo-d) (Community Director, FINOS)
+- [Tom Schady](github.com/tschady) (GreenKey Technology)
+- [Rhys Arkins](github.com/rarkins) (WhiteSource)
+- Alessandro Petroni (Red Hat)
+- Albert Chen (FOSSA)
 
 ## ODP Mailing-list
 You can subscribe to [fdx-odp@finos.org](mailto:fdx-odp+subscribe@finos.org) to get updates from the team.

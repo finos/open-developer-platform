@@ -7,6 +7,28 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 Continuous Delivery (CD - read the [definition given by Martin Fowler](https://martinfowler.com/bliki/ContinuousDelivery.html)) allows project leads and committers to configure automated processes to build and deploy their software. FINOS provides a [dedicated OpenShift Online instance](#openshift-console) that can be used for this purpose.
 
+## Openshift Console
+The Open Developer Platform provides access to a FINOS [OpenShift Container Platform](https://www.openshift.com/products/container-platform/) instance (also called FINOS OpenShift Console), the leading enterprise Kubernetes distribution, so that developers can try out integrations with other containers, build and test containerised architectures and enable continuously deployed code build pipelines.
+
+Access is granted (free of charge) to all FINOS project teams (see below); in this page we guide contributors to request access, understand the OpenShift FINOS setup and execute the first tests.
+
+<img alt="openshift-console" src={useBaseUrl('img/vendors/openshift-console.png')} />
+
+## How to get access
+In order to access the FINOS OpenShift Console, it is necessary to comply with the following requirements:
+
+1. You must be part of a <a href={useBaseUrl('project-collaboration#teams')}>FINOS project team</a>
+2. You must have an account on developers.redhat.com; you can also sign up with your GitHub credentials
+
+To request access, send an email to help@finos.org, with the following info:
+1. Name, surname and company
+2. Corporate email address
+3. GitHub ID
+4. Red Hat Login ID (when logged into Red Hat Developers portal, go to the account page)
+5. FINOS Project team you are part of
+
+The FINOS Infra team will create a project for your project, grant permissions to your Red Hat user and notify you via email the link to access the FINOS OpenShift Console.
+
 ## Travis CI to OpenShift integration
 Travis CI [configuration](https://docs.travis-ci.com/user/customizing-the-build/) can be extended trigger the OpenShift image build and deployment; to make configuration easier, the Foundation provides a script called [`oc-deploy.sh`](https://github.com/symphonyoss/contrib-toolbox/blob/master/scripts/oc-deploy.sh) that can be executed as `after_success` script and triggers a containerised deployment, using the OpenShift CLI tool; with a simple bash line, the following operations are performed:
 
@@ -276,28 +298,6 @@ See the example below.
       targetPort: healthcheck-tcp
     wildcardPolicy: None
 ```
-
-## Openshift Console
-The Open Developer Platform provides access to a FINOS [OpenShift Container Platform](https://www.openshift.com/products/container-platform/) instance (also called FINOS OpenShift Console), the leading enterprise Kubernetes distribution, so that developers can try out integrations with other containers, build and test containerised architectures and enable continuously deployed code build pipelines.
-
-Access is granted (free of charge) to all FINOS project teams (see below); in this page we guide contributors to request access, understand the OpenShift FINOS setup and execute the first tests.
-
-<img alt="openshift-console" src={useBaseUrl('img/vendors/openshift-console.png')} />
-
-## How to get access
-In order to access the FINOS OpenShift Console, it is necessary to comply with the following requirements:
-
-1. You must be part of a <a href={useBaseUrl('project-collaboration#teams')}>FINOS project team</a>
-2. You must have an account on developers.redhat.com; you can also sign up with your GitHub credentials
-
-To request access, send an email to help@finos.org, with the following info:
-1. Name, surname and company
-2. Corporate email address
-3. GitHub ID
-4. Red Hat Login ID (when logged into Red Hat Developers portal, go to the account page)
-5. FINOS Project team you are part of
-
-The FINOS Infra team will create a project for your project, grant permissions to your Red Hat user and notify you via email the link to access the FINOS OpenShift Console.
 
 ## Useful commands
 Below are some commands we found useful while setting up our Symphony bots on OpenShift Online, using the [OpenShift CLI (`oc`)](https://docs.openshift.com/container-platform/3.9/cli_reference/get_started_cli.html).

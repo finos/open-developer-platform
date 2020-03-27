@@ -5,7 +5,7 @@ title: Project Documentation
 
 FINOS collaboration services include several ways to write, collaborate and publish project documentation.
 
-After experimenting with few tools, services and technologies, we have chosen [Docusaurus](#using-docusaurus) (and GitHub Pages) to be the best choice; [other solutions](#other-solutions) are reported down below.
+After experimenting with few tools, services and technologies, we have chosen [Docusaurus](#using-docusaurus) (and GitHub Pages) to be the best choice.
 
 ## Docusaurus
 
