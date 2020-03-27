@@ -3,6 +3,24 @@ id: intro
 title: Continuous Integration
 ---
 
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+## GitHub Actions
+GitHub gives the ability to create, reuse and share actions, which can be easily described as workloads that can be triggered on a wide range of events.
+
+Actions can be only defined at repository level, creating a `YAML` file in the `.github/workflows` folder. The `Actions` tab available in `github.com` web UI will list the actions defined and show the execution logs.
+
+The Open Developer Platform uses GitHub Actions for the following use cases:
+- <a href={useBaseUrl(docs/development-infrastructure/project-documentation)}>Building and publishing Project websites</a>
+- <a href={useBaseUrl(docs/project-collaboration)}>Tracking meeting attendance</a>
+- <a href="https://github.com/finos/open-developer-platform/blob/master/.github/workflows/project-blueprint.yml">Validating repository compliance (work in progress)</a>
+
+To learn how to use GitHub Actions, start reading https://help.github.com/en/actions .
+When it's time to start writing your first `.yml` file, we found extremely helpful the following resources:
+- [Using the GITHUB_TOKEN in a workflow](https://help.github.com/en/actions/configuring-and-managing-workflows/authenticating-with-the-github_token#using-the-github_token-in-a-workflow)
+- [Context and expression syntax](https://help.github.com/en/actions/reference/context-and-expression-syntax-for-github-actions)
+- [Event Types & Payloads](https://developer.github.com/v3/activity/events/types/)
+
 ## Travis CI
 Travis CI is a hosted, distributed continuous integration service used to build and test software projects hosted at GitHub.
 
