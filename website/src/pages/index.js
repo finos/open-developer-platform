@@ -105,7 +105,7 @@ function Home() {
                 'button button--outline button--secondary button--lg',
                 styles.getStarted,
               )}
-              to={useBaseUrl('what-is-odp')}>
+              to={useBaseUrl('docs/what-is-odp')}>
               Get Started
             </Link>
           </div>
