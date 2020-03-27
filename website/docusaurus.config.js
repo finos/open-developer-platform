@@ -62,7 +62,7 @@ module.exports = {
           ],
         },
       ],
-      copyright: `Copyright © 2017 - Open Developer Platform - FINOS - The Fintech Open Source Foundation`,
+      copyright: `Copyright © 2018 - Open Developer Platform - FINOS - The Fintech Open Source Foundation`,
       ogImage: 'img/undraw_online.svg',
       twitterImage: 'img/undraw_tweetstorm.svg',
       twitterUsername: 'FinosFoundation'    
