@@ -14,6 +14,11 @@ module.exports = {
   projectName: 'open-developer-platform',
   organizationName: 'finos',
   scripts: ['https://buttons.github.io/buttons.js'],
+
+  // ogImage: 'img/undraw_online.svg',
+  // twitterImage: 'img/undraw_tweetstorm.svg',
+  // twitterUsername: 'FinosFoundation',
+
   themeConfig: {
     navbar: {
       title: 'Open Developer Platform',
@@ -33,6 +38,7 @@ module.exports = {
       ],
     },
     footer: {
+      copyright: `Copyright © 2018 - Open Developer Platform - FINOS - The Fintech Open Source Foundation`,
       logo: {
         alt: 'FINOS Logo',
         src: 'img/favicon/favicon-finos.ico',
@@ -41,32 +47,52 @@ module.exports = {
       style: 'dark',
       links: [
         {
-          title: 'Comminity',
+          title: 'FINOS Programs',
           items: [
             {
-              label: 'OSR Program',
+              label: 'FinServ Delivery Accelerator',
+              to: 'https://finosfoundation.atlassian.net/wiki/spaces/FDX/overview',
+            },
+            {
+              label: 'Open Source Readiness',
               to: 'https://finosfoundation.atlassian.net/wiki/spaces/OSR',
             },
             {
-              label: 'FINOS Project Catalogue',
-              to: 'http://finos.github.io',
+              label: 'Data Technologies',
+              to: 'https://www.finos.org/dt',
             },
             {
-              label: 'FINOS Community Handbook',
+              label: 'FDC3',
+              to: 'https://www.finos.org/fdc3',
+            }]
+          },
+          {
+            title: 'FDX Links',
+            items: [    
+            {
+              label: 'Cloud Service Certification Project',
+              to: 'https://github.com/finos/cloud-service-certification/wiki',
+            },
+            {
+              label: 'Project Catalogue',
+              to: 'http://finos.github.io',
+            }]
+          },
+          {
+            title: 'FINOS Community',
+            items: [    
+            {
+              label: 'Community Handbook',
               to: 'https://finosfoundation.atlassian.net/wiki/spaces/FINOS/pages/80642059/Community+Handbook',
             },
             {
-              label: 'FINOS Community Governance',
+              label: 'FINOS Governance',
               to: 'https://finosfoundation.atlassian.net/wiki/spaces/FINOS/pages/75530783/Community+Governance',
-            },
-          ],
-        },
-      ],
-      copyright: `Copyright © 2018 - Open Developer Platform - FINOS - The Fintech Open Source Foundation`,
-      ogImage: 'img/undraw_online.svg',
-      twitterImage: 'img/undraw_tweetstorm.svg',
-      twitterUsername: 'FinosFoundation'    
-    }
+            }
+          ]
+        }
+      ]
+    },
   },
   presets: [
     [

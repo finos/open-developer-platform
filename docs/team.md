@@ -16,7 +16,7 @@ The team is composed by FINOS staff, bank institutions and software vendors, who
 - [James McLeod](github.com/mcleo-d) (Community Director, FINOS)
 - [Tom Schady](github.com/tschady) (GreenKey Technology)
 - [Rhys Arkins](github.com/rarkins) (WhiteSource)
-- Alessandro Petroni (Red Hat)
+- [Alessandro Petroni](github.com/apetroni) (Red Hat)
 - Albert Chen (FOSSA)
 
 ## ODP Mailing-list

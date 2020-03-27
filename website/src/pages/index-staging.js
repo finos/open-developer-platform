@@ -6,31 +6,54 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
 
+const vendors = [
+  {
+    imageUrl: 'img/vendors/github-logo.png',
+    name: 'GitHub'
+  },
+  {
+    imageUrl: 'img/vendors/whitesource-logo.png',
+    name: 'Whitesource'
+  },
+  {
+    imageUrl: 'img/vendors/redhat-logo.png',
+    name: 'Red Hat'
+  },
+  {
+    imageUrl: 'img/vendors/greenkey-tech-logo.png',
+    name: 'GreenKey Technologies'
+  },
+  {
+    imageUrl: 'img/vendors/fossa-logo.png',
+    name: 'FOSSA'
+  }
+]
+
 const features = [
   {
-    title: <>Lorem Ipsum</>,
-    imageUrl: '/img/feature-blank.svg',
+    title: <>Project Collaboration</>,
+    imageUrl: '/img/intro/project-collaboration.png',
     description: (
       <>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        ODP provides collaboration workflows that are open and accessible by everyone, especially financial institutions, which are often blocked by regulatory restrictions.
       </>
     ),
   },
   {
-    title: <>Lorem Ipsum</>,
-    imageUrl: '/img/feature-blank.svg',
+    title: <>Developer tooling</>,
+    imageUrl: '/img/intro/developer-tools.png',
     description: (
       <>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        FINOS contributors can access to development infrastructure services, like code hosting, CI/CD, IP compliance &amp; security &amp; quality checks, container runtime and release automation.
       </>
     ),
   },
   {
-    title: <>Lorem Ipsum</>,
-    imageUrl: '/img/feature-blank.svg',
+    title: <>Open to everyone</>,
+    imageUrl: '/img/intro/open.png',
     description: (
       <>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Everyone is welcome to read, listen and submit feedback to the ODP team; all content and conversations produced are (and will be) public.
       </>
     ),
   },
@@ -47,6 +70,20 @@ function Feature({imageUrl, title, description}) {
       )}
       <h3>{title}</h3>
       <p>{description}</p>
+    </div>
+  );
+}
+
+function Vendor({imageUrl, name}) {
+  const imgUrl = useBaseUrl(imageUrl);
+  return (
+    <div className={classnames('text--center col col--4', styles.feature)}>
+      {imgUrl && (
+        <div className="text--center">
+          <img className={styles.featureImage} src={imgUrl} alt={name} />
+        </div>
+      )}
+      <h3>{name}</h3>
     </div>
   );
 }
@@ -81,6 +118,18 @@ function Home() {
               <div className="row">
                 {features.map((props, idx) => (
                   <Feature key={idx} {...props} />
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+        {vendors && vendors.length && (
+          <section className={styles.features}>
+            <div className="container">
+              <div className="row">
+                <h2>ODP Vendors</h2>
+                {vendors.map((props, idx) => (
+                  <Vendor key={idx} {...props} />
                 ))}
               </div>
             </div>
