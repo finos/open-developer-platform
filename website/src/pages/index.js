@@ -6,6 +6,29 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
 
+const vendors = [
+  {
+    imageUrl: 'img/vendors/github-logo.png',
+    name: 'GitHub'
+  },
+  {
+    imageUrl: 'img/vendors/whitesource-logo.png',
+    name: 'Whitesource'
+  },
+  {
+    imageUrl: 'img/vendors/redhat-logo.png',
+    name: 'Red Hat'
+  },
+  {
+    imageUrl: 'img/vendors/greenkey-tech-logo.png',
+    name: 'GreenKey Technologies'
+  },
+  {
+    imageUrl: 'img/vendors/fossa-logo.png',
+    name: 'FOSSA'
+  }
+]
+
 const features = [
   {
     title: <>Project Collaboration</>,
@@ -51,6 +74,20 @@ function Feature({imageUrl, title, description}) {
   );
 }
 
+function Vendor({imageUrl, name}) {
+  const imgUrl = useBaseUrl(imageUrl);
+  return (
+    <div className={classnames('text--center col col--4', styles.feature)}>
+      {imgUrl && (
+        <div className="text--center">
+          <img className={styles.featureImage} src={imgUrl} alt={name} />
+        </div>
+      )}
+      <h3>{name}</h3>
+    </div>
+  );
+}
+
 function Home() {
   const context = useDocusaurusContext();
   const {siteConfig = {}} = context;
@@ -81,6 +118,18 @@ function Home() {
               <div className="row">
                 {features.map((props, idx) => (
                   <Feature key={idx} {...props} />
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+        {vendors && vendors.length && (
+          <section className={styles.features}>
+            <div className="container">
+              <div className="row">
+                <h2>ODP Vendors</h2>
+                {vendors.map((props, idx) => (
+                  <Vendor key={idx} {...props} />
                 ))}
               </div>
             </div>
