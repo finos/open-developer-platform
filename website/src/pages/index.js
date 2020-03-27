@@ -44,7 +44,7 @@ const features = [
     imageUrl: '/img/intro/developer-tools.png',
     description: (
       <>
-        FINOS contributors can access to development infrastructure services, like distributed SCM, CI/CD, IP compliance & security checks, container runtime and release automation
+        FINOS contributors can access to development infrastructure services, like code hosting, CI/CD, IP compliance &amp; security &amp; quality checks, container runtime and release automation.
       </>
     ),
   },
@@ -53,7 +53,7 @@ const features = [
     imageUrl: '/img/intro/open.png',
     description: (
       <>
-        Everyone is welcome to read, listen and submit feedback to the ODP Team; all content and conversations produced are (and will be) public.
+        Everyone is welcome to read, listen and submit feedback to the ODP team; all content and conversations produced are (and will be) public.
       </>
     ),
   },
