@@ -10,7 +10,7 @@ To enable Travis CI on a Foundation hosted project:
 
 1. [Sign in to Travis CI](https://travis-ci.org/) with your Github credentials
 2. Access the [Travis CI profile](https://travis-ci.org/profile/symphonyoss) and sync your project
-3. Add a `.travis.yml` file in the root folder of your GitHub repo (check this [.travis.yml](https://github.com/symphonyoss/ssf-parent-pom/blob/master/.travis.yml) as example)
+3. Add a `.travis.yml` file in the root folder of your GitHub repo (check this [.travis.yml](https://github.com/finos/finos-parent-pom/blob/master/.travis.yml) as example)
   a. (optional) If you need to perform variable encryption and other useful commands, install the [Travis CI Client](https://github.com/travis-ci/travis.rb) (using `gem install travis`)
 4. Access `https://travis-ci.org/<program name>/<repository-name>` and validate the build
 
@@ -26,7 +26,7 @@ A badge can be added at the top of the project's root-level `README.md` file, us
 When using Java, Travis CI can be easily configured to publish new snapshot artifacts on commit; to enable this feature, a project committer can follow these simple steps:
 
 1. Follow the Java Snapshot deployment configuration ; as a result, you should have username/password credentials (mentioned below as `CI_DEPLOY_USERNAME` and `CI_DEPLOY_PASSWORD`) to access issues.sonatype.org
-2. Email help@finos.org to request permission to deploy artifacts on Maven remote repositories; this action is not required if the developer has already been granted access previously
+2. Email [help@finos.org](mailto:help@finos.org) to request permission to deploy artifacts on Maven remote repositories; this action is not required if the developer has already been granted access previously
 3. Commit a `settings.xml` file in the project root folder
 4. Define `CI_DEPLOY_USERNAME` and `CI_DEPLOY_PASSWORD` variables with Travis CI; make sure that they're encrypted and hidden during the build process; the credentials to use are the ones defined on step 1; if you don't want to share your username/password credentials, you can request and use Nexus tokens
 5. Change the `mvn` build command to
@@ -49,7 +49,7 @@ When using Java, Travis CI can be easily configured to publish new snapshot arti
 ```
 
 ### Continuous release in Python
-Travis CI can be configured to use [python-semantic-release](http://python-semantic-release.readthedocs.io/en/latest/), a package that simplifies and automates versioning for python projects; a project lead can email help@finos.org to request Foundation staff to apply the proper Travis CI project settings; packages will be published on behalf of the FINOS pypi user.
+Travis CI can be configured to use [python-semantic-release](http://python-semantic-release.readthedocs.io/en/latest/), a package that simplifies and automates versioning for python projects; a project lead can email [help@finos.org](mailto:help@finos.org) to request Foundation staff to apply the proper Travis CI project settings; packages will be published on behalf of the FINOS pypi user.
 
 ### Continuous release in NodeJS
 Travis CI can easily publish packages to npm using [semantic-release.org](http://semantic-release.org/), which delegates release operations to your CI environment and allows you to control versioning [using commits (commitizen)](https://www.npmjs.com/package/commitizen); as a result, npm packages will be continuously released on each code repository change.
@@ -140,7 +140,7 @@ script:
 1. **Pre-release build and publishing**, using build environments that are equipped with .NET Framework and Visual Studio (headless); it also features source code tagging and version updates on source code based on incremental build number, to fully automate the package publishing pipeline
 2. **Sync with NuGet**, that can be either manual (promoting pre-releases to releases using MyGet web interface) or automatic (a committer must create a personal account on MyGet and request access from the Foundation in order to be able to push packages)
 
-In order to request a project to be integrated with MyGet, a Project lead can sign up to MyGet and email help@finos.org the following info:
+In order to request a project to be integrated with MyGet, a Project lead can sign up to MyGet and email [help@finos.org](mailto:help@finos.org) the following info:
 1. Project coordinates - GitHub project url and other useful info
 2. MyGet username
 3. CSProj and CS files - Where project descriptors are located
