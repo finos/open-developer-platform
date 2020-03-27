@@ -62,14 +62,18 @@ module.exports = {
             }]
           },
           {
-            title: 'FDX Links',
-            items: [    
+            title: 'ODP & FDX',
+            items: [
+            {
+              label: 'Contributing to ODP',
+              to: 'https://odp.finos.org/docs/contributing',
+            },
             {
               label: 'Cloud Service Certification Project',
               to: 'https://github.com/finos/cloud-service-certification/wiki',
             },
             {
-              label: 'Project Catalogue',
+              label: 'FINOS Project Catalogue',
               to: 'http://finos.github.io',
             }]
           },
