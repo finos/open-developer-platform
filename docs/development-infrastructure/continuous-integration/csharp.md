@@ -1,4 +1,0 @@
----
-id: csharp
-title: C#
----
