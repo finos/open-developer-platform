@@ -1,20 +1,15 @@
-// See https://docusaurus.io/docs/site-config for all the possible
-// site configuration options.
-
-// List of projects using ODP
-// TODO - make it work here
-const projects = require('./data/projects.json');
-
+// Docs at https://v2.docusaurus.io/docs/configuration
 module.exports = {
   title: 'Open Developer Platform',
   tagline: 'Delivering open source software development best practices while enforcing security and legal compliance for the financial services industry',
-  url: 'https://finos.github.io',
-  baseUrl: '/open-developer-platform/',
+  url: 'https://odp.finos.org',
+  baseUrl: '/',
   favicon: 'img/favicon/favicon-finos.ico',
   projectName: 'open-developer-platform',
   organizationName: 'finos',
   scripts: ['https://buttons.github.io/buttons.js'],
 
+  // TODO - find a place for these
   // ogImage: 'img/undraw_online.svg',
   // twitterImage: 'img/undraw_tweetstorm.svg',
   // twitterUsername: 'FinosFoundation',
