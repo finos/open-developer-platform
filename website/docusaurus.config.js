@@ -22,7 +22,7 @@ module.exports = {
         src: 'img/favicon/favicon-finos.ico',
       },
       links: [
-        {to: 'docs/docs-intro', label: 'Docs', position: 'right'},
+        {to: 'docs/what-is-odp', label: 'Docs', position: 'right'},
         {to: 'docs/roadmap', label: 'Roadmap', position: 'right'},
         {to: 'docs/team', label: 'Team', position: 'right'},
         {

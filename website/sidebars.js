@@ -1,6 +1,6 @@
 module.exports = {
   mainSidebar: {
-    'Getting Started': ["docs-intro", "project-collaboration"],
+    'Getting Started': ["what-is-odp", "project-collaboration"],
     'Development Infrastructure': [
       {
         type: 'category',
