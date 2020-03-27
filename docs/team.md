@@ -1,6 +1,6 @@
 ---
 id: team
-title: The ODP Project Team
+title: Project Team
 ---
 
 The ODP Project team is tasked with advising and prioritizing the building and managing of FINOS infrastructure that FINOS members are able to access for communication and open source software development.
