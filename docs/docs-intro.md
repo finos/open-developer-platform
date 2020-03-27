@@ -11,6 +11,7 @@ ODP leverages GitHub as project collaboration platform and integrates with exter
 
 ## How to use ODP
 The onboarding process on ODP is composed by the following steps:
+
 1. Sign up to GitHub.com and get a GitHub username.
 2. Sign and submit the [FINOS Contributor License Agreement](https://finosfoundation.atlassian.net/wiki/spaces/FINOS/pages/75530375/Contribution+Compliance+Requirements), in order to become part of the GitHub FINOS.
 3. Start [collaborating on FINOS projects](project-collaboration)!
