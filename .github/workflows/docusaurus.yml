@@ -8,6 +8,7 @@ on:
   push:
     branches:
       - master
+      - docusaurus-migration
     paths:
       - '.github/workflows/docusaurus.yml'
       - 'docs/**'

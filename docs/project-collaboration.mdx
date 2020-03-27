@@ -1,0 +1,394 @@
+---
+id: project-collaboration
+title: Project collaboration
+---
+
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+FINOS leverages many services offered by GitHub.com, which are documented in the [Collaboration Use Cases On GitHub](#collaboration-use-cases-on-github) and [Other collaboration use cases](#other-collaboration-use-cases) sections below.
+
+In order to collaborate in a FINOS project, the first thing is to get a GitHub.com account and sign the FINOS CLA; this document will walk you through access control and permissions that are enforced on FINOS GitHub properties.
+
+## Access Control
+| Who | What |
+|--- | :----------|
+| Any GitHub user | Fork repository |
+| | Submit a code change via Pull Request (flagged by the FINOS CLA bot)
+| | Use GitHub Issues to contribute to the discussion |
+| Anyone | Checkout the source code |
+| | Consume any artifact produced by a Project |
+| | Access FINOS issue boards |
+| Project team member (GitHub User in a FINOS Team) and PMC (GitHub User in a FINOS PMC Team)	| Make direct changes to project repositories |
+| | Anything granted by the GitHub Maintain permission |
+| FINOS Staff | Administration tasks |
+| | Monitoring |
+| GitHub user covered by CLA | Become a member of the GitHub FINOS Organization |
+| | Submit a code change via Pull Request (validated by the FINOS CLA bot) |
+| Project Lead (GitHub User) | Request to add new committers to the team (authorized by PMC) |
+
+All repositories managed by the Foundation are open (public); as a consequence, anyone is able to:
+
+1. Checkout the source code
+2. Consume any artifact produced by a Project
+3. Access [FINOS Kanban boards](https://github.com/orgs/finos/projects)
+4. Use GitHub Issues to contribute to the discussion (a GitHub account is required)
+
+Any GitHub user covered by a [Contributor License Agreement with FINOS](https://finosfoundation.atlassian.net/wiki/spaces/FINOS/pages/75530375/Contribution+Compliance+Requirements) can also:
+
+1. [Become a member of the FINOS GitHub Organization](#becoming-github-finos-organization-member)
+2. Submit a code change via Pull Request
+
+[FINOS uses GitHub Teams](https://github.com/orgs/finos/teams) to manage committers team for each project, which are the only ones allowed to make direct changes to project repositories. You can read more about FINOS teams below.
+
+Note that GitHub Teams are managed by the Project Leads, but changes must be authorized by the project [PMC](https://finosfoundation.atlassian.net/wiki/spaces/FINOS/pages/81166347/Foundation+Structure#FoundationStructure-Programs).
+
+### GitHub member VS FINOS Member
+Please note that with [*FINOS Members*](http://finos.org/membes) we normally refer to the institutions that sit on FINOS board and support us financially, whereas [*GitHub FINOS Organization members*](https://github.com/orgs/finos/people) are individuals - represented by a GitHub user(name) - that have a signed CLA with FINOS.
+
+The two concepts are completely unrelated.
+
+### Becoming GitHub FINOS Organization member
+Assuming that you have read our [Contribution Compliance Requirements](https://finosfoundation.atlassian.net/wiki/spaces/FINOS/pages/75530375/Contribution+Compliance+Requirements) and have a CLA signed with FINOS, you can request invitation to [FINOS GitHub Organization](https://github.com/orgs/finos/people) by emailing your GitHub username to [help@finos.org](mailto:help@finos.org).
+
+### Public VS Private membership
+
+<img alt="public-vs-private-membership" src={useBaseUrl('img/collab/public-vs-private.png')} />
+Any GitHub FINOS Organization member can decide whether to publish her/his affiliation with FINOS or not; given that the employer doesn't restrict such action, we welcome any of our member to set to Public the Organization visibility:
+
+1. Access https://github.com/orgs/finos/people
+2. Search for your name or GitHub username
+3. Open the dropdown close to Private
+4. Select Public visibility
+
+<img alt="repo-teams" src={useBaseUrl('img/collab/repo-teams.png')} />
+
+### CLA bot
+To help project leads validating external contributor's identity and capacity to contribute code to the Foundation, the Foundation team have deployed an instance of cla-bot, which validates all Pull Requests (PRs) across all FINOS repositories and:
+
+1. Extracts the list of GitHub users who contributed to the PR
+2. Matches their identities against FINOS internal identity database
+3. Updates the Pull Request with the result of the validation
+    a. If ok, adds a cla-signed label
+    b. if not ok, posts a comment on the issue and informs 1) the user on how to submit the CLA to FINOS 2) the project lead that the PR cannot be merged.
+
+The CLA bot source code can be found on [https://github.com/finos/cla-bot](https://github.com/finos/cla-bot).
+
+#### PR validation failure
+If the CLA Bot finds something wrong in a PR, it will fail the validation checks, showing a visible red mark and (optionally, if configured), block anyone to merge the Pull Request.
+
+#### Re summoning the bot
+When a Pull Request gets modified, or a contributors CLA gets added, it can be re-summoned simply adding a comment with the text @finos-cla-bot[bot] check.
+
+#### GitLab version
+There is a GitLab version of this bot that can be found on [https://github.com/ScottLogic/gitlab-cla-bot](https://github.com/ScottLogic/gitlab-cla-bot); FINOS uses it to run an internal GitLab instance.
+
+#### Email validation
+In order to allow the CLA bot to validate a Pull Request, every contributor must ensure that commits are signed with a valid email address, properly configured (and verified) on GitHub. Otherwise, the CLA bot will post the following message:
+```
+Thank you for your contribution and Welcome to our Open Source Community!
+
+To make sure your pull request is successful, we need all our contributors to be identifiable, but we couldn't parse the GitHub details of the following people : {{unidentifiedUsers}}
+
+Luckily, resolving the issue is straightforward and you can resolve it by following the instructions below.
+
+1. Check your git client is configured with a user email git config --list | grep email
+
+2. If the user email is missing, run the following command, substituting with your git commit email address git config --global user.email email@example.com
+
+3. Make sure your git commit email is configured on GitHub by Setting your Commit Email Address
+
+4. Then, amend the authors in your commit history by using git commit --amend to change your last commit.
+
+Alternatively, use the slightly more complex git reset --soft and git rebase to checkout your changes, rewrite the commit history locally and (force) push changes to the downstream branch.
+
+If you have any issues with the steps above, please email help@finos.org so we can help you resolve before reviewing and accepting your pull request.
+
+Thanks once again for the contribution and understanding.
+
+_cc_ @finos-admin
+```
+
+### Teams
+Every Program, PMC and Project will be mapped as a GitHub team, following a 2-levels hierarchical structure:
+```
+1. <each FINOS Program Team>
+  a. FINOS Project Team, belonging to the Program
+2. panpmcs
+  a. <each FINOS PMC Team>
+```
+
+Note that FINOS Program Teams only inherit members from sub-groups, they are not directly managed.
+
+Each repository will grant access to these teams, as shown in the picture below (taken from the [datahelix project](https://github.com/finos/datahelix))
+
+<img alt="finos-teams" src={useBaseUrl('img/collab/finos-teams.png')} />
+
+## Collaboration use cases on GitHub
+
+### Code hosting
+
+Code in the Foundation is hosted exclusively on [https://github.com/finos](https://github.com/finos), with exception for **Hadouken**, **Plexus Interop** and **Symphony** programs, which use dedicated GitHub Organizations, see below. These orgs are still managed by FINOS and share the same configuration, which is documented in this page.
+
+| Program | GitHub Organization |
+|--- | :----|
+| Hadouken | https://github.com/HadoukenIO |
+| Plexus Interop | https://github.com/finos-plexus |
+| Symphony | https://github.com/symphonyoss |
+
+#### Building and testing
+The build is an end-to-end process that converts source code into reusable artifacts, something that we will refer to as deployable units, which is developed by the project team and hosted in the github repository. It is a particularly important task, as it can centralise and trigger several automated sub-tasks, such as version control, code testing, quality and compliance reports and more.
+
+A working build process is key to implement more automated processes, such as release, [Continuous Integration]() and automated deployments; it is also a requirement for [project activation]().
+
+To know more about build configuration, check the [Languages]() page.
+
+#### Versioning
+Versioning is the process to establish a format to a project version and the rules to update it, preferably integrating with automated build and release systems; the Foundation mandates the use of [Semantic Versioning](http://semver.org/) ("semver") throughout a project's lifecycle:
+
+- for incubating projects, version numbers must be less than 1.0.0
+- for [Active](https://finosfoundation.atlassian.net/wiki/spaces/FINOS/pages/75530371/Active) projects, version numbers can be 1.0.0 or greater
+
+Every project team is encouraged to define specific criteria by which the MAJOR, MINOR and PATCH components of the semver scheme will be used (keeping in mind the general guidelines semver itself mandates), since this helps to provide clarity to consumers.
+
+#### Release
+The release process allows to publish deployable units into a publicly available artifact repository, by invoking the build process and applying version control to increment the project's version; the Foundation collects guides and best practices on how to release a project, depending on the language and eco-system of choice; browse the [Languages]() page to know more about automated configurations for a given language.
+
+#### Best practices
+
+##### Avoid direct changes to GitHub repositories - use Pull Requests
+Making direct changes to repositories is not recommended, for teams bigger than 1, for few reasons, including:
+
+1. Direct commits are not validated, as they cannot be blocked (ie, if CLA is not in place)
+2. Pull Requests allow to have a conversation with the team
+3. Pull Requests tent to have a more thorough validation pipeline
+
+##### Committers authorized by PMC
+GitHub Teams are managed by the Project Lead, but changes must be authorized by the [PMC](https://finosfoundation.atlassian.net/wiki/spaces/FINOS/pages/81166347/Foundation+Structure#FoundationStructure-Programs).
+
+### Issues
+[**GitHub Issues**](https://guides.github.com/features/issues/) provides a simple and flexible way to track task lists; issues can also include list of checkboxes, as shown in the image.
+
+Labels can be useful to add meta information to tasks, like type, audience and more.
+
+#### Issue Templates
+When creating a new issue, it is possible to guide users via Issue Templates, which allow to:
+
+1. Choose an issue type from a list; at FINOS, we start providing 3 templates: bugs, feature requests and support questions (check the project blueprint below)
+2. Define a template for the issue content (ie, abstract, expected result, actual result)
+
+#### Issue Labels
+Labels are very helpful to manage issues; each repository can define its own taxonomy, though it is helpful to enforce a common list of labels, so that the experience of using GitHub Issues across different repositories and projects is the same. It is also handy when using GitHub boards that link to multiple repositories.
+
+```
+- Priorities - #ff0000
+  - prio-high - High priority
+  - prio-low - Low priority
+  - prio-medium - Medium priority
+- Contribution hints - #5319e7
+  - good first issue - A good first issue to start contributing
+  - help wanted
+- Issue status - #a2e8e6
+  - on hold - Tasks not executed until further notice
+  - feature writing - Grooming and feature writing needed
+  - ready for dev - This item is ready for development
+- Types - #53c43c
+  - docs - Related to documentation
+  - question - Further information is requested
+  - meeting - If an issue describes a meeting minute
+  - vote - If an issue describes a vote
+  - indexed - When meeting attendance (assignees) is tracked
+- Topics - #ffd4b7
+  - github - GitHub related topic
+  - docusaurus - Docusaurus related topic
+```
+
+### Project Releases
+The easiest way to define roadmaps in GitHub is using [**Milestones**](https://guides.github.com/features/issues/), which allow to group issues together and associate a title, description and due date.
+
+As a complement or alternative, [**GitHub project boards**](https://help.github.com/en/articles/about-project-boards) can be used to define a Kanban (or "flow") of activities across a list of predefined states, which can be mapped to the milestones of a roadmap.
+
+<img alt="milestone-example" src={useBaseUrl('img/collab/milestone-example.png')} />
+
+### Project Website
+FINOS Projects may need a Wiki in order to collaboratively edit and publish content related with general documentation, team composition, meeting information, how to get in touch and other useful info.
+
+FINOS uses a framework called Docusaurus to build a website template that any project can adopt; this website is an example. The advantages of having a centralised strategy for project documentation includes:
+
+1. Ease of use - Markdown file syntax, simple local development, easy configuration.
+2. Easy to collaborate - Files are stored in a `docs/` GitHub repository folder, anyone can submit a Pull Request.
+3. Automated - any change to the `master` branch version will trigger a deployment of the website, using the [Docusaurus build action](TODO - link); also forks can enable this action, so that Pull Request submitters can provide a link to their preview website.
+4. Branded - enforces FINOS graphic guidelines across all websites
+
+If you want to add a website to an existing project, checkout the [ODP Project Documentation](development-infrastructure/project-documentation); if you are starting a project from scratch, checkout the [FINOS project blueprint](#finos-project-blueprint).
+
+Checkout [FDC3](http://fdc3.finos.org/) and [Financial Objects](http://fo.finos.org/) as other examples.
+
+<img alt="fdc3-org" src={useBaseUrl('img/collab/fdc3-org.png')} />
+
+### Conversations
+In order to track threaded conversations - among project team members, external collaborators and consumers - it is possible to use [**GitHub Issues**](https://help.github.com/en/github/managing-your-work-on-github/about-issues), with the following limitations:
+
+1. The scope of the conversations is always public, whereas there may be sensitive conversations across project leaders that may require to be confidential
+2. Issue comments are flat, although mentions and quoting can be used to follow multiple conversation threads.
+
+A more advanced way (currently being investigated at FINOS) is to use [**GitHub team discussions**](https://help.github.com/en/articles/about-team-discussions):
+
+1. Can be created as private, which are accessible only by team members
+2. Can be created as public to all GitHub FINOS org members
+3. Cannot be created at public to non FINOS member or unauthenticated visitors, so GitHub Issues is the only option for that.
+
+Both features **support email notifications** and the ability to post a comment by answering to it.
+
+<img alt="team-page-discussions-tab" src={useBaseUrl('img/collab/team-page-discussions-tab.png')} />
+
+### Voting
+FINOS Governance processes require voting at different levels (and publicly available), including but not limited to:
+
+1. PMC votes for new contributions
+2. Project votes for new committers, releases and other decisions
+
+GitHub Issues can provide an easy platform to vehicle this process:
+
+1. The person casting the vote opens a GitHub Issue (see ODP issue template as example). The following items must be filled/reviewed, before circulating the issue URL:
+  a. Title and description of the vote; use the [VOTE] prefix in the issue title, to help issue browsing and discoverability
+  b. Add the vote label
+  c. List of users who have the right to a binding vote, typically the project or PMC teams
+2. Everyone can vote the issue, until the vote is open:
+  a. Those with a GitHub account can simply react to the issue (see image to the right)
+  b. Those without a GitHub account can react via email (using any public FINOS list)
+3. The person casting the vote counts reactions and reports the following data in a issue comment:
+  a. Total votes (add links to email web history for each email vote, if any)
+  b. Binding votes (Approve, Deny, Abstained)
+  c. Result
+
+<img alt="vote-reactions" src={useBaseUrl('img/collab/vote-reactions.png')} />
+
+#### Project setup
+A project needs:
+
+1. A Github repository
+2. The <code>vote</code> issue label defined
+3. Issue template <code>.github/ISSUE_TEMPLATE/Vote.md</code> defined
+
+### Meeting Minutes
+
+<img alt="meeting-issue-template-create" src={useBaseUrl('img/collab/issue-template-create.png')} />
+
+Meetings are one of the most used collaboration channels at FINOS, and minutes are very important, as they provide a transparency across all project activities and decisions; you can read more in the [Running Good Meetings](https://finosfoundation.atlassian.net/wiki/spaces/FINOS/pages/92996572/Running+Good+Meetings) page; they are also very important for participants, as they are used to track meeting participation and therefore the activity of each individual and firm; all data is publicly available at metrics.finos.org
+
+Although Atlassian Confluence is currently the most used tool, FINOS also provides a way to use GitHub Issues to manage meeting minutes. The person leading the meeting (or meeting leader) can create a new GitHub Issue for each meeting, following the [Meeting template provided by FINOS](https://github.com/finos/open-developer-platform/blob/master/.github/ISSUE_TEMPLATE/Meeting.md) and leverage issue assignees to track meeting participants (see our public activity dashboards).
+
+- *Prior to the meeting* - normally 48 hours before - a new GitHub Issue is created using the Meetings issue template; use the <code>[MEETING]</code> prefix in the issue title, to help issue browsing and discoverability. The issue URL can be then circulated
+- *At the beginning of the meeting* - the meeting leader identifies all participants with their GitHub username and adds them as issue assignees
+- *At the end of the meeting* - the meeting leader adds the <code>meeting</code> label to the issue, triggering the indexing process; when done, the label <code>indexed</code> will be added
+
+<img alt="meeting-issue" src={useBaseUrl('img/collab/meeting-issue.png')} />
+
+#### Corner cases
+
+- If a GitHub username cannot be added as issue assignee, it means that is not part of github.com/orgs/finos/people (the GitHub FINOS Org members); to work around this restriction, the GitHub user can add a hello comment to the issue, which will allow the meeting leader to do the assignment. In parallel, the GitHub user can sign a CLA with FINOS and request GitHub Org membership.
+- If a participant doesn't have a GitHub account, the meeting leader can add full name and affiliation in the issue description (see issue template).
+- If the meeting leader makes a mistake and wants to remove the meeting from the records, the meeting label can simply be removed, and the items will be removed (including the <code>indexed</code> label). After fixing assignments, the <code>meeting</code> label can be added again.
+
+#### Project setup
+A project needs:
+
+1. A Github repository
+2. The meeting leader must have at least <code>Write</code> access to the repository
+3. The <code>meeting</code> issue label defined
+4. Issue template [<code>.github/ISSUE_TEMPLATE/Meeting.md</code>](https://github.com/finos/open-developer-platform/blob/master/.github/ISSUE_TEMPLATE/Meeting.md) defined
+5. Action [<code>.github/workflows/meetings.yml</code>](https://github.com/finos/open-developer-platform/blob/master/.github/workflows/meetings.yml) defined
+6. GitHub repository secrets (ask [help@finos.org](mailto:help@finos.org) to set them up)
+
+### Security Scanning
+In order to consolidate processes and tools around security vulnerabilities management, FINOS have shared a [guidelines around responsible disclosure for security vulnerabilities](https://finosfoundation.atlassian.net/wiki/spaces/FINOS/pages/1230176257/Security+Vulnerabilities+Responsible+Disclosure+Policy) and teamed up with WhiteSource to configure a bot that continuously scans - across each configured repository - all external dependencies; the bot is able to scan direct commits and Pull Requests, and by default creates GitHub Issues with details about the vulnerability; you can read more about [WhiteSource integration for GitHub.com](https://finosfoundation.atlassian.net/wiki/spaces/FDX/pages/1129283585/WhiteSource+for+GitHub.com).
+
+### FINOS Project blueprint
+[Project blueprint](https://github.com/finos/project-blueprint) is a FINOS project that provides a template for new or existing repositories; it includes:
+
+1. A [README.md template](https://github.com/finos/project-blueprint/blob/master/README.template.md), with a suggested structure of content
+2. A [NOTICE template](https://github.com/finos/project-blueprint/blob/master/NOTICE), required by FINOS bylaws
+3. A [LICENSE template](https://github.com/finos/project-blueprint/blob/master/LICENSE), required by FINOS bylaws
+4. A [Code of Conduct](https://github.com/finos/project-blueprint/blob/master/.github/CODE_OF_CONDUCT.md) template, required by FINOS bylaws
+5. [Contributing guidelines](https://github.com/finos/project-blueprint/blob/master/.github/CONTRIBUTING.md), required by FINOS bylaws
+6. [WhiteSource custom configuration](https://github.com/finos/project-blueprint/blob/master/whitesource.config), to setup continuous security scanning for your project
+7. Issue templates for bugs, feature requests and support questions , [defined in the <code>.github</code> folder](https://github.com/finos/project-blueprint/tree/master/.github/ISSUE_TEMPLATE)
+
+Placeholders are defined using the <code>{}</code> brackets.
+
+#### Creating a new repository
+Anyone can use the Project blueprint repository, simply accessing [https://github.com/finos/project-blueprint](https://github.com/finos/project-blueprint) and pressing the <code>Use this template</code> button and following instructions.
+
+The main <code>README.md</code> file contains instructions on how to replace placeholders across all blueprint files.
+
+#### Aligning existing repository with project blueprint
+There is no automated way to align an existing repository with the project blueprint structure, therefore it must be done manually, going through the blueprint items listed above and copy/paste content across repositories.
+
+#### Built-in project website
+The blueprint comes with a built-in Docusaurus instance to run a [project website](#project-website), see `docs/` and `website/` folders.
+
+#### Automated and continuous quality scanning
+The ODP team is working on a GitHub action to continuously check all FINOS repositories against FINOS bylaws and requirements; see https://github.com/finos/open-developer-platform/issues/31 to know more.
+
+#### Other resources
+- [About permissions on GitHub](https://help.github.com/en/github/getting-started-with-github/access-permissions-on-github#organization-accounts)
+- [About GitHub Teams](https://help.github.com/en/github/setting-up-and-managing-organizations-and-teams/about-teams)
+- [Other GitHub guides](https://guides.github.com/)
+
+## Other collaboration use cases
+
+### Web Conferencing (Webex)
+The Foundation provides a Webex-based web conferencing facility to support online meetings.  We expect PMCs and Working Groups who don't have their own Webex service to make use of this infrastructure for their regular meetings. Please email help@finos.org or raise a HELP issue to request assistance with.
+
+#### Why WebEx
+The Foundation has determined that most other web conferencing services (including, but not limited to, GoTo Meeting, Zoom, appear.in, RingCentral, and more) are blocked by some or all of the banks that participate in our community.  Webex is the only web conferencing system that is reasonably broadly supported by the banks, and in order to ensure equal access to all community members (and especially those employed by a bank), we strongly recommend using Webex exclusively for web conferencing.
+
+That said, it doesn't have to be the Foundation's Webex account specifically - any Webex account will be equally accessible by the community.
+
+### Mailing Lists (Google Groups)
+The Foundation provides mailing lists via the [Google Groups service](https://groups.google.com/a/finos.org/forum/#!myforums).  Email, as a lowest common denominator communication channel, is one of the best ways to reach the broadest cross-section of the community as possible.
+
+The FINOS mailing lists have a fairly low amount of collaboration, as GitHub.com Issues and Discussions are normally used instead; they're mostly used for announcements and notifications, to stay in touch with marketing, community, programs and project updates.
+
+Checkout the [list of FINOS Google Groups](https://finosfoundation.atlassian.net/wiki/spaces/FINOS/pages/77955298/Engage+Our+Community).
+
+#### Email Best Practices
+
+- Keep it clean - many members of the community participate from their place of employment, so please use professional tone and language at all times.
+- Treat people with respect and consideration - specifically, ensure you're familiar with the [code of conduct](https://www.finos.org/code-of-conduct).
+- Be helpful - be willing to jump in to answer questions.  Even if you aren't 100% sure of the answer, posting your understanding can help unlock a deeper conversation (and if you're unsure, briefly saying so is a good idea).
+- Stay calm - the written word is always open to interpretation, so give people the benefit of the doubt and try not to let emotions get out of control.
+- Be patient - people with the appropriate skills might not be around the moment you ask a question.  New community members will be asking "beginner" questions that may have already been answered previously - be gentle and polite in helping them navigate the Foundation's content.
+- Minimize "walls of text" - avoid emails containing large blocks of text.  A worthy aspiration is to try to craft emails that fit on a smart phone screen without swiping.
+- Prefer public mailing lists for all email communication - chances are that someone else in the community will be interested in the topic you're discussing, and by leveraging public mailing lists you create the opportunity for them to find that content themselves.
+- Don't use email attachment - Many banks silently delete emails containing certain types of file attachment - notably executables (EXE files, etc.), source code files (JS files, etc.), and archive files (ZIP files, etc.).  For this reason we recommend using file attachments sparingly, limiting the use of archive files when sending attachments, and trying to stick to "safe" (content only) file formats such as PDF, Word, Powerpoint, etc.
+
+### Wiki (Confluence Cloud)
+The Foundation provides a Cloud-hosted instance of the [Atlassian Confluence wiki](https://finosfoundation.atlassian.net/wiki) for use by the community. This software provides content collaboration features, for both web content, and document-based content. Most of the content is publicly available, though it's possible to restrict access to pages.
+
+Access to Confluence is available to the community for free - you can [sign up for an account](https://id.atlassian.com/signup?continue=https%3A%2F%2Ffinosfoundation.atlassian.net%2Flogin%3FredirectCount%3D1%26dest-url%3D%252Fwiki%252Fspaces%252FFINOS%252Foverview).
+
+#### Accessibility issues
+Please be aware that several eployees of financial institutions have experienced issues creating accounts on https://finosfoundation.atlassian.net/wiki due to compliance related restrictions applied to their corporate network.
+
+The Project Website section documents how to 
+Teams can also decide to use GitHub Wiki to document their project activity and publish documentation, you can read more on https://help.github.com/en/articles/about-wikis or see how some FINOS hosted projects, like the GreenKey Discovery SDK, are using it today.
+
+## Minuting Services
+The Foundation offers a dedicated scribe who is available to capture the minutes of online meetings.  These minutes include:
+
+1. the list of attendees, provided a formal roll call is conducted by the host at the commencement of the call
+2. a summary of the discussion of each agenda item
+3. any decisions reached (i.e. using the Foundation's decision making mechanism)
+4. any actions identified during the meeting
+
+To request scribe services, please email [help@finos.org](mailto:help@finos.org) and include the schedule of meetings you need assistance with.  The Foundation will then confirm whether the scribe is available at that time, and provide further instructions regarding booking their time.
+
+Content will be added to the Confluence meeting minute page containing the agenda (which must exist prior to the call - see note below), or, if you're using some other system for meeting minutes, as a Word document attachment in an email (which you will then have to copy into that system yourself).
+
+Other important notes:
+
+- Minuting services are available on a first-come, first-served basis; if the scribe is already booked for a meeting at the same time as yours, they will not be available. We encourage PMCs and Project leads to review the meeting schedules of their peers, to reduce the risk of such conflicts.
+- We encourage PMC leads and Project leads to delegate minute taking responsibilities on a rotating basis to participants in the call, in cases where the scribe is unavailable.
+- The provided minutes will be "raw", and will almost always require further editing by the host and/or attendees of the call to correct domain specific terminology (FinServ and technology acronyms, organisation names, etc.).
+- All meetings where minuting is requested must have a written agenda published prior to the commencement of the call, ideally here on Confluence.  Agendas are required by the Foundation's [anti-trust policy](https://www.finos.org/hubfs/FINOS/governance/FINOS%20Antitrust%20Policy%202018-04-24.pdf).

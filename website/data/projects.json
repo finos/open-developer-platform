@@ -1,0 +1,26 @@
+[   {
+        "caption": "FDC3",
+        "image": "https://www.finos.org/hs-fs/hubfs/2019_FDC3_Logo_CLR.png?width=258&name=2019_FDC3_Logo_CLR.png",
+        "infoLink": "https://fdc3.org",
+        "pinned": true
+    },
+    {
+        "caption": "Perspective",
+        "image": "https://perspective.finos.org/img/logo.png",
+        "infoLink": "https://perspective.finos.org",
+        "pinned": true
+    },
+    {
+        "caption": "Alloy",
+        "image": "",
+        "infoLink": "https://alloy.finos.org",
+        "pinned": true
+    },
+    {
+        "caption": "Plexus Interop",
+        "image": "https://www.finos.org/hs-fs/hubfs/plexus.png?width=272&name=plexus.png",
+        "infoLink": "https://finos-plexus.github.io/plexus-interop",
+        "pinned": true,
+        "isMember": true
+    }
+]

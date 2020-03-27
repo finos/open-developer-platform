@@ -1,10 +1,3 @@
-/**
- * Copyright (c) 2017-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
 const React = require('react');
 
 const CompLibrary = require('../../core/CompLibrary.js');
@@ -63,7 +56,6 @@ class HomeSplash extends React.Component {
         <div className="inner">
           <ProjectTitle tagline={siteConfig.tagline} title={siteConfig.title} />
           <PromoSection>
-            <Button href=''>Get Started</Button>
             <Button href={siteConfig.repoUrl}>GitHub</Button>
           </PromoSection>
         </div>
@@ -106,55 +98,40 @@ class Index extends React.Component {
       <Block background="white" layout="fourColumn">
         {[
           {
-            content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. [Pellentesque]() pellentesque id standard`,
-            image: `${baseUrl}img/feature-blank.svg`,
+            content: `ODP provides collaboration workflows that are open and accessible by everyone, especially financial institutions, which are often blocked by regulatory restrictions.`,
+            image: `https://www.finos.org/hubfs/FINOS/website/pages/odp/icons/people.svg`,
             imageAlign: 'top',
-            title: 'Example 1',
+            title: 'Project Collaboration',
           },
           {
-            content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. [Pellentesque]() pellentesque id standard`,
-            image: `${baseUrl}img/feature-blank.svg`,
+            content: `FINOS contributors can access to development infrastructure services, like distributed SCM, CI/CD, IP compliance & security checks, container runtime and release automation`,
+            image: `https://www.finos.org/hubfs/FINOS/website/pages/odp/icons/construct.svg`,
             imageAlign: 'top',
-            title: 'Example 2',
+            title: 'Developer tooling',
           },
           {
-            content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. [Pellentesque]() pellentesque id standard`,
-            image: `${baseUrl}img/feature-blank.svg`,
+            content: `Everyone is welcome to read, listen and submit feedback to the ODP Team; all content and conversations produced are (and will be) public.`,
+            image: `https://www.finos.org/hubfs/FINOS/website/pages/odp/icons/people.svg`,
             imageAlign: 'top',
-            title: 'Example 3',
-          },
-          {
-            content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. [Pellentesque]() pellentesque id standard`,
-            image: `${baseUrl}img/feature-blank.svg`,
-            imageAlign: 'top',
-            title: 'Example 4',
-            link: `${baseUrl}/appd-intro`
+            title: 'Open to everyone',
           }
-          
         ]}
       </Block>
     );
 
-    const UserShowcase = () => {
-      if ((siteConfig.users || []).length === 0) {
+    const ProjectShowcase = () => {
+      if ((siteConfig.projects || []).length === 0) {
         return null;
       }
 
-      const pinnedUsers = siteConfig.users.filter(user => user.pinned);
+      const pinnedProjects = siteConfig.projects.filter(project => project.pinned);
 
       const pageUrl = page => baseUrl + (language ? `${language}/` : '') + page;
 
       return (
-        <div className="userShowcase productShowcaseSection paddingTop paddingBottom">
-          <h2>Who is Using ODP?</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac pulvinar velit. Curabitur maximus dui in libero vehicula fringilla. Nam eu fringilla turpis. Pellentesque id. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent iaculis.</p>
-          <Showcase users={pinnedUsers} />
-          {/* exclude button to users page for now, all users shown on main page */}
-          {/* <div className="more-users">
-            <a className="button" href={pageUrl('users.html')}>
-              All {siteConfig.title} Users
-            </a>
-          </div> */}
+        <div className="projectShowcase productShowcaseSection paddingTop paddingBottom">
+          <h2>Projects Using ODP</h2>
+          <Showcase projects={pinnedProjects} />
         </div>
       );
     };
@@ -164,8 +141,8 @@ class Index extends React.Component {
         <HomeSplash siteConfig={siteConfig} language={language} />
         <div className="mainContainer">
           <Features />
-          <FeatureCallout />
-          <UserShowcase />
+          {/* <FeatureCallout /> */}
+          <ProjectShowcase />
         </div>
       </div>
     );
