@@ -9,7 +9,7 @@ import styles from './styles.module.css';
 const features = [
   {
     title: <>Project Collaboration</>,
-    imageUrl: 'https://www.finos.org/hubfs/FINOS/website/pages/odp/icons/people.svg',
+    imageUrl: '/img/intro/project-collaboration.png',
     description: (
       <>
         ODP provides collaboration workflows that are open and accessible by everyone, especially financial institutions, which are often blocked by regulatory restrictions.
@@ -18,7 +18,7 @@ const features = [
   },
   {
     title: <>Developer tooling</>,
-    imageUrl: 'https://www.finos.org/hubfs/FINOS/website/pages/odp/icons/construct.svg',
+    imageUrl: '/img/intro/developer-tools.png',
     description: (
       <>
         FINOS contributors can access to development infrastructure services, like distributed SCM, CI/CD, IP compliance & security checks, container runtime and release automation
@@ -27,7 +27,7 @@ const features = [
   },
   {
     title: <>Open to everyone</>,
-    imageUrl: 'https://www.finos.org/hubfs/FINOS/website/pages/odp/icons/people.svg',
+    imageUrl: '/img/intro/open.png',
     description: (
       <>
         Everyone is welcome to read, listen and submit feedback to the ODP Team; all content and conversations produced are (and will be) public.
