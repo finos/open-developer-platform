@@ -30,6 +30,6 @@ module.exports = {
       'development-infrastructure/project-documentation',
       'development-infrastructure/continuous-delivery'
     ],
-    'About ODP': ["team","roadmap"],
+    'About ODP': ["contributing","team","roadmap"],
   },
 }
