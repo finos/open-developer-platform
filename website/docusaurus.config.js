@@ -88,6 +88,14 @@ module.exports = {
             {
               label: 'FINOS Governance',
               to: 'https://finosfoundation.atlassian.net/wiki/spaces/FINOS/pages/75530783/Community+Governance',
+            },
+            {
+              label: 'LinkedIN',
+              to: 'https://www.linkedin.com/company/finosfoundation',
+            },
+            {
+              label: 'Twitter',
+              to: 'https://www.twitter.com/finosfoundation',
             }
           ]
         }
