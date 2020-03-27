@@ -8,6 +8,7 @@ on:
   push:
     branches:
       - master
+      - docusaurus-migration
     paths:
       - '.github/workflows/docusaurus.yml'
       - 'docs/**'
@@ -33,7 +34,9 @@ jobs:
     - name: Install Node
       uses: actions/setup-node@v1
     - name: Install Website deps
-      run: npm install --prefix website
+      run: |
+        ./scripts/build-contribute-page.sh
+        npm install --prefix website
     - name: Patch forked version
       run: |
         # Extract GitHub org/user and patch siteConfig.js only if not "finos"
