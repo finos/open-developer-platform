@@ -6,6 +6,29 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
 
+const projects = [
+  {
+    "name": "FDC3",
+    "imageUrl": "https://www.finos.org/hs-fs/hubfs/2019_FDC3_Logo_CLR.png?width=258&name=2019_FDC3_Logo_CLR.png",
+    "url": "https://fdc3.org"
+  },
+  {
+    "name": "Perspective",
+    "imageUrl": "https://perspective.finos.org/img/logo.png",
+    "url": "https://perspective.finos.org"
+  },
+  {
+    "name": "Alloy",
+    "imageUrl": "",
+    "url": "https://alloy.finos.org"
+  },
+  {
+    "name": "Plexus Interop",
+    "imageUrl": "https://www.finos.org/hs-fs/hubfs/plexus.png?width=272&name=plexus.png",
+    "url": "https://finos-plexus.github.io/plexus-interop"
+  }
+]
+
 const vendors = [
   {
     imageUrl: 'img/vendors/github-logo.png',
@@ -88,6 +111,20 @@ function Vendor({imageUrl, name}) {
   );
 }
 
+function Project({imageUrl, name}) {
+  const imgUrl = useBaseUrl(imageUrl);
+  return (
+    <div className={classnames('text--center col col--4', styles.feature)}>
+      {imgUrl && (
+        <div className="text--center">
+          <img className={styles.featureImage} src={imgUrl} alt={name} />
+        </div>
+      )}
+      <h3>{name}</h3>
+    </div>
+  );
+}
+
 function Home() {
   const context = useDocusaurusContext();
   const {siteConfig = {}} = context;
@@ -130,6 +167,18 @@ function Home() {
                 <h2>ODP Vendors</h2>
                 {vendors.map((props, idx) => (
                   <Vendor key={idx} {...props} />
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+        {projects && projects.length && (
+          <section className={styles.features}>
+            <div className="container">
+              <div className="row">
+                <h2>Used by FINOS Projects</h2>
+                {projects.map((props, idx) => (
+                  <Project key={idx} {...props} />
                 ))}
               </div>
             </div>

@@ -34,5 +34,5 @@ WebEx Meeting number is **661 146 297**
 
 ### Meeting minutes
 You can find meeting minutes history on:
-- The [Confluence Wiki Minutes page](https://finosfoundation.atlassian.net/wiki/spaces/FDX/pages/253034498/Minutes+of+the+ODP+Project), until 11 March 2020
 - GitHub [issues with meeting labeled](https://github.com/finos/open-developer-platform/issues?q=label%3Ameeting), as of 25 March 2020
+- The [Confluence Wiki Minutes page](https://finosfoundation.atlassian.net/wiki/spaces/FDX/pages/253034498/Minutes+of+the+ODP+Project), until 11 March 2020

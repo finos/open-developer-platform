@@ -1,4 +1,0 @@
----
-id: java
-title: Java
----
