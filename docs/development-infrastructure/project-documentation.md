@@ -18,6 +18,9 @@ This page walks through the use of docusaurus on a local environment; full docum
 ### Docusaurus Build Action
 FINOS have developed a GitHub Action to automatically build the Docusaurus websites and publish them into GitHub Pages; the action works on upstream repositories (ie https://github.com/finos/open-developer-platform) as well as forked ones (ie https://github.com/maoo/open-developer-platform), providing a simple way to stage the web version of a change to a Docusaurus website.
 
+#### Enabling the action
+If you're forking a repository with the Docusaurus build action, you need to access the `Actions` tab of your GitHub (forked) repository and click on the `Enable GitHub Actions` button. At that point, any change you make on your `master` branch will be published on `https://<github username>.github.io/<repository name>`.
+
 #### Known issue
 When the action runs for the first time, GitHub automatically configures GitHub Pages to read contents from the gh-pages branch, but for some reason, it doesn’t build the HTTP(s) endpoint. To enable it:
 
