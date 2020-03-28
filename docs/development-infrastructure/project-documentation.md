@@ -123,3 +123,10 @@ Add links to docs, custom pages or external links by editing the `headerLinks` f
 For more information, checkout the [docusaurus navigation docs](https://docusaurus.io/docs/en/navigation).
 
 In Docusaurus 2, [navigation have been greatly improved](https://v2.docusaurus.io/docs/sidebar).
+
+## Other solutions
+Before Docusaurus, FINOS Community have experimented few other solutions, which are worth mentioning for historical reasons:
+
+1. [GitHub Wiki](https://help.github.com/en/github/building-a-strong-community/about-wikis) provides a great integration with code, as it's hosted as a git endpoint; however, Pull Requests are not available, therefore the collaboration mechanism can only be extended to the project team, which is a big limitation. Also, installing a local development environment [is not trivial](https://gist.github.com/suewonjp/7493de784f4a88c63d1810031609ee35) Its biggest advantage is the possibility to preview the changes via the GitHub web UI
+2. [Jekyll](https://jekyllrb.com/), the page generator engine used by GitHub Pages, which also supports templating; the downside of Jekyll is that the installation of a local development environment (Ruby) is hard.
+3. [GoHugo](https://gohugo.io/), a generic static page generator written in Go, with a strong community and eco-system
