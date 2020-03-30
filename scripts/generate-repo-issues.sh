@@ -7,7 +7,8 @@ generate_post_data()
   cat <<EOF
 {
   "title": "$ISSUE_TITLE",
-  "body": "$ISSUE_DESCRIPTION"
+  "body": "$ISSUE_DESCRIPTION",
+  "labels": ["quality checks"]
 }
 EOF
 }
