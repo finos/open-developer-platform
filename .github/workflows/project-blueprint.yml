@@ -28,5 +28,5 @@ jobs:
       run: git clone https://finos-admin:$FINOS_TOKEN@github.com/finos-admin/metadata.git >/dev/null
     - name: Generating repository validation
       run: curl -s https://raw.githubusercontent.com/finos/open-developer-platform/master/scripts/generate-repo-validation.sh | bash
-    - name: Checking existing issues
-      run: curl -s https://raw.githubusercontent.com/finos/open-developer-platform/master/scripts/check-existing-issues.sh | bash
+    - name: Generating repository issues
+      run: curl -s https://raw.githubusercontent.com/finos/open-developer-platform/master/scripts/generate-repo-validation.sh | bash
