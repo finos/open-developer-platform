@@ -35,8 +35,7 @@ It may take 20 to 40 minutes to enable the URL, until then you may get a 404 err
 
 The action can be [copied from the ODP GitHub repository](https://github.com/finos/open-developer-platform/blob/master/.github/workflows/docusaurus.yml)
 
-In order to use the action, simply copy the raw file content into a file called `.github/workflows/docusaurus.yml` , then push the changes; the action should automatically run and deploy the HTML files into the `gh-pages` branch.
-
+In order to use the action, simply copy the [`Raw` file content](https://github.com/finos/open-developer-platform/blob/master/.github/workflows/docusaurus.yml) into a file called `.github/workflows/docusaurus.yml` , then push the changes; the action should automatically run and deploy the HTML files into the `gh-pages` branch.
 
 ### Docusaurus 2 (alpha)
 This document refers to Docusaurus 1.x version.
