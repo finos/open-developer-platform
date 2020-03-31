@@ -80,7 +80,7 @@ Thanks once again for the contribution and understanding.
 _cc_ @finos-admin
 ```
 
-## Project compliance scan
+### Project compliance scan
 FINOS have developed a tool that scans all the GitHub repositories across all FINOS orgs and generates a report based on the following quality and compliance validations:
 - `has-admin` - One or more admin collaborators were found in this GitHub repository. FINOS Governance doesn't allow GitHub users to have Admin rights on repositories, therefore it must be removed.
 - `has-user` - One or more user collaborators were found in this GitHub repository. FINOS Governance only allows GitHub users to be added via Teams. Please remove it, therefore it must be removed.
@@ -102,7 +102,7 @@ FINOS have developed a tool that scans all the GitHub repositories across all FI
 
 Code is publicly available on https://github.com/finos/metadata-tool, the command to invoke is `check-project-repos`.
 
-### Reporting via GitHub Issues
+#### Reporting via GitHub Issues
 *Work in progress - follow https://github.com/finos/open-developer-platform/issues/31*
 
 In order to deliver these reports directly to the teams, the Open Developer Platform have developed a GitHub Action that uses metadata-tool to generate the project reports and submits a GitHub Issue for each GitHub repository where validation problems were spotted; the issue will include a detailed description of the validation done and point the reader on how to resolve it.
