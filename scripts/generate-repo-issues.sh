@@ -3,7 +3,7 @@
 # This script generates the repo issues
 
 if [ -z $ISSUE_TITLE ]; then
-  ISSUE_TITLE="[FINOS_PROJECT_BLUEPRINT] - Fixes to apply - test"
+  ISSUE_TITLE="[FINOS_PROJECT_BLUEPRINT] - Fixes to apply"
 fi
 export ISSUE_TITLE=$ISSUE_TITLE
 
