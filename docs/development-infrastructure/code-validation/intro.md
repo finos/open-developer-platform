@@ -107,6 +107,8 @@ Code is publicly available on https://github.com/finos/metadata-tool, the comman
 
 In order to deliver these reports directly to the teams, the Open Developer Platform have developed a GitHub Action that uses metadata-tool to generate the project reports and submits a GitHub Issue for each GitHub repository where validation problems were spotted; the issue will include a detailed description of the validation done and point the reader on how to resolve it.
 
+This is an example of [auto-generated issue for project compliance](https://github.com/finos/contrib-toolbox/issues/12).
+
 GitHub Action can be found in the [ODP GitHub repo](https://github.com/finos/open-developer-platform/blob/master/.github/workflows/project-blueprint.yml).
 
 #### Ignoring validations
