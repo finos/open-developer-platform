@@ -1,12 +1,20 @@
 #!/bin/bash
 
-# This script generates the repo issues
+# This script generates and submit issues to FINOS GitHub repositories,
+# reading the output of generate-repo-validation.sh
+# 
+# First, it runs an org-wide search for all open issues that match 
+# the title ISSUE_TITLE.
+# 
+# For all repositories with quality checks to report, which don't have an 
+# existing open issue, the script will generate and submit one.
 
 if [ -z $ISSUE_TITLE ]; then
   ISSUE_TITLE="[FINOS_PROJECT_BLUEPRINT] - Fixes to apply"
 fi
 export ISSUE_TITLE=$ISSUE_TITLE
 
+# TODO - remove this when the feature is completely rolled out
 enabled_repos="contrib-toolbox,open-developer-platform,metadata-tool,bot-github-chatops"
 
 # Generate list of repos that already have an issue created with $ISSUE_TITLE
