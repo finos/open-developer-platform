@@ -40,9 +40,11 @@ cat finos-repo-validation.json | jq -r '.[]| [.org, .["repo-name"]] | @tsv' |
             PAYLOAD=`cat finos-repo-validation.json | jq -r '.[] | select(.org == env.ORG and .["repo-name"] == env.REPO) | { "title": env.ISSUE_TITLE, "body": .message, "labels":["quality checks"] }'`
             echo "Creating issue for repo $ORG/$REPO"
             curl -v -u admin:$GITHUB_TOKEN -d "$PAYLOAD" https://api.github.com/repos/$ORG/$REPO/issues
+        else
+          echo "Skipping $ORG/$REPO - An open issue already exists"
         fi
       else
-        echo "Skipping $ORG/$REPO as it's not an enabled repo"
+        echo "Skipping $ORG/$REPO - Not an enabled repo (waiting for rollout)"
       fi
     fi
   done
