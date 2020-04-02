@@ -6,6 +6,7 @@ on:
   schedule:
     # * is a special character in YAML so you have to quote this string
     - cron:  '0 0 1 * *'
+  # Used mostly for testing - should be removed for golive, tests should happen in forked repos
   push:
     paths:
       - '.github/workflows/project-blueprint.yml'
