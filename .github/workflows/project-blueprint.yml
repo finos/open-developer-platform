@@ -10,6 +10,8 @@ on:
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   FINOS_TOKEN: ${{ secrets.FINOS_TOKEN }}
+  GITHUB_USER: "admin"
+  GITHUB_PASSWORD: ${{ secrets.FINOS_TOKEN }}
   ISSUE_TITLE: "[FINOS_PROJECT_BLUEPRINT] - Fixes to apply"
 
 jobs:
