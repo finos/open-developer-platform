@@ -15,7 +15,11 @@ fi
 export ISSUE_TITLE=$ISSUE_TITLE
 
 # TODO - remove this when the feature is completely rolled out
-enabled_repos="contrib-toolbox,open-developer-platform,metadata-tool,bot-github-chatops"
+enabled_repos="
+  contrib-toolbox,open-developer-platform,metadata-tool,bot-github-chatops,SymphonyElectron,electron-builder,electron-utils,electron-spellchecker,node-ffi,ScreenSnippet,ScreenSnippet2,SwiftSearch,electron-dl,ScreenShareIndicatorFrame,node-auto-launch"
+
+# TODO - add Symphony Eletron repos
+
 
 # Generate list of repos that already have an issue created with $ISSUE_TITLE
 rm -rf /tmp/existing-issues.txt
