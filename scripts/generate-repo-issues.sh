@@ -38,8 +38,13 @@ cat finos-repo-validation.json | jq -r '.[]| [.org, .["repo-name"]] | @tsv' |
         ISSUE_EXIST=`cat /tmp/existing-issues.txt | grep "$ORG/$REPO"`
         if [ -z "$ISSUE_EXIST" ]; then
             PAYLOAD=`cat finos-repo-validation.json | jq -r '.[] | select(.org == env.ORG and .["repo-name"] == env.REPO) | { "title": env.ISSUE_TITLE, "body": .message, "labels":["quality checks"] }'`
-            echo "Creating issue for repo $ORG/$REPO"
-            curl -v -u admin:$GITHUB_TOKEN -d "$PAYLOAD" https://api.github.com/repos/$ORG/$REPO/issues
+            MSG=`echo $PAYLOAD | jq -r '.body'`
+            if [ "$MSG" == "null" ]; then
+              echo "Skipping $ORG/$REPO - Kudos, no issues found!"
+            else
+              echo "Creating issue for repo $ORG/$REPO"
+              curl -v -u admin:$GITHUB_TOKEN -d "$PAYLOAD" https://api.github.com/repos/$ORG/$REPO/issues
+            fi
         else
           echo "Skipping $ORG/$REPO - An open issue already exists"
         fi

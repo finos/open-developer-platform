@@ -77,13 +77,3 @@ jobs:
         issue-number: ${{ github.event.number }}
         body: Website [preview is available](https://${{ github.actor }}.github.io/${{ env.REPO_NAME }})
         # reaction-type: '+1'
-
-# TODO Getting 403 as described on https://github.com/danger/danger-js/issues/918
-#     - name: Add comment to PR
-#       if: github.event_name == 'pull_request'
-#       uses: unsplash/comment-on-pr@master
-#       with:
-#         msg: ""
-#     - name: Comment backup step
-#       if: failure()
-#       run: echo "Could not add comment, see error above"
