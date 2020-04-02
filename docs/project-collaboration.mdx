@@ -279,7 +279,15 @@ The main <code>README.md</code> file contains instructions on how to replace pla
 There is no automated way to align an existing repository with the project blueprint structure, therefore it must be done manually, going through the blueprint items listed above and copy/paste content across repositories.
 
 #### Built-in project website
-The blueprint comes with a built-in Docusaurus instance to run a [project website](#project-website), see `docs/` and `website/` folders.
+The project blueprint comes with a pre-definite website that is built using Docusaurus (1.14) and served via `https://finos.github.io/<repository name>`.
+
+Getting started is quite simple:
+
+1. Make sure that your GitHub repository includes the `docs/` and `website/` folder from the [project-blueprint](https://github.com/finos/project-blueprint)
+2. Read our <a href={userBaseUrl('development-infrastructure/project-documentation')}>getting started guide</a> to understand more about Docusaurus
+3. Edit `website/siteConfig.js` following comments in file
+4. Install the <a href={userBaseUrl('development-infrastructure/project-documentation#docusaurus-build-action')}>Docusaurus Build Action provided by FINOS</a>
+5. Make edits on `docs/` files and check changes on `https://finos.github.io/<reposirory name>.`
 
 #### Automated and continuous quality scanning
 The ODP team is working on a GitHub action to continuously check all FINOS repositories against FINOS bylaws and requirements; see https://github.com/finos/open-developer-platform/issues/31 to know more.
