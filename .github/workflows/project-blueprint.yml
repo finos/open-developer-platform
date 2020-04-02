@@ -11,7 +11,6 @@ on:
     paths:
       - '.github/workflows/project-blueprint.yml'
 
-      
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   FINOS_TOKEN: ${{ secrets.FINOS_TOKEN }}
