@@ -6,6 +6,9 @@ on:
   schedule:
     # * is a special character in YAML so you have to quote this string
     - cron:  '0 0 1 * *'
+  push:
+    paths:
+      - '.github/workflows/project-blueprint.yml'
 
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
