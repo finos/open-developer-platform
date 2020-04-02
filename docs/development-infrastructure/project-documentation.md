@@ -18,11 +18,20 @@ This page walks through the use of docusaurus on a local environment; full docum
 ### Docusaurus Build Action
 FINOS have developed a GitHub Action to automatically build the Docusaurus websites and publish them into GitHub Pages; the action works on upstream repositories (ie https://github.com/finos/open-developer-platform) as well as forked ones (ie https://github.com/maoo/open-developer-platform), providing a simple way to stage the web version of a change to a Docusaurus website.
 
+The action also intercepts Pull Requests and adds a comment with the link to the website (preview) of the PR submitter; this way issue reviewers can easily and visually see the changes.
+
 #### Enabling the action
-If you're forking a repository with the Docusaurus build action, you need to access the `Actions` tab of your GitHub (forked) repository and click on the `Enable GitHub Actions` button. At that point, any change you make on your `master` branch will be published on `https://<github username>.github.io/<repository name>`.
+If you're forking a repository with the Docusaurus build action, you need to:
+
+1. Create a new branch called `gh-pages`, if it doesn't already exist. Check [the GitHub guide](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-and-deleting-branches-within-your-repository) if you don't know how to create a branch.
+2. Access the `Actions` tab of your GitHub (forked) repository (on `https://github.com/<your username>/<repository name>/actions`) and click on the `Enable GitHub Actions` button.
+
+At this point, any change on your `master` branch (within the `docs/` or `website/` folders) will be published on `https://<github username>.github.io/<repository name>`. Go ahead and make a change to any `docs/*.md` file and see if they get published on the website.
 
 #### Known issue
-When the action runs for the first time, GitHub automatically configures GitHub Pages to read contents from the gh-pages branch, but for some reason, it doesn’t build the HTTP(s) endpoint. To enable it:
+If you don't create a `gh-pages` branch prior to the first action run, Docusaurus will, but for some reason, it doesn’t correctly update the HTTP(s) endpoint, and as a result the website returns a `404` error.
+
+To fix it, follow these steps:
 
 1. Visit `https://github.com/<org/user name>/<repository name>/settings`
 2. Find the `GitHub Pages` section
