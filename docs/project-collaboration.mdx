@@ -221,8 +221,8 @@ GitHub Issues can provide an easy platform to vehicle this process:
 A project needs:
 
 1. A Github repository
-2. The <code>vote</code> issue label defined
-3. Issue template <code>.github/ISSUE_TEMPLATE/Vote.md</code> defined
+2. The `vote` issue label defined
+3. Issue template `.github/ISSUE_TEMPLATE/Vote.md` defined
 
 ### Meeting Minutes
 
@@ -232,9 +232,9 @@ Meetings are one of the most used collaboration channels at FINOS, and minutes a
 
 Although Atlassian Confluence is currently the most used tool, FINOS also provides a way to use GitHub Issues to manage meeting minutes. The person leading the meeting (or meeting leader) can create a new GitHub Issue for each meeting, following the [Meeting template provided by FINOS](https://github.com/finos/open-developer-platform/blob/master/.github/ISSUE_TEMPLATE/Meeting.md) and leverage issue assignees to track meeting participants (see our public activity dashboards).
 
-- *Prior to the meeting* - normally 48 hours before - a new GitHub Issue is created using the Meetings issue template; use the <code>[MEETING]</code> prefix in the issue title, to help issue browsing and discoverability. The issue URL can be then circulated
+- *Prior to the meeting* - normally 48 hours before - a new GitHub Issue is created using the Meetings issue template; use the `[MEETING]` prefix in the issue title, to help issue browsing and discoverability. The issue URL can be then circulated
 - *At the beginning of the meeting* - the meeting leader identifies all participants with their GitHub username and adds them as issue assignees
-- *At the end of the meeting* - the meeting leader adds the <code>meeting</code> label to the issue, triggering the indexing process; when done, the label <code>indexed</code> will be added
+- *At the end of the meeting* - the meeting leader adds the `meeting` label to the issue, triggering the indexing process; when done, the label `indexed` will be added
 
 <img alt="meeting-issue" src={useBaseUrl('img/collab/meeting-issue.png')} />
 
@@ -242,16 +242,16 @@ Although Atlassian Confluence is currently the most used tool, FINOS also provid
 
 - If a GitHub username cannot be added as issue assignee, it means that is not part of github.com/orgs/finos/people (the GitHub FINOS Org members); to work around this restriction, the GitHub user can add a hello comment to the issue, which will allow the meeting leader to do the assignment. In parallel, the GitHub user can sign a CLA with FINOS and request GitHub Org membership.
 - If a participant doesn't have a GitHub account, the meeting leader can add full name and affiliation in the issue description (see issue template).
-- If the meeting leader makes a mistake and wants to remove the meeting from the records, the meeting label can simply be removed, and the items will be removed (including the <code>indexed</code> label). After fixing assignments, the <code>meeting</code> label can be added again.
+- If the meeting leader makes a mistake and wants to remove the meeting from the records, the meeting label can simply be removed, and the items will be removed (including the `indexed` label). After fixing assignments, the `meeting` label can be added again.
 
 #### Project setup
 A project needs:
 
 1. A Github repository
-2. The meeting leader must have at least <code>Write</code> access to the repository
-3. The <code>meeting</code> issue label defined
-4. Issue template [<code>.github/ISSUE_TEMPLATE/Meeting.md</code>](https://github.com/finos/open-developer-platform/blob/master/.github/ISSUE_TEMPLATE/Meeting.md) defined
-5. Action [<code>.github/workflows/meetings.yml</code>](https://github.com/finos/open-developer-platform/blob/master/.github/workflows/meetings.yml) defined
+2. The meeting leader must have at least `Write` access to the repository
+3. The `meeting` issue label defined
+4. Issue template [`.github/ISSUE_TEMPLATE/Meeting.md`](https://github.com/finos/open-developer-platform/blob/master/.github/ISSUE_TEMPLATE/Meeting.md) defined
+5. Action [`.github/workflows/meetings.yml`](https://github.com/finos/open-developer-platform/blob/master/.github/workflows/meetings.yml) defined
 6. GitHub repository secrets (ask [help@finos.org](mailto:help@finos.org) to set them up)
 
 ### Security Scanning
@@ -266,14 +266,14 @@ In order to consolidate processes and tools around security vulnerabilities mana
 4. A [Code of Conduct](https://github.com/finos/project-blueprint/blob/master/.github/CODE_OF_CONDUCT.md) template, required by FINOS bylaws
 5. [Contributing guidelines](https://github.com/finos/project-blueprint/blob/master/.github/CONTRIBUTING.md), required by FINOS bylaws
 6. [WhiteSource custom configuration](https://github.com/finos/project-blueprint/blob/master/whitesource.config), to setup continuous security scanning for your project
-7. Issue templates for bugs, feature requests and support questions , [defined in the <code>.github</code> folder](https://github.com/finos/project-blueprint/tree/master/.github/ISSUE_TEMPLATE)
+7. Issue templates for bugs, feature requests and support questions , [defined in the `.github` folder](https://github.com/finos/project-blueprint/tree/master/.github/ISSUE_TEMPLATE)
 
-Placeholders are defined using the <code>{}</code> brackets.
+Placeholders are defined using the `{}` brackets.
 
 #### Creating a new repository
-Anyone can use the Project blueprint repository, simply accessing [https://github.com/finos/project-blueprint](https://github.com/finos/project-blueprint) and pressing the <code>Use this template</code> button and following instructions.
+Anyone can use the Project blueprint repository, simply accessing [https://github.com/finos/project-blueprint](https://github.com/finos/project-blueprint) and pressing the `Use this template` button and following instructions.
 
-The main <code>README.md</code> file contains instructions on how to replace placeholders across all blueprint files.
+The main `README.md` file contains instructions on how to replace placeholders across all blueprint files.
 
 #### Aligning existing repository with project blueprint
 There is no automated way to align an existing repository with the project blueprint structure, therefore it must be done manually, going through the blueprint items listed above and copy/paste content across repositories.
