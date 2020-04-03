@@ -1,4 +1,4 @@
-name: project-blueprint-action
+name: project-compliance-quality-action
 
 # This GitHub action checks all FINOS GitHub repositories against a list of validations, and opens an issue on the repository with the missing items.
 # If the issue already exists, it skips the repository
@@ -9,7 +9,7 @@ on:
   # Used mostly for testing - should be removed for golive, tests should happen in forked repos
   push:
     paths:
-      - '.github/workflows/project-blueprint.yml'
+      - '.github/workflows/project-compliance-quality.yml'
 
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -31,7 +31,7 @@ jobs:
         path: 'metadata-tool'
         ref: blueprint-check
     - name: Checking out FINOS metadata
-      run: git clone https://finos-admin:$FINOS_TOKEN@github.com/finos-admin/metadata.git >/dev/null
+      run: git clone https://user:$FINOS_TOKEN@github.com/finos-admin/metadata.git >/dev/null
     - name: Generating repository validation
       run: curl -s https://raw.githubusercontent.com/finos/open-developer-platform/master/scripts/generate-repo-validation.sh | bash
     - name: Generating repository issues
