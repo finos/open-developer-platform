@@ -66,9 +66,10 @@ jobs:
           UNKNOWNS=`cat github-finos-meetings-unknowns.txt`
           ISSUE_CONTENT="Couldn't find the following GitHub usernames on file: $UNKNOWNS . /CC @aitana16 @maoo @mcleo-d"
           echo ::set-output name=UNKNOWNS_COMMENT::${ISSUE_CONTENT}
+          echo "Posting message as comment: ${{ steps.vars.outputs.UNKNOWNS_COMMENT }}"
         fi
     - name: Report unknowns on issue comment
-      if: github.event_name == 'issue' && steps.vars.outputs.UNKNOWNS_COMMENT
+      if: github.event.action == 'labeled' && steps.vars.outputs.UNKNOWNS_COMMENT
       uses: peter-evans/create-or-update-comment@v1
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
