@@ -63,13 +63,13 @@ jobs:
     - name: Check unknowns
       run: |
         if [ -f "github-finos-meetings-unknowns.txt" ]; then
-          UNKNOWNS=`cat github-finos-meetings-unknowns.txt`
-          ISSUE_CONTENT="Couldn't find the following GitHub usernames on file: $UNKNOWNS . /CC @aitana16 @maoo @mcleo-d"
-          echo ::set-output name=UNKNOWNS_COMMENT::${ISSUE_CONTENT}
-          echo "Posting message as comment: ${{ steps.vars.outputs.UNKNOWNS_COMMENT }}"
+          echo "::set-env name=UNKNOWNS::`cat github-finos-meetings-unknowns.txt`"
+          ISSUE_CONTENT="Couldn't find the following GitHub usernames on file: ${{ env.UNKNOWNS }} . /CC @aitana16 @maoo @mcleo-d"
+          echo "::set-env name=UNKNOWNS_COMMENT::${ISSUE_CONTENT}"
+          echo "Posting message as comment: ${{ env.UNKNOWNS_COMMENT }}"
         fi
     - name: Report unknowns on issue comment
-      if: github.event.action == 'labeled' && steps.vars.outputs.UNKNOWNS_COMMENT
+      if: github.event.action == 'labeled' && env.UNKNOWNS_COMMENT != ''
       uses: peter-evans/create-or-update-comment@v1
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
