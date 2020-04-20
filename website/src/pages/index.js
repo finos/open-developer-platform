@@ -60,7 +60,8 @@ function Home() {
       description={`${siteConfig.tagline}`}>
       <header className={classnames('hero hero--primary', styles.heroBanner)}>
         <div className="container">
-          <h1 className="hero__title">{siteConfig.title}</h1>
+          <h1 style={{visibility: 'hidden'}} className="hero__title">{siteConfig.title}</h1>
+          <img style={{width: '600px'}} src={useBaseUrl('img/2020_ODP_Logo_WHT.png')}/>
           <p className="hero__subtitle">{siteConfig.tagline}</p>
           <div className={styles.buttons}>
             <Link

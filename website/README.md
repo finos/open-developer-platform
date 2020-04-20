@@ -14,14 +14,17 @@ This website was created with [Docusaurus](https://docusaurus.io/).
 
 ```sh
 # Install dependencies
-$ yarn
+$ yarn --cwd website
 ```
 
 2. Run your dev server:
 
 ```sh
+# Generate docs/contributing.md file
+./scripts/build-contribute-page.sh
+
 # Start the site
-$ yarn start
+$ yarn --cwd website start
 ```
 
 ## Directory Structure

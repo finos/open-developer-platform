@@ -4,7 +4,7 @@ module.exports = {
   tagline: 'Delivering open source software development best practices while enforcing security and legal compliance for the financial services industry',
   url: 'https://odp.finos.org',
   baseUrl: '/',
-  favicon: 'img/favicon/favicon-finos.ico',
+  favicon: 'img/favicon/favicon-odp.ico',
   projectName: 'open-developer-platform',
   organizationName: 'finos',
   scripts: ['https://buttons.github.io/buttons.js'],
@@ -18,8 +18,8 @@ module.exports = {
     navbar: {
       title: 'Open Developer Platform',
       logo: {
-        alt: 'FINOS Logo',
-        src: 'img/favicon/favicon-finos.ico',
+        alt: 'ODP Logo',
+        src: 'img/favicon/favicon-odp.ico',
       },
       links: [
         {to: 'docs/what-is-odp', label: 'Docs', position: 'right'},
