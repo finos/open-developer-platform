@@ -34,6 +34,8 @@ jobs:
       uses: actions/checkout@v1
     - name: Install Node
       uses: actions/setup-node@v1
+      with:
+        node-version: '12'
     - name: Install Website deps
       run: npm install --prefix website
     - name: Patch forked version
