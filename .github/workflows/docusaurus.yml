@@ -37,7 +37,9 @@ jobs:
       with:
         node-version: '12'
     - name: Install Website deps
-      run: npm install --prefix website
+      uses: borales/actions-yarn@v2.1.0
+      with:
+        cmd: --cwd website install
     - name: Patch forked version
       run: |
         # Extract GitHub org/user and patch siteConfig.js only if not "finos"
@@ -47,10 +49,13 @@ jobs:
         then echo "Repo organization is '$REPO_ORG', patching docusaurus configuration to work on a forked repo" ; curl ${{ env.PATCH_SCRIPT_URL }} |  bash -s -- ${{ env.REPO_NAME }} $REPO_ORG
         else echo "Skipping patching, as this is the FINOS Organization"
         fi
-    - name: Build Website
+    - name: Build Contributing page
       run: |
         curl ${{ env.CONTRIBUTE_SCRIPT_URL }} |  bash -s
-        npm run build --prefix website
+    - name: Install Website deps
+      uses: borales/actions-yarn@v2.1.0
+      with:
+        cmd: --cwd website build
     - name: Publish Website
       run: |
         # Extract GitHub org/user
@@ -70,7 +75,7 @@ jobs:
         git config --global user.name "$GIT_USERNAME"
         echo "machine github.com login $GIT_USERNAME password $GITHUB_TOKEN" > ~/.netrc
         # Run docusaurus-publish
-        GIT_USER=$GIT_USERNAME npm run publish-gh-pages --prefix website
+        GIT_USER=$GIT_USERNAME yarn publish-gh-pages --prefix website
     - name: Create comment
       if: github.event_name == 'pull_request'
       uses: peter-evans/create-or-update-comment@v1
