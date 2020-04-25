@@ -37,9 +37,7 @@ jobs:
       with:
         node-version: '12'
     - name: Install Website deps
-      uses: borales/actions-yarn@v2.1.0
-      with:
-        cmd: --cwd website install
+      run: yarn --cwd website install
     - name: Patch forked version
       run: |
         # Extract GitHub org/user and patch siteConfig.js only if not "finos"
@@ -53,9 +51,7 @@ jobs:
       run: |
         curl ${{ env.CONTRIBUTE_SCRIPT_URL }} |  bash -s
     - name: Install Website deps
-      uses: borales/actions-yarn@v2.1.0
-      with:
-        cmd: --cwd website build
+      run: yarn --cwd website build
     - name: Publish Website
       run: |
         # Extract GitHub org/user
@@ -75,7 +71,7 @@ jobs:
         git config --global user.name "$GIT_USERNAME"
         echo "machine github.com login $GIT_USERNAME password $GITHUB_TOKEN" > ~/.netrc
         # Run docusaurus-publish
-        GIT_USER=$GIT_USERNAME yarn publish-gh-pages --prefix website
+        GIT_USER=$GIT_USERNAME yarn --cwd website publish-gh-pages
     - name: Create comment
       if: github.event_name == 'pull_request'
       uses: peter-evans/create-or-update-comment@v1
