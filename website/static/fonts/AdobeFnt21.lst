@@ -1,0 +1,35 @@
+%!Adobe-FontList 1.20
+%Locale:0x409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:/Users/Megan/Documents/MSB Graphic Arts/2020 Projects/FINOS/2020 Open Developer Platform/Roadmap/2020_ODP_Roadmap/Document fonts/AdobeFnt21.lst
+FileLength:636
+FileModTime:609444551
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Raleway-Black
+FamilyName:Raleway
+StyleName:Black
+MenuName:Raleway Black
+StyleBits:0
+WeightClass:900
+WidthClass:5
+AngleClass:0
+FullName:Raleway Black
+WritingScript:Roman
+OutlineFileName:/Users/Megan/Documents/MSB Graphic Arts/2020 Projects/FINOS/2020 Open Developer Platform/Roadmap/2020_ODP_Roadmap/Document fonts/Raleway-Black.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:180592
+FileModTime:536868048
+NameArray:0,Mac,4,Raleway Black
+NameArray:0,Win,1,Raleway Black
+NameArray:0,Win,16,Raleway
+%EndFont
+
