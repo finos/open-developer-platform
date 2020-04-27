@@ -5,40 +5,8 @@ title: Continuous Integration
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-## GitHub Actions
-GitHub gives the ability to create, reuse and share actions, which can be easily described as workloads that can be triggered on a wide range of events.
 
-Actions can be only defined at repository level, creating a `YAML` file in the `.github/workflows` folder. The `Actions` tab available in `github.com` web UI will list the actions defined and show the execution logs.
-
-The Open Developer Platform uses GitHub Actions for the following use cases:
-- <a href={useBaseUrl('docs/development-infrastructure/project-documentation')}>Building and publishing Project websites</a>
-- <a href={useBaseUrl('docs/project-collaboration')}>Tracking meeting attendance</a>
-- <a href="https://github.com/finos/open-developer-platform/blob/master/.github/workflows/project-blueprint.yml">Validating repository compliance (work in progress)</a>
-
-To learn how to use GitHub Actions, start reading [https://help.github.com/en/actions](https://help.github.com/en/actions).
-When it's time to start writing your first `.yml` file, we found extremely helpful the following resources:
-- [Using the GITHUB_TOKEN in a workflow](https://help.github.com/en/actions/configuring-and-managing-workflows/authenticating-with-the-github_token#using-the-github_token-in-a-workflow)
-- [Context and expression syntax](https://help.github.com/en/actions/reference/context-and-expression-syntax-for-github-actions)
-- [Event Types & Payloads](https://developer.github.com/v3/activity/events/types/)
-
-## Travis CI
-Travis CI is a hosted, distributed continuous integration service used to build and test software projects hosted at GitHub.
-
-To enable Travis CI on a Foundation hosted project:
-
-1. [Sign in to Travis CI](https://travis-ci.org/) with your Github credentials
-2. Access the [Travis CI profile](https://travis-ci.org/profile/symphonyoss) and sync your project
-3. Add a `.travis.yml` file in the root folder of your GitHub repo (check this [.travis.yml](https://github.com/finos/finos-parent-pom/blob/master/.travis.yml) as example)
-  a. (optional) If you need to perform variable encryption and other useful commands, install the [Travis CI Client](https://github.com/travis-ci/travis.rb) (using `gem install travis`)
-4. Access `https://travis-ci.org/<program name>/<repository-name>` and validate the build
-
-Please check the [Travis supported languages](https://docs.travis-ci.com/user/languages/) and how to [customize your build](https://docs.travis-ci.com/user/customizing-the-build) to understand if your language is supported and how to configure additional build features.
-
-A badge can be added at the top of the project's root-level `README.md` file, using the following Markdown syntax:
-
-```
-[![Build Status](https://travis-ci.org/<program name>/<repository name>.svg)](https://travis-ci.org/<program name>/<repository name>)
-```
+## Release and deployment
 
 ### Continuous (artifact) deployment in Java
 When using Java, Travis CI can be easily configured to publish new snapshot artifacts on commit; to enable this feature, a project committer can follow these simple steps:
@@ -73,6 +41,41 @@ Travis CI can be configured to use [python-semantic-release](http://python-seman
 Travis CI can easily publish packages to npm using [semantic-release.org](http://semantic-release.org/), which delegates release operations to your CI environment and allows you to control versioning [using commits (commitizen)](https://www.npmjs.com/package/commitizen); as a result, npm packages will be continuously released on each code repository change.
 
 [Follow our instructions](javascript) on how to register a package and user in the Foundation npm organisation.
+
+## GitHub Actions
+GitHub gives the ability to create, reuse and share actions, which can be easily described as workloads that can be triggered on a wide range of events.
+
+Actions can be only defined at repository level, creating a `YAML` file in the `.github/workflows` folder. The `Actions` tab available in `github.com` web UI will list the actions defined and show the execution logs.
+
+The Open Developer Platform uses GitHub Actions for the following use cases:
+- <a href={useBaseUrl('docs/development-infrastructure/project-documentation')}>Building and publishing Project websites</a>
+- <a href={useBaseUrl('docs/project-collaboration')}>Tracking meeting attendance</a>
+- <a href="https://github.com/finos/open-developer-platform/blob/master/.github/workflows/project-blueprint.yml">Validating repository compliance (work in progress)</a>
+
+To learn how to use GitHub Actions, start reading [https://help.github.com/en/actions](https://help.github.com/en/actions).
+When it's time to start writing your first `.yml` file, we found extremely helpful the following resources:
+- [Using the GITHUB_TOKEN in a workflow](https://help.github.com/en/actions/configuring-and-managing-workflows/authenticating-with-the-github_token#using-the-github_token-in-a-workflow)
+- [Context and expression syntax](https://help.github.com/en/actions/reference/context-and-expression-syntax-for-github-actions)
+- [Event Types & Payloads](https://developer.github.com/v3/activity/events/types/)
+
+## Travis CI
+Travis CI is a hosted, distributed continuous integration service used to build and test software projects hosted at GitHub.
+
+To enable Travis CI on a Foundation hosted project:
+
+1. [Sign in to Travis CI](https://travis-ci.org/) with your Github credentials
+2. Access the [Travis CI profile](https://travis-ci.org/profile/symphonyoss) and sync your project
+3. Add a `.travis.yml` file in the root folder of your GitHub repo (check this [.travis.yml](https://github.com/finos/finos-parent-pom/blob/master/.travis.yml) as example)
+  a. (optional) If you need to perform variable encryption and other useful commands, install the [Travis CI Client](https://github.com/travis-ci/travis.rb) (using `gem install travis`)
+4. Access `https://travis-ci.org/<program name>/<repository-name>` and validate the build
+
+Please check the [Travis supported languages](https://docs.travis-ci.com/user/languages/) and how to [customize your build](https://docs.travis-ci.com/user/customizing-the-build) to understand if your language is supported and how to configure additional build features.
+
+A badge can be added at the top of the project's root-level `README.md` file, using the following Markdown syntax:
+
+```
+[![Build Status](https://travis-ci.org/<program name>/<repository name>.svg)](https://travis-ci.org/<program name>/<repository name>)
+```
 
 ### Example of Configuring Integration Testing
 In order to run this sample (some sample bots from the Symphony program), the Travis build needs to be configured to add the following items:
