@@ -55,39 +55,57 @@ const vendors = [
 const features = [
   {
     title: <>Project Collaboration</>,
-    imageUrl: '/img/intro/project-collaboration.png',
+    imageUrl: '/img/intro/Collaboration.svg',
     description: (
       <>
-        ODP provides collaboration workflows that are open and accessible by everyone, especially financial institutions, which are often blocked by regulatory restrictions.
+        ODP delivers compliance, security and quality automated checks, enabling open source collaboration workflows in financial services and other regulated industries.
       </>
     ),
   },
   {
-    title: <>Developer tooling</>,
-    imageUrl: '/img/intro/developer-tools.png',
+    title: <>Financial Services working together</>,
+    imageUrl: '/img/intro/Bank.svg',
     description: (
       <>
-        FINOS contributors can access to development infrastructure services, like code hosting, CI/CD, IP compliance &amp; security &amp; quality checks, container runtime and release automation.
+        Bringing financial firms together to validate solutions and evangelise around success stories.
       </>
     ),
   },
   {
-    title: <>Open to everyone</>,
-    imageUrl: '/img/intro/open.png',
+    title: <>Tech vendors working together</>,
+    imageUrl: '/img/intro/TechCommunication.svg',
     description: (
       <>
-        Everyone is welcome to read, listen and submit feedback to the ODP team; all content and conversations produced are (and will be) public.
+        Bringing technical vendors together to provide solutions and integrate with their enterprise offerings.
       </>
-    ),
+    )
   },
+  {
+    title: <>Teach collaboration best practices</>,
+    imageUrl: '/img/intro/ConnectingTeaching.svg',
+    description: (
+      <>
+        Teach collaboration best practices
+      </>
+    )
+  },
+  {
+    title: <>Open Source Digital Transformation</>,
+    imageUrl: '/img/intro/Success.svg',
+    description: (
+      <>
+        Guide financial firms through their Open Source Digital Transformation
+      </>
+    )
+  }
 ];
 
 function Feature({imageUrl, title, description}) {
   const imgUrl = useBaseUrl(imageUrl);
   return (
-    <div className={classnames('col col--4', styles.feature)}>
+    <div className={classnames('text--center col col--2', styles.feature)}>
       {imgUrl && (
-        <div className="text--center">
+        <div>
           <img className={styles.featureImage} src={imgUrl} alt={title} />
         </div>
       )}
