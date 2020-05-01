@@ -184,6 +184,8 @@ function Home() {
             <div className="container">
               <div className="row">
                 <h2>ODP Vendors</h2>
+              </div>
+              <div className="row">
                 {vendors.map((props, idx) => (
                   <Vendor key={idx} {...props} />
                 ))}
@@ -196,6 +198,8 @@ function Home() {
             <div className="container">
               <div className="row">
                 <h2>Used by FINOS Projects</h2>
+              </div>
+              <div className="row">
                 {projects.map((props, idx) => (
                   <Project key={idx} {...props} />
                 ))}
