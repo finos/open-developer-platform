@@ -118,7 +118,7 @@ function Feature({imageUrl, title, description}) {
 function Vendor({imageUrl, name}) {
   const imgUrl = useBaseUrl(imageUrl);
   return (
-    <div className={classnames('text--center col col--4', styles.feature)}>
+    <div className={classnames('text--center col col--2', styles.feature)}>
       {imgUrl && (
         <div className="text--center">
           <img className={styles.featureImage} src={imgUrl} alt={name} />
@@ -132,7 +132,7 @@ function Vendor({imageUrl, name}) {
 function Project({imageUrl, name}) {
   const imgUrl = useBaseUrl(imageUrl);
   return (
-    <div className={classnames('text--center col col--4', styles.feature)}>
+    <div className={classnames('text--center col col--2', styles.feature)}>
       {imgUrl && (
         <div className="text--center">
           <img className={styles.featureImage} src={imgUrl} alt={name} />
