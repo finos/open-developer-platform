@@ -79,4 +79,3 @@ jobs:
         token: ${{ secrets.GITHUB_TOKEN }}
         issue-number: ${{ github.event.number }}
         body: Website [preview is available](https://${{ github.actor }}.github.io/${{ env.REPO_NAME }})
-        # reaction-type: '+1'
