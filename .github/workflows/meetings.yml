@@ -74,7 +74,7 @@ jobs:
       uses: peter-evans/create-or-update-comment@v1
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
-        issue-number: ${{ github.event.number }}
+        issue-number: ${{ github.event.issue.number }}
         body: "${{ steps.vars.outputs.UNKNOWNS_COMMENT }}"
     - name: Add label 'indexed' to issue
       if: github.event.action == 'closed'
