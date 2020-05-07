@@ -64,7 +64,7 @@ jobs:
       if: github.event.action == 'closed'
       run: |
         if [ -f "metadata-tool/github-finos-meetings-unknowns.txt" ]; then
-          echo "::set-env name=UNKNOWNS::`cat github-finos-meetings-unknowns.txt`"
+          echo "::set-env name=UNKNOWNS::`cat metadata-tool/github-finos-meetings-unknowns.txt`"
           ISSUE_CONTENT="Couldn't find the following GitHub usernames on file: ${{ env.UNKNOWNS }} . /CC @aitana16 @maoo @mcleo-d"
           echo "::set-env name=UNKNOWNS_COMMENT::${ISSUE_CONTENT}"
           echo "Posting message as comment: ${{ env.UNKNOWNS_COMMENT }}"
