@@ -3,6 +3,8 @@
 # This script sumits the meeting attendance for the passed list of assignees
 
 cd ${GIT_CSV_REPO}-checkout
+echo "new entries..."
+diff ../${GIT_CSV_REPO}-checkout/github-finos-meetings.csv github-finos-meetings.csv
 cp -f ../${GIT_CSV_REPO}-checkout/github-finos-meetings.csv github-finos-meetings.csv
 
 if [ "$ACTION" == "closed" ]; then
