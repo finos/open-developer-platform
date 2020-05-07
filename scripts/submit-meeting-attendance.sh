@@ -5,7 +5,7 @@
 cd ${GIT_CSV_REPO}-checkout
 cp -f ../${GIT_CSV_REPO}-checkout/github-finos-meetings.csv github-finos-meetings.csv
 
-if [ "$ACTION" == "labeled" ]; then
+if [ "$ACTION" == "closed" ]; then
     cat ../metadata-tool/github-finos-meetings-add.csv >> github-finos-meetings.csv
 elif [ "$ACTION" == "unlabeled" ]; then
     cp -f ../metadata-tool/github-finos-meetings-remove.csv github-finos-meetings.csv
