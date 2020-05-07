@@ -61,6 +61,7 @@ jobs:
     - name: Pushing github-finos-meetings.csv changes to Git
       run: curl -s https://raw.githubusercontent.com/finos/open-developer-platform/master/scripts/submit-meeting-attendance.sh | bash
     - name: Check unknowns
+      if: github.event.action == 'closed'
       run: |
         if [ -f "metadata-tool/github-finos-meetings-unknowns.txt" ]; then
           echo "::set-env name=UNKNOWNS::`cat github-finos-meetings-unknowns.txt`"
