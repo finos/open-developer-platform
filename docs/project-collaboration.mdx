@@ -247,9 +247,13 @@ Meetings are one of the most used collaboration channels at FINOS, and minutes a
 
 Although Atlassian Confluence is currently the most used tool, FINOS also provides a way to use GitHub Issues to manage meeting minutes. The person leading the meeting (or meeting leader) can create a new GitHub Issue for each meeting, following the [Meeting template provided by FINOS](https://github.com/finos/open-developer-platform/blob/master/.github/ISSUE_TEMPLATE/Meeting.md) and leverage issue assignees to track meeting participants (see our public activity dashboards).
 
-- *Prior to the meeting* - normally 48 hours before - a new GitHub Issue is created using the Meetings issue template; use the `[MEETING]` prefix in the issue title, to help issue browsing and discoverability. The issue URL can be then circulated
+- *Prior to the meeting) - 48 hours before, as per [meeting best practices](https://finosfoundation.atlassian.net/wiki/spaces/FINOS/pages/92996572/Running+Good+Meetings), the meeting leader creates a new GitHub Issue using...
+ - Meetings issue template
+ - `[MEETING]` title prefix
+ - `meeting` label
 - *At the beginning of the meeting* - the meeting leader identifies all participants with their GitHub username and adds them as issue assignees
-- *At the end of the meeting* - the meeting leader adds the `meeting` label to the issue, triggering the indexing process; when done, the label `indexed` will be added
+- *At the end of the meeting* - the meeting leader closes the issue, which will trigger the attendants the indexing process; when indexing is completed, the label indexed will be added to the issue.
+- *(Optional) After the meeting (same day)* - the meeting leader can remove the indexed label in order to remove meeting attendance from the index and make changes; in order to reindex the meeting, `Reopen` and `Close` the issue.
 
 <img alt="meeting-issue" src={useBaseUrl('img/collab/meeting-issue.png')} />
 
@@ -257,7 +261,8 @@ Although Atlassian Confluence is currently the most used tool, FINOS also provid
 
 - If a GitHub username cannot be added as issue assignee, it means that is not part of github.com/orgs/finos/people (the GitHub FINOS Org members); to work around this restriction, the GitHub user can add a hello comment to the issue, which will allow the meeting leader to do the assignment. In parallel, the GitHub user can sign a CLA with FINOS and request GitHub Org membership.
 - If a participant doesn't have a GitHub account, the meeting leader can add full name and affiliation in the issue description (see issue template).
-- If the meeting leader makes a mistake and wants to remove the meeting from the records, the meeting label can simply be removed, and the items will be removed (including the `indexed` label). After fixing assignments, the `meeting` label can be added again.
+- If a GitHub username is not registered on FINOS internal database, it won't be indexed; in that case, the action will add a comment to the issue, with the list of users not being indexed and a mention to FINOS staff team.
+- If a meeting issue is Reopened and Closed, after the meeting is held, the meeting date will be overridden with the current one ; this is why it is suggested to update the issue the same day of the meeting; if you happen to Reopen and Close the issue days after the meeting, please notify [help@finos.org](mailto:help@finos.org)
 
 #### Project setup
 A project needs:
