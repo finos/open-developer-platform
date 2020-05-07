@@ -23,7 +23,7 @@ name: meeting-minutes-action
 # Note. There's a thread regarding org level secrets in GitHub, which may avoid the secret configuration step - https://github.community/t5/GitHub-Actions/Secrets-on-Team-and-Organization-level/td-p/29745
 on:
   issues:
-    types: [closed,unlabeled]
+    types: [closed,labeled,unlabeled]
 
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -62,7 +62,7 @@ jobs:
     - name: Pushing github-finos-meetings.csv changes to Git
       run: curl -s https://raw.githubusercontent.com/finos/open-developer-platform/master/scripts/submit-meeting-attendance.sh | bash
     - name: Check unknowns
-      if: github.event.action == 'closed'
+      if: github.event.action == 'closed' || (github.event.action == 'labeled' && github.event.label.name == 'indexed')
       run: |
         if [ -f "metadata-tool/github-finos-meetings-unknowns.txt" ]; then
           UNKNOWNS=`cat metadata-tool/github-finos-meetings-unknowns.txt`
@@ -71,13 +71,13 @@ jobs:
           echo "Posting message as comment: ${UNKNOWNS_COMMENT}"
         fi
     - name: Report unknowns on issue comment
-      if: github.event.action == 'closed' && env.UNKNOWNS_COMMENT != ''
+      if: (github.event.action == 'closed' || (github.event.action == 'labeled' && github.event.label.name == 'indexed')) && env.UNKNOWNS_COMMENT != ''
       uses: peter-evans/create-or-update-comment@v1
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
         issue-number: ${{ github.event.issue.number }}
         body: "${{ env.UNKNOWNS_COMMENT }}"
     - name: Add label 'indexed' to issue
-      if: github.event.action == 'closed'
+      if: github.event.action == 'closed' || (github.event.action == 'labeled' && github.event.label.name == 'indexed')
       run: |
         curl -v -u admin:${{ secrets.GITHUB_TOKEN }} -H "Accept: application/vnd.github.antiope-preview+json" -d '{"labels": ["indexed"]}' ${{ github.event.issue.url }}/labels

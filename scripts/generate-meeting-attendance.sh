@@ -2,7 +2,7 @@
 
 # This script generates the meeting attendance for the passed list of assignees
 
-if [ "$ACTION" == "closed" ]; then
+if [ "$ACTION" == "closed" ] || [ "$ACTION" == "labeled" ]; then
     ROSTER_ACTION="add"
 elif [ "$ACTION" == "unlabeled" ]; then
     ROSTER_ACTION="remove"
