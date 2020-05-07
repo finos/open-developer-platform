@@ -40,6 +40,7 @@ env:
   ORG_NAME: ${{ github.event.repository.owner.login }}
   MEETING_DATE: ${{ github.event.issue.created_at }}
   ASSIGNEES: ${{ join(github.event.issue.assignees.*.login, ', ') }}
+  ISSUE_NUMBER: ${{ github.event.issue.number }}
   ACTION: ${{ github.event.action }}
 
 jobs:
