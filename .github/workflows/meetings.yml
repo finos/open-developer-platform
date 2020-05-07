@@ -62,7 +62,7 @@ jobs:
       run: curl -s https://raw.githubusercontent.com/finos/open-developer-platform/master/scripts/submit-meeting-attendance.sh | bash
     - name: Check unknowns
       run: |
-        if [ -f "github-finos-meetings-unknowns.txt" ]; then
+        if [ -f "metadata-tool/github-finos-meetings-unknowns.txt" ]; then
           echo "::set-env name=UNKNOWNS::`cat github-finos-meetings-unknowns.txt`"
           ISSUE_CONTENT="Couldn't find the following GitHub usernames on file: ${{ env.UNKNOWNS }} . /CC @aitana16 @maoo @mcleo-d"
           echo "::set-env name=UNKNOWNS_COMMENT::${ISSUE_CONTENT}"
