@@ -57,6 +57,8 @@ jobs:
       run: git clone https://finos-admin:$FINOS_TOKEN@github.com/finos-admin/metadata.git >/dev/null
     - name: Downloading github-finos-meetings.csv
       run: curl -s https://raw.githubusercontent.com/finos/open-developer-platform/master/scripts/checkout-meeting-attendance.sh | bash
+    - name: Checkout metadata dependencies
+      run: cd metadata-tool ; lein deps
     - name: Generating a new github-finos-meetings.csv
       run: curl -s https://raw.githubusercontent.com/finos/open-developer-platform/master/scripts/generate-meeting-attendance.sh | bash
     - name: Pushing github-finos-meetings.csv changes to Git
