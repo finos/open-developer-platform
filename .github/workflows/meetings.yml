@@ -1,18 +1,22 @@
 name: meeting-minutes-action
 
+
 # This GitHub action is used to manage meeting minutes via GitHub Issues:
 # - The issue description contains minutes and other meeting meta info (see .github/ISSUE_TEMPLATE/Meeting.md)
-# - Meeting attendants are set as issue assignees
+# - Issue commenters are tracked as meetings attendants, and (eventually, not real time) published on metrics.finos.org
 # 
 # When an issue (with "meeting" label) is closed, this action
-# collects the issue assignees and uses FINOS metadata-tool to generate a CSV
+# collects the issue commenters and uses FINOS metadata-tool to generate a CSV
 # file with meeting attendance, which can be submitted for later ingestion and
 # final publication into metrics.finos.org . After successful submission, 
 # the "indexed" label will be added to the issue.
 # 
-# When the "indexed" label is removed, entries will be removed by the system, 
-# allowing to amend attendance after the meeting. The "indexed" label will 
-# also be removed.
+# When the "indexed" label is removed, entries will be removed from the index, 
+# allowing to amend attendance after the meeting; by re-adding the "indexed", entries will be added again to the index.
+#
+# The date of the meeting is extracted from the date that the issue was closed, therefore:
+# - Do not apply the "indexed" label if the issue is not closed
+# - Only close the issue once, during (or right after) the meeting, regardless of issue contents/comments; use the "indexed" label to trigger a reindexing later on
 # 
 # To run this action, you'll need the following secrets defined in https://github.com/finos/<repo name>/settings/secrets :
 # - FINOS_TOKEN
