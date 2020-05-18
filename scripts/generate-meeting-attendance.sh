@@ -12,7 +12,6 @@ cat <<EOT >> metadata-tool/meeting-attendance.json
 {
     "org": "${ORG_NAME}",
     "repo": "${REPO_NAME}",
-    "attendants": "${ASSIGNEES}",
     "issueNumber": "${ISSUE_NUMBER}",
     "date": "${MEETING_DATE}",
     "action": "${ROSTER_ACTION}"
