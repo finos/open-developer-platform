@@ -105,10 +105,10 @@ body {
 }
 
 .homeContainer {
-  background-image: url("../img/background.png"); /* CHANGE THIS TO BACKGROUND LOGO PNG - THIS IS A SEMI-TRANSPARENT DOUBLE RENDERING OF THE LOGO ICON */
+  background-image: url("../img/2020_ODP_Hero.png"); /* CHANGE THIS TO BACKGROUND LOGO PNG - THIS IS A SEMI-TRANSPARENT DOUBLE RENDERING OF THE LOGO ICON */
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: #0086BF; /* CHANGE THIS TO PRIMARY PROJECT COLOR */
+  background-color: #b42f3d; /* CHANGE THIS TO PRIMARY PROJECT COLOR */
 }
 
 .homeContainer h2{
@@ -142,7 +142,7 @@ body {
 }
 
 .featureShowcaseSection h2{
-  color: #0033A0; /* CHANGE THIS TO PRIMARY PROJECT COLOR */
+  color: #b42f3d; /* CHANGE THIS TO PRIMARY PROJECT COLOR */
   font-size: 30px;
 }
 
@@ -192,9 +192,19 @@ article iframe {
 }
 
 .nav-footer {
-  background-color: #0086bf;
+  background-color: #383939;
 }
 
 .nav-footer .sitemap{
   margin: 0 auto 1em;
+}
+
+
+
+
+
+.row--center h2{
+  color: #ffffff;
+  font-size: 16px;
+  text-align: center;
 }

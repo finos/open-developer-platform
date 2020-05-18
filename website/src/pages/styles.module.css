@@ -9,6 +9,9 @@
   text-align: center;
   position: relative;
   overflow: hidden;
+  background-image: url("/background.png"); /* CHANGE THIS TO BACKGROUND LOGO PNG - THIS IS A SEMI-TRANSPARENT DOUBLE RENDERING OF THE LOGO ICON */
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 @media screen and (max-width: 966px) {
@@ -31,6 +34,51 @@
 }
 
 .featureImage {
-  height: 200px;
-  width: 200px;
+  height: 100px;
+  width: 100px;
+  padding-bottom: 30px;
+}
+
+.memberImage {
+  height: 250px;
+  width: 250px;
+}
+
+
+.projectImage {
+  height: 250px;
+  width: 250px;
+}
+
+.row--center h2{
+  color: #ffffff;
+  font-size: 16px;
+  text-align: center;
+}
+
+
+.hero.hero--primary {
+  background-color: #B42F3D;
+  background-image: url('/img/odp-background1-red.png'); /* CHANGE THIS TO BACKGROUND LOGO PNG - THIS IS A SEMI-TRANSPARENT DOUBLE RENDERING OF THE LOGO ICON */
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.members {
+  
+
+  padding: 74px 0;
+  background-color: #cacccc;
+  background-image: url('/img/odp-background2-gray.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.projects {
+  
+
+  padding: 74px 0;
+  background-color: #ffffff;
+
 }

@@ -33,7 +33,7 @@ module.exports = {
       ],
     },
     footer: {
-      copyright: `Copyright © 2018 - Open Developer Platform - FINOS - The Fintech Open Source Foundation`,
+      copyright: `Copyright © 2020 - Open Developer Platform - FINOS - The Fintech Open Source Foundation`,
       logo: {
         alt: 'FINOS Logo',
         src: 'img/favicon/favicon-finos.ico',
