@@ -179,7 +179,7 @@ function Home() {
           <section className={styles.members}>
             <div className="container">
               <div className="row row--center">
-                <h2>ODP Members</h2>
+                <h2>ODP Community Participants</h2>
               </div>
               <div className="row">
                 {vendors.map((props, idx) => (
