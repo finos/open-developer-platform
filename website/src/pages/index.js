@@ -6,47 +6,135 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
 
+const projects = [
+  {
+    "name": "FDC3",
+    "imageUrl": "img/users/fdc3.png",
+    "url": "https://fdc3.org"
+  },
+  // {
+  //   "name": "Perspective",
+  //   "imageUrl": "https://perspective.finos.org/img/logo.png",
+   //  "url": "https://perspective.finos.org"
+  // },
+  {
+    "name": "Alloy",
+    "imageUrl": "img/users/alloy.png",
+    "url": "https://alloy.finos.org"
+  },
+  {
+    "name": "Plexus Interop",
+    "imageUrl": "img/users/plexus.png",
+    "url": "https://finos-plexus.github.io/plexus-interop"
+  }
+]
+
+const vendors = [
+  {
+    imageUrl: 'img/vendors/morgan-stanley-800.png',
+    name: 'Morgan Stanley'
+  },
+  {
+    imageUrl: 'img/vendors/github-800.png',
+    name: 'GitHub'
+  },
+  {
+    imageUrl: 'img/vendors/red-hat-800.png',
+    name: 'Red Hat'
+  },
+  {
+    imageUrl: 'img/vendors/green-key-800.png',
+    name: 'GreenKey Technologies'
+  }
+]
+
 const features = [
   {
-    title: <>Lorem Ipsum</>,
-    imageUrl: '/img/feature-blank.svg',
+    title: <>Project Collaboration</>,
+    imageUrl: '/img/intro/Collaboration.svg',
     description: (
       <>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        ODP delivers compliance, security and quality automated checks, enabling open source collaboration workflows in financial services and other regulated industries.
       </>
     ),
   },
   {
-    title: <>Lorem Ipsum</>,
-    imageUrl: '/img/feature-blank.svg',
+    title: <>Financial Services working together</>,
+    imageUrl: '/img/intro/Bank.svg',
     description: (
       <>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Bringing financial firms together to validate solutions and evangelise around success stories.
       </>
     ),
   },
   {
-    title: <>Lorem Ipsum</>,
-    imageUrl: '/img/feature-blank.svg',
+    title: <>Tech vendors working together</>,
+    imageUrl: '/img/intro/TechCommunication.svg',
     description: (
       <>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Bringing technical vendors together to provide solutions and integrate with their enterprise offerings.
       </>
-    ),
+    )
   },
+  // {
+  //   title: <>Teach collaboration best practices</>,
+  //   imageUrl: '/img/intro/ConnectingTeaching.svg',
+  //   description: (
+  //     <>
+  //       Teach collaboration best practices
+  //     </>
+  //   )
+  // },
+  {
+    title: <>Open Source Digital Transformation</>,
+    imageUrl: '/img/intro/Success.svg',
+    description: (
+      <>
+        Guide financial firms through their Open Source Digital Transformation
+      </>
+    )
+  }
 ];
 
 function Feature({imageUrl, title, description}) {
   const imgUrl = useBaseUrl(imageUrl);
   return (
-    <div className={classnames('col col--4', styles.feature)}>
+    <div className={classnames('text--center col col--3', styles.feature)}>
       {imgUrl && (
-        <div className="text--center">
+        <div>
           <img className={styles.featureImage} src={imgUrl} alt={title} />
         </div>
       )}
       <h3>{title}</h3>
       <p>{description}</p>
+    </div>
+  );
+}
+
+function Vendor({imageUrl, name}) {
+  const imgUrl = useBaseUrl(imageUrl);
+  return (
+    <div className={classnames('text--center col col--3', styles.feature)}>
+      {imgUrl && (
+        <div className="text--center">
+          <img className={styles.memberImage} src={imgUrl} alt={name} />
+        </div>
+      )}
+     
+    </div>
+  );
+}
+
+function Project({imageUrl, name}) {
+  const imgUrl = useBaseUrl(imageUrl);
+  return (
+    <div className={classnames('text--center col col--4', styles.feature)}>
+      {imgUrl && (
+        <div className="text--center">
+          <img className={styles.projectImage} src={imgUrl} alt={name} />
+        </div>
+      )}
+     
     </div>
   );
 }
@@ -82,6 +170,34 @@ function Home() {
               <div className="row">
                 {features.map((props, idx) => (
                   <Feature key={idx} {...props} />
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+        {vendors && vendors.length && (
+          <section className={styles.members}>
+            <div className="container">
+              <div className="row row--center">
+                <h2>ODP Members</h2>
+              </div>
+              <div className="row">
+                {vendors.map((props, idx) => (
+                  <Vendor key={idx} {...props} />
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+        {projects && projects.length && (
+          <section className={styles.projects}>
+            <div className="container">
+              <div className="row row--center">
+                <h2>Used by FINOS Projects</h2>
+              </div>
+              <div className="row">
+                {projects.map((props, idx) => (
+                  <Project key={idx} {...props} />
                 ))}
               </div>
             </div>
