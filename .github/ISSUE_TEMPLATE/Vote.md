@@ -1,6 +1,10 @@
 ---
-name: 🖊ODP Vote
+name: "\U0001F58AODP Vote"
 about: To track ODP votes
+title: ''
+labels: ''
+assignees: ''
+
 ---
 
 ## Vote

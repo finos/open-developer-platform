@@ -1,6 +1,10 @@
 ---
-name: 🤝ODP Meeting Minutes
+name: "\U0001F91DODP Meeting Minutes"
 about: To track ODP meeting agenda and attendance
+title: DD MMM YYYY - ODP Meeting Minutes
+labels: meeting
+assignees: maoo
+
 ---
 
 ## Date
