@@ -26,16 +26,15 @@ You can subscribe to [fdx-odp@finos.org](mailto:fdx-odp+subscribe@finos.org) to 
 ## Bi-weekly meetings
 We meet every 2 wednesdays, at 12pm ET; check the [FINOS Program Calendar](https://t.sidekickopen76.com/s2t/c/5/f18dQhb0S7lM8dDMPbW2n0x6l2B9nMJN7t5X-FfhMynW4Xrjwx3MhNxPW56dwLJ25mtnR102?t=https%3A%2F%2Fcalendar.google.com%2Fcalendar%2Fembed%3Fsrc%3Dfinos.org_fac8mo1rfc6ehscg0d80fi8jig%2540group.calendar.google.com%26ctz%3DAmerica%252FNew_York&si=7000000001133615&pi=83f16601-138a-452a-d689-9fb0599a2eed) for next meeting
 
-You can [join via web](https://finos.webex.com/finos/j.php?MTID=me6cd7441ee4946d919175d20a0b267a4) or by phone:
+You can [join via web](https://finos.webex.com/finos/j.php?MTID=mcc71187e3c9c95f7295a4064a1967710) or by phone:
 
-- USA - +1-240-454-0879
-- CANADA - +1-647-484-1596
+- USA - +1-415-655-0003
 - UK - +44-20319-88141
 - Spain - +34-93545-2895
 
 Checkout [all Webex global numbers](https://support.webex.com/MyAccountWeb/needsupport.do?userType=ht)
 
-WebEx Meeting number is **661 146 297**
+WebEx Meeting number is **127 057 5516** and WebEx Meeting password is **phUvNPPY365**
 
 ### Meeting minutes
 You can find meeting minutes history on:
