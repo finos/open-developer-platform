@@ -20,22 +20,6 @@ In order to configure your GitHub access, it is necessary to:
   2. GitHub forces you to set the email address as public, or it would reject push operations with the error `push declined due to email privacy restrictions`.
   
 ## Access Control
-| Who | What |
-|--- | :----------|
-| Any GitHub user | Fork repository |
-| | Submit a code change via Pull Request (flagged by the <a href="{useBaseUrl('docs/development-infrastructure/code-validation/intro#cla-bot')}">FINOS CLA bot</a>)
-| | Use GitHub Issues to contribute to the discussion |
-| Anyone | Checkout the source code |
-| | Consume any artifact produced by a Project |
-| | Access FINOS issue boards |
-| Project team member (GitHub User in a FINOS Team) and PMC (GitHub User in a FINOS PMC Team)	| Make direct changes to project repositories |
-| | Anything granted by the GitHub Maintain permission |
-| FINOS Staff | Administration tasks |
-| | Monitoring |
-| GitHub user covered by CLA | Become a member of the GitHub FINOS Organization |
-| | Submit a code change via Pull Request (validated by the <a href="{useBaseUrl('docs/development-infrastructure/code-validation/intro#cla-bot')}">FINOS CLA bot</a>) |
-| Project Lead (GitHub User) | Request to add new committers to the team (authorized by PMC) |
-
 All repositories managed by the Foundation are open (public); as a consequence, anyone is able to:
 
 1. Checkout the source code
@@ -50,7 +34,23 @@ Any GitHub user covered by a [Contributor License Agreement with FINOS](https://
 
 [FINOS uses GitHub Teams](https://github.com/orgs/finos/teams) to manage committers team for each project, which are the only ones allowed to make direct changes to project repositories. You can read more about FINOS teams below.
 
-Note that GitHub Teams are managed by the Project Leads, but changes must be authorized by the project [PMC](https://finosfoundation.atlassian.net/wiki/spaces/FINOS/pages/81166347/Foundation+Structure#FoundationStructure-Programs).
+Below is a recap of who can do what.
+
+| Who | What |
+|--- | :----------|
+| Any GitHub user | Fork repository |
+| | Submit a code change via Pull Request (flagged by the <a href="{useBaseUrl('docs/development-infrastructure/code-validation/intro#cla-bot')}">FINOS CLA bot</a>)
+| | Use GitHub Issues to contribute to the discussion |
+| Anyone | Checkout the source code |
+| | Consume any artifact produced by a Project |
+| | Access FINOS issue boards |
+| GitHub user covered by CLA | Become a member of the GitHub FINOS Organization |
+| | Submit a code change via Pull Request (validated by the <a href="{useBaseUrl('docs/development-infrastructure/code-validation/intro#cla-bot')}">FINOS CLA bot</a>) |
+| FINOS Staff | Administration tasks |
+| | Monitoring |
+| Project Maintainer (GitHub User) | Make direct changes to project repositories |
+| | Anything granted by the GitHub Maintain permission |
+| Project Lead (GitHub User) | Add new maintainers |
 
 ### GitHub member VS FINOS Member
 Please note that with [*FINOS Members*](http://finos.org/membes) we normally refer to the institutions that sit on FINOS board and support us financially, whereas [*GitHub FINOS Organization members*](https://github.com/orgs/finos/people) are individuals - represented by a GitHub user(name) - that have a signed CLA with FINOS.
@@ -77,17 +77,13 @@ Any GitHub FINOS Organization member can decide whether to publish her/his affil
 <img alt="repo-teams" src={useBaseUrl('img/collab/repo-teams.png')} />
 
 ### Teams
-Every Program, PMC and Project will be mapped as a GitHub team, following a 2-levels hierarchical structure:
-```
-1. <each FINOS Program Team>
-  a. FINOS Project Team, belonging to the Program
-2. panpmcs
-  a. <each FINOS PMC Team>
-```
 
-Note that FINOS Program Teams only inherit members from sub-groups, they are not directly managed.
+**NOTE!** - *We're in the process of updating this configuration/documentation to reflect changes in governance after disbanding FINOS Programs.*
 
-Each repository will grant access to these teams, as shown in the picture below (taken from the [datahelix project](https://github.com/finos/datahelix))
+Given that all project contributors have the ability to follow the standard GitHub (Pull Request) development workflow, the only actors that need to have any entitlement on GitHub repositories are maintainers. We use GitHub Teams to manage that, where:
+1. Project Leads have the ability to add new maintainers (aka GitHub Team maintainer)
+2. Project maintainers can vote to add/remove team members
+3. the project maintainers team have (GitHub) `Maintain` permission across all project (GitHub) repositories.
 
 <img alt="finos-teams" src={useBaseUrl('img/collab/finos-teams.png')} />
 
@@ -95,9 +91,9 @@ Each repository will grant access to these teams, as shown in the picture below 
 
 ### Code hosting
 
-Code in the Foundation is hosted exclusively on [https://github.com/finos](https://github.com/finos), with exception for **Hadouken**, **Plexus Interop** and **Symphony** programs, which use dedicated GitHub Organizations, see below. These orgs are still managed by FINOS and share the same configuration, which is documented in this page.
+Code in the Foundation is hosted exclusively on [https://github.com/finos](https://github.com/finos), with exception for **Hadouken**, **Plexus Interop** and **Symphony** initiatives, which use dedicated GitHub Organizations, see below. These orgs are still managed by FINOS and share the same configuration, which is documented in this page.
 
-| Program | GitHub Organization |
+| Initiative | GitHub Organization |
 |--- | :----|
 | Hadouken | https://github.com/HadoukenIO |
 | Plexus Interop | https://github.com/finos-plexus |
@@ -130,9 +126,6 @@ Making direct changes to repositories is not recommended, for teams bigger than 
 1. Direct commits are not validated, as they cannot be blocked (ie, if CLA is not in place)
 2. Pull Requests allow to have a conversation with the team
 3. Pull Requests tent to have a more thorough validation pipeline
-
-##### Committers authorized by PMC
-GitHub Teams are managed by the Project Lead, but changes must be authorized by the [PMC](https://finosfoundation.atlassian.net/wiki/spaces/FINOS/pages/81166347/Foundation+Structure#FoundationStructure-Programs).
 
 ### Issues
 [**GitHub Issues**](https://guides.github.com/features/issues/) provides a simple and flexible way to track task lists; issues can also include list of checkboxes, as shown in the image.
@@ -213,15 +206,15 @@ Both features **support email notifications** and the ability to post a comment 
 ### Voting
 FINOS Governance processes require voting at different levels (and publicly available), including but not limited to:
 
-1. PMC votes for new contributions
-2. Project votes for new committers, releases and other decisions
+1. Project Maintainers vote for accepting new members to their teams
+2. Project Maintainers vote to manage releases and other decide on any other decisions
 
 GitHub Issues can provide an easy platform to vehicle this process:
 
 1. The person casting the vote opens a GitHub Issue (see ODP issue template as example). The following items must be filled/reviewed, before circulating the issue URL:
   a. Title and description of the vote; use the [VOTE] prefix in the issue title, to help issue browsing and discoverability
   b. Add the vote label
-  c. List of users who have the right to a binding vote, typically the project or PMC teams
+  c. List of users who have the right to a binding vote, typically project maintainers
 2. Everyone can vote the issue, until the vote is open:
   a. Those with a GitHub account can simply react to the issue (see image to the right)
   b. Those without a GitHub account can react via email (using any public FINOS list)
@@ -320,7 +313,7 @@ The ODP team is working on a GitHub action to continuously check all FINOS repos
 ## Other collaboration use cases
 
 ### Web Conferencing (Webex)
-The Foundation provides a Webex-based web conferencing facility to support online meetings.  We expect PMCs and Working Groups who don't have their own Webex service to make use of this infrastructure for their regular meetings. Please email [help@finos.org](mailto:help@finos.org) to request assistance with.
+The Foundation provides a Webex-based web conferencing facility to support online meetings.  We expect FINOS projects who don't have their own Webex service to make use of this infrastructure for their regular meetings. Please email [help@finos.org](mailto:help@finos.org) to request assistance with.
 
 #### Why WebEx
 The Foundation has determined that most other web conferencing services (including, but not limited to, GoTo Meeting, Zoom, appear.in, RingCentral, and more) are blocked by some or all of the banks that participate in our community.  Webex is the only web conferencing system that is reasonably broadly supported by the banks, and in order to ensure equal access to all community members (and especially those employed by a bank), we strongly recommend using Webex exclusively for web conferencing.
@@ -330,7 +323,7 @@ That said, it doesn't have to be the Foundation's Webex account specifically - a
 ### Mailing Lists (Google Groups)
 The Foundation provides mailing lists via the [Google Groups service](https://groups.google.com/a/finos.org/forum/#!myforums).  Email, as a lowest common denominator communication channel, is one of the best ways to reach the broadest cross-section of the community as possible.
 
-The FINOS mailing lists have a fairly low amount of collaboration, as GitHub.com Issues and Discussions are normally used instead; they're mostly used for announcements and notifications, to stay in touch with marketing, community, programs and project updates.
+The FINOS mailing lists have a fairly low amount of collaboration, as GitHub.com Issues and Discussions are normally used instead; they're mostly used for announcements and notifications, to stay in touch with marketing, community and project updates.
 
 Checkout the [list of FINOS Google Groups](https://finosfoundation.atlassian.net/wiki/spaces/FINOS/pages/77955298/Engage+Our+Community).
 
@@ -370,7 +363,7 @@ Content will be added to the Confluence meeting minute page containing the agend
 
 Other important notes:
 
-- Minuting services are available on a first-come, first-served basis; if the scribe is already booked for a meeting at the same time as yours, they will not be available. We encourage PMCs and Project leads to review the meeting schedules of their peers, to reduce the risk of such conflicts.
-- We encourage PMC leads and Project leads to delegate minute taking responsibilities on a rotating basis to participants in the call, in cases where the scribe is unavailable.
+- Minuting services are available on a first-come, first-served basis; if the scribe is already booked for a meeting at the same time as yours, they will not be available. We encourage Project maintainers to review the meeting schedules of their peers, to reduce the risk of such conflicts.
+- We encourage Project maintainers to delegate minute taking responsibilities on a rotating basis to participants in the call, in cases where the scribe is unavailable.
 - The provided minutes will be "raw", and will almost always require further editing by the host and/or attendees of the call to correct domain specific terminology (FinServ and technology acronyms, organisation names, etc.).
 - All meetings where minuting is requested must have a written agenda published prior to the commencement of the call, ideally here on Confluence.  Agendas are required by the Foundation's [anti-trust policy](https://www.finos.org/hubfs/FINOS/governance/FINOS%20Antitrust%20Policy%202018-04-24.pdf).
