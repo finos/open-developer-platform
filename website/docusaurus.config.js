@@ -42,12 +42,8 @@ module.exports = {
       style: 'dark',
       links: [
         {
-          title: 'FINOS Programs',
+          title: 'FINOS Initiatives',
           items: [
-            {
-              label: 'FinServ Delivery Accelerator',
-              to: 'https://finosfoundation.atlassian.net/wiki/spaces/FDX/overview',
-            },
             {
               label: 'Open Source Readiness',
               to: 'https://finosfoundation.atlassian.net/wiki/spaces/OSR',
@@ -62,7 +58,7 @@ module.exports = {
             }]
           },
           {
-            title: 'ODP & FDX',
+            title: 'Quick links',
             items: [
             {
               label: 'Contributing to ODP',
@@ -73,8 +69,8 @@ module.exports = {
               to: 'https://github.com/finos/cloud-service-certification/wiki',
             },
             {
-              label: 'FINOS Project Catalogue',
-              to: 'http://finos.github.io',
+              label: 'FINOS Project Landscape',
+              to: 'http://landscape.finos.org',
             }]
           },
           {

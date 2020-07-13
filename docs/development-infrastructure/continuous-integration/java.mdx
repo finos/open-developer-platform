@@ -23,7 +23,7 @@ The build process aims to produce reusable Java binaries (**artifacts**, in Mave
 The Maven command to build artifacts is `mvn package`.
 
 ## Artifact publishing
-All Java projects hosted by the Foundation are expected to use a groupId that is (or prefixed by) `org.finos.<program name>` and are published on the [Maven central repository](http://search.maven.org/#search%7Cga%7C1%7Corg.finos) (also known as Maven Central).
+All Java projects hosted by the Foundation are expected to use a groupId that is (or prefixed by) `org.finos` and are published on the [Maven central repository](http://search.maven.org/#search%7Cga%7C1%7Corg.finos) (also known as Maven Central).
 
 In order to publish artifacts (in Maven terms, **artifact deployment**), it's necessary to setup some accounts and configure the workstation accordingly; please note that these steps are not mandatory for all project teams, but only for those performing artifact deployment and releases (normally the project lead or a team member elected as release manager).
 
@@ -56,7 +56,7 @@ You can find more info on the [Central Repository howto page for Maven](http://c
 ### Maven Central Badge
 A badge can be added at the top of the project's root-level [README.md] file, using the following Markdown syntax:
 ```
-[![Maven Central](https://img.shields.io/maven-central/v/org.finos.<program name>/<project name>.svg?maxAge=2592000)](http://search.maven.org/#artifactdetails%7Corg.finos.<program name>%7C<project name>%7C2%7Cpom)
+[![Maven Central](https://img.shields.io/maven-central/v/org.finos/<project name>.svg?maxAge=2592000)](http://search.maven.org/#artifactdetails%7Corg.finos%7C<project name>%7C2%7Cpom)
 ```
 
 If you want to run this process continuously for each commit, you can integrate with [Travis CI or other Continuous Integration systems](intro).

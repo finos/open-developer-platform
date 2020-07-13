@@ -12,7 +12,7 @@ The ODP Working Group allows build automation vendors to contribute services to 
 3. A vendor representative joins the ODP Working Group, to help deploying and integrating the service with the existing ODP platform
 
 Using a containerised architecture for the ODP hosted services could be a good technical track to investigate, given that:
-1. Red Hat - one of FDX Program sponsors - provides Open Shift as runtime environment for ODP and has a lot of experience advocating containerised architectures
+1. Red Hat provides Open Shift as runtime environment for ODP and has a lot of experience advocating containerised architectures
 2. Drastically lowers the effort of service consumption and deployment, making FINOS operations easier and simplifying collaboration with vendors
 3. Allows reusability of vendors services beyond ODP, adding value to consumers (who can use the same developer workflow also for proprietary or inner source code) and vendors (for their marketing activities)
 4. Allows to track consumption, by [simply pulling data from Docker Hub](https://www.brianchristner.io/how-to-track-docker-hub-metrics/); this is an extremely valuable metric, which would be otherwise impossible to track effectively (across all platforms/eco-systems)

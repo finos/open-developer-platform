@@ -67,18 +67,18 @@ To enable Travis CI on a Foundation hosted project:
 2. Access the [Travis CI profile](https://travis-ci.org/profile/symphonyoss) and sync your project
 3. Add a `.travis.yml` file in the root folder of your GitHub repo (check this [.travis.yml](https://github.com/finos/finos-parent-pom/blob/master/.travis.yml) as example)
   a. (optional) If you need to perform variable encryption and other useful commands, install the [Travis CI Client](https://github.com/travis-ci/travis.rb) (using `gem install travis`)
-4. Access `https://travis-ci.org/<program name>/<repository-name>` and validate the build
+4. Access `https://travis-ci.org/finos/<repository-name>` and validate the build
 
 Please check the [Travis supported languages](https://docs.travis-ci.com/user/languages/) and how to [customize your build](https://docs.travis-ci.com/user/customizing-the-build) to understand if your language is supported and how to configure additional build features.
 
 A badge can be added at the top of the project's root-level `README.md` file, using the following Markdown syntax:
 
 ```
-[![Build Status](https://travis-ci.org/<program name>/<repository name>.svg)](https://travis-ci.org/<program name>/<repository name>)
+[![Build Status](https://travis-ci.org/finos/<repository name>.svg)](https://travis-ci.org/finos/<repository name>)
 ```
 
 ### Example of Configuring Integration Testing
-In order to run this sample (some sample bots from the Symphony program), the Travis build needs to be configured to add the following items:
+In order to run this sample (some Symphony sample bots), the Travis build needs to be configured to add the following items:
 
 ```
 # Download certificate before the build script runs

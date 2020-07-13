@@ -21,5 +21,5 @@ Badges can be added at the top of the project's root-level `README.md` file, usi
 ```
 
 ## Continuous Integration
-Check [Travis CI support for Clojure](https://docs.travis-ci.com/user/languages/clojure/) in order to run build, test and deployment processes periodically or on commit.  A ([.travis.yml](https://github.com/symphonyoss/clj-symphony/blob/master/.travis.yml)) is available in the Symphony program's clj-symphony project.
+Check [Travis CI support for Clojure](https://docs.travis-ci.com/user/languages/clojure/) in order to run build, test and deployment processes periodically or on commit.  A ([.travis.yml](https://github.com/symphonyoss/clj-symphony/blob/master/.travis.yml)) is available in the clj-symphony project.
 

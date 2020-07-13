@@ -14,10 +14,10 @@ Node.js is a Javascript runtime for running JS code; the `node` command line is 
 To date, the Foundation has provisioned:
 1. A FINOS NPMJS Organisation, that is used as a directory of all NPM packages that are released from a FINOS hosted project or working group.
 2. A FINOS Admin user, which can be used to publish NPM packages to NPMJS, if a Project Lead is unable to create a personal account to do so
-3. A Symphony Software Foundation NPMJS Organisation, that houses all published Node.js packages from the Symphony Program.
+3. A Symphony Software Foundation NPMJS Organisation, that houses all published Node.js packages.
 
 ### Using package scoping
-All npm packages released under the Symphony Program's npm organisation should define the @finos scope, in order to point to the npm organisation; if you're not familiar, r[ead more about scoped packages](https://docs.npmjs.com/misc/scope).
+All npm packages released under the FINOS npm organisation should define the @finos scope, in order to point to the npm organisation; if you're not familiar, r[ead more about scoped packages](https://docs.npmjs.com/misc/scope).
 
 There are some situations where it is not possible to specify the scope of a package, since scoping maybe used for behaviour-related aspects of the application; for example when [defining typescript typings](https://www.npmjs.com/org/types).
 
