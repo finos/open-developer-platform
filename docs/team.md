@@ -15,10 +15,6 @@ The team is composed by FINOS staff, bank institutions and software vendors, who
 - [Brian Ingenito](github.com/bingenito) (Morgan Stanley) - Project Lead
 - [Maurizio Pillitu](github.com/maoo) (DevOps Director, FINOS)
 - [James McLeod](github.com/mcleo-d) (Community Director, FINOS)
-- [Tom Schady](github.com/tschady) (GreenKey Technology)
-- [Rhys Arkins](github.com/rarkins) (WhiteSource)
-- [Alessandro Petroni](github.com/apetroni) (Red Hat)
-- Albert Chen (FOSSA)
 
 ## ODP Mailing-list
 You can subscribe to [fdx-odp@finos.org](mailto:fdx-odp+subscribe@finos.org) to get updates from the team.
