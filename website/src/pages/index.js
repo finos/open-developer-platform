@@ -50,11 +50,11 @@ const vendors = [
 
 const features = [
   {
-    title: <>Project Collaboration</>,
+    title: <>Open Source Project Collaboration</>,
     imageUrl: '/img/intro/Collaboration.svg',
     description: (
       <>
-        ODP delivers compliance, security and quality automated checks, enabling open source collaboration workflows in financial services and other regulated industries.
+        ODP delivers automated compliance, security and quality checks, enabling open source collaboration workflows in financial services and other regulated industries.
       </>
     ),
   },
@@ -72,7 +72,7 @@ const features = [
     imageUrl: '/img/intro/TechCommunication.svg',
     description: (
       <>
-        Bringing technology vendors together with banks to accelerate open source development in finance by integrating solutions into the Open Developer Platform.
+        Bringing technology vendors and banks together to accelerate open source development in finance by integrating solutions into the Open Developer Platform.
       </>
     )
   },
@@ -86,7 +86,7 @@ const features = [
   //   )
   // },
   {
-    title: <>Open Source Digital Transformation</>,
+    title: <>Accelerating Your Open Source Delivery Pipeline</>,
     imageUrl: '/img/intro/Success.svg',
     description: (
       <>

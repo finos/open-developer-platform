@@ -45,51 +45,47 @@ module.exports = {
           title: 'FINOS Initiatives',
           items: [
             {
-              label: 'Open Source Readiness',
-              to: 'https://finosfoundation.atlassian.net/wiki/spaces/OSR',
+              label: 'FINOS Projects on GitHub',
+              to: 'https://github.com/finos',
             },
             {
-              label: 'Data Technologies',
-              to: 'https://www.finos.org/dt',
+              label: 'Engage the FINOS Community',
+              to: 'https://www.finos.org/engage-with-our-community',
             },
             {
-              label: 'FDC3',
-              to: 'https://www.finos.org/fdc3',
+              label: 'FINOS News and Events',
+              to: 'https://www.finos.org/news-and-events',
             }]
           },
           {
             title: 'Quick links',
             items: [
             {
-              label: 'Contributing to ODP',
-              to: 'https://odp.finos.org/docs/contributing',
+              label: 'Join an ODP Project Meeting',
+              to: 'https://github.com/finos/open-developer-platform/issues?q=label%3Ameeting+',
             },
             {
-              label: 'Cloud Service Certification Project',
-              to: 'https://github.com/finos/cloud-service-certification/wiki',
+            label: 'Browse ODP Good First Issues',
+            to: 'https://github.com/finos/open-developer-platform/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22',
             },
             {
-              label: 'FINOS Project Landscape',
-              to: 'http://landscape.finos.org',
+              label: 'Ask an ODP Question',
+              to: 'https://github.com/finos/open-developer-platform/issues/new?assignees=&labels=&template=Support_question.md&title=',
             }]
           },
           {
             title: 'FINOS Community',
             items: [    
             {
-              label: 'Community Handbook',
-              to: 'https://finosfoundation.atlassian.net/wiki/spaces/FINOS/pages/80642059/Community+Handbook',
+            label: 'FINOS Community Handbook',
+            to: 'https://finosfoundation.atlassian.net/wiki/spaces/FINOS/pages/80642059/Community+Handbook',
             },
             {
-              label: 'FINOS Governance',
-              to: 'https://finosfoundation.atlassian.net/wiki/spaces/FINOS/pages/75530783/Community+Governance',
-            },
-            {
-              label: 'LinkedIn',
+              label: 'FINOS on LinkedIn',
               to: 'https://www.linkedin.com/company/finosfoundation',
             },
             {
-              label: 'Twitter',
+              label: 'FINOS on Twitter',
               to: 'https://www.twitter.com/finosfoundation',
             }
           ]
