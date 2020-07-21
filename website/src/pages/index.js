@@ -68,7 +68,7 @@ const features = [
     ),
   },
   {
-    title: <>Tech vendors working together</>,
+    title: <>Technology Vendors Working Together</>,
     imageUrl: '/img/intro/TechCommunication.svg',
     description: (
       <>
