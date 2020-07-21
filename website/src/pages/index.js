@@ -41,10 +41,6 @@ const vendors = [
   {
     imageUrl: 'img/vendors/red-hat-800.png',
     name: 'Red Hat'
-  },
-  {
-    imageUrl: 'img/vendors/green-key-800.png',
-    name: 'GreenKey Technologies'
   }
 ]
 
