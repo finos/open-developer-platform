@@ -1,7 +1,7 @@
 // Docs at https://v2.docusaurus.io/docs/configuration
 module.exports = {
   title: 'Open Developer Platform',
-  tagline: 'Delivering open source software development best practices while enforcing security and legal compliance for the financial services industry',
+  tagline: 'Delivering open source software development best practices whilst enforcing security and legal compliance for the financial services industry',
   url: 'https://odp.finos.org',
   baseUrl: '/',
   favicon: 'img/favicon/favicon-odp.ico',
