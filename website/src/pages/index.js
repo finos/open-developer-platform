@@ -12,11 +12,6 @@ const projects = [
     "imageUrl": "img/users/fdc3.png",
     "url": "https://fdc3.org"
   },
-  // {
-  //   "name": "Perspective",
-  //   "imageUrl": "https://perspective.finos.org/img/logo.png",
-   //  "url": "https://perspective.finos.org"
-  // },
   {
     "name": "Alloy",
     "imageUrl": "img/users/alloy.png",
