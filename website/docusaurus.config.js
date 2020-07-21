@@ -81,12 +81,12 @@ module.exports = {
             to: 'https://finosfoundation.atlassian.net/wiki/spaces/FINOS/pages/80642059/Community+Handbook',
             },
             {
-              label: 'FINOS on LinkedIn',
-              to: 'https://www.linkedin.com/company/finosfoundation',
+            label: 'FINOS Community Governance',
+            to: 'https://finosfoundation.atlassian.net/wiki/spaces/FINOS/pages/75530783/Community+Governance',
             },
             {
-              label: 'FINOS on Twitter',
-              to: 'https://www.twitter.com/finosfoundation',
+              label: 'FINOS on LinkedIn',
+              to: 'https://www.linkedin.com/company/finosfoundation',
             }
           ]
         }
