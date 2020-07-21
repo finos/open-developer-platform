@@ -59,7 +59,7 @@ const features = [
     ),
   },
   {
-    title: <>Financial Services working together</>,
+    title: <>Financial Services Working Together</>,
     imageUrl: '/img/intro/Bank.svg',
     description: (
       <>
