@@ -85,7 +85,7 @@ module.exports = {
               to: 'https://finosfoundation.atlassian.net/wiki/spaces/FINOS/pages/75530783/Community+Governance',
             },
             {
-              label: 'LinkedIN',
+              label: 'LinkedIn',
               to: 'https://www.linkedin.com/company/finosfoundation',
             },
             {
