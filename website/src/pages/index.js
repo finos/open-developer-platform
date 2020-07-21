@@ -54,7 +54,7 @@ const features = [
     imageUrl: '/img/intro/Collaboration.svg',
     description: (
       <>
-        ODP delivers automated compliance, security and quality checks, enabling open source collaboration workflows in financial services and other regulated industries.
+        ODP delivers automated compliance, security and quality checks that enable open source collaboration in financial services and other regulated industries.
       </>
     ),
   },
@@ -63,7 +63,7 @@ const features = [
     imageUrl: '/img/intro/Bank.svg',
     description: (
       <>
-        Bringing together financial services firms to contribute and validate successful open source delivery solutions to the FINOS reference architecture.
+        Bringing financial services firms together to identify successful solutions across finacial services engineering to collaboratively build a FINOS reference architecture.
       </>
     ),
   },
@@ -90,7 +90,7 @@ const features = [
     imageUrl: '/img/intro/Success.svg',
     description: (
       <>
-        Providing guidance to banks on accelerating digital transformation by leveraging and contributing into the FINOS Open Developer Platform reference architecture.
+        ODP provides a reference architecture that accelerates the pipeline delivery of open source projects by leveraging the FINOS Open Developer Platform.
       </>
     )
   }
