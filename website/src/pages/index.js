@@ -63,7 +63,7 @@ const features = [
     imageUrl: '/img/intro/Bank.svg',
     description: (
       <>
-        Bringing financial firms together to validate solutions and evangelise around success stories.
+        Bringing together financial services firms to contribute and validate successful open source delivery solutions to the FINOS reference architecture.
       </>
     ),
   },
@@ -72,7 +72,7 @@ const features = [
     imageUrl: '/img/intro/TechCommunication.svg',
     description: (
       <>
-        Bringing technical vendors together to provide solutions and integrate with their enterprise offerings.
+        Bringing technology vendors together with banks to accelerate open source development in finance by integrating solutions into the Open Developer Platform.
       </>
     )
   },
@@ -90,7 +90,7 @@ const features = [
     imageUrl: '/img/intro/Success.svg',
     description: (
       <>
-        Guide financial firms through their Open Source Digital Transformation
+        Providing guidance to banks on accelerating digital transformation by leveraging and contributing into the FINOS Open Developer Platform reference architecture.
       </>
     )
   }
