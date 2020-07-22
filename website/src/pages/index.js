@@ -9,7 +9,7 @@ import styles from './styles.module.css';
 const projects = [
   {
     "name": "FDC3",
-    "imageUrl": "img/users/fdc3.png",
+    "imageUrl": "https://raw.githubusercontent.com/finos/finos-landscape/master/hosted_logos/fdc3.svg",
     "url": "https://fdc3.org"
   },
   // {
@@ -19,12 +19,12 @@ const projects = [
   // },
   {
     "name": "Alloy",
-    "imageUrl": "img/users/alloy.png",
+    "imageUrl": "https://raw.githubusercontent.com/finos/finos-landscape/master/hosted_logos/alloy.svg",
     "url": "https://alloy.finos.org"
   },
   {
     "name": "Plexus Interop",
-    "imageUrl": "img/users/plexus.png",
+    "imageUrl": "https://raw.githubusercontent.com/finos/finos-landscape/master/hosted_logos/plexus-interop.svg",
     "url": "https://finos-plexus.github.io/plexus-interop"
   }
 ]
