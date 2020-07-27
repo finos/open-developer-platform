@@ -12,11 +12,6 @@ const projects = [
     "imageUrl": "https://raw.githubusercontent.com/finos/finos-landscape/master/hosted_logos/fdc3.svg",
     "url": "https://fdc3.org"
   },
-  // {
-  //   "name": "Perspective",
-  //   "imageUrl": "https://perspective.finos.org/img/logo.png",
-   //  "url": "https://perspective.finos.org"
-  // },
   {
     "name": "Alloy",
     "imageUrl": "https://raw.githubusercontent.com/finos/finos-landscape/master/hosted_logos/alloy.svg",
@@ -41,38 +36,34 @@ const vendors = [
   {
     imageUrl: 'img/vendors/red-hat-800.png',
     name: 'Red Hat'
-  },
-  {
-    imageUrl: 'img/vendors/green-key-800.png',
-    name: 'GreenKey Technologies'
   }
 ]
 
 const features = [
   {
-    title: <>Project Collaboration</>,
+    title: <>Open Source Project Collaboration</>,
     imageUrl: '/img/intro/Collaboration.svg',
     description: (
       <>
-        ODP delivers compliance, security and quality automated checks, enabling open source collaboration workflows in financial services and other regulated industries.
+        ODP delivers automated compliance, security and quality checks that enable open source collaboration in financial services and other regulated industries.
       </>
     ),
   },
   {
-    title: <>Financial Services working together</>,
+    title: <>Financial Services Working Together</>,
     imageUrl: '/img/intro/Bank.svg',
     description: (
       <>
-        Bringing financial firms together to validate solutions and evangelise around success stories.
+        Bringing financial services firms together to identify successful solutions across finacial services engineering to collaboratively build a FINOS reference architecture.
       </>
     ),
   },
   {
-    title: <>Tech vendors working together</>,
+    title: <>Technology Vendors Working Together</>,
     imageUrl: '/img/intro/TechCommunication.svg',
     description: (
       <>
-        Bringing technical vendors together to provide solutions and integrate with their enterprise offerings.
+        Bringing technology vendors and banks together to accelerate open source development in finance by integrating solutions into the Open Developer Platform.
       </>
     )
   },
@@ -86,11 +77,11 @@ const features = [
   //   )
   // },
   {
-    title: <>Open Source Digital Transformation</>,
+    title: <>Accelerating Your Open Source Delivery Pipeline</>,
     imageUrl: '/img/intro/Success.svg',
     description: (
       <>
-        Guide financial firms through their Open Source Digital Transformation
+        ODP provides a reference architecture that accelerates the pipeline delivery of open source projects by leveraging the FINOS Open Developer Platform.
       </>
     )
   }
