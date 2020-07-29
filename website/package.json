@@ -11,5 +11,8 @@
     "classnames": "^2.2.6",
     "react": "^16.10.2",
     "react-dom": "^16.10.2"
+  },
+  "dependencies": {
+    "is-promise": "2.1.0"
   }
 }
