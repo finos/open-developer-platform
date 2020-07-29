@@ -17,7 +17,7 @@ Access is granted (free of charge) to all FINOS project teams (see below); in th
 ## How to get access
 In order to access the FINOS OpenShift Console, it is necessary to comply with the following requirements:
 
-1. You must be part of a <a href={useBaseUrl('project-collaboration#teams')}>FINOS project team</a>
+1. You must be part of a <a href={useBaseUrl('project-collaboration')}>FINOS project team</a>
 2. You must have an account on developers.redhat.com; you can also sign up with your GitHub credentials
 
 To request access, send an email to [help@finos.org](mailto:help@finos.org), with the following info:
@@ -89,7 +89,7 @@ In order to configure Continuous Delivery, the project must meet few requirement
 4. Collect all passwords and secrets that are needed by the applications to run; the Foundation Staff will register these entries as secrets in OpenShift and deliver secret key references
 5. The build process MUST generate a folder that:
   a. **MUST contain all the artifacts** to run the application; for Maven builds, the assembly plugin can be used
-  b. **MUST contain a (Unix) run script**; for Maven builds, the [appassember plugin](http://www.mojohaus.org/appassembler/appassembler-maven-plugin/) can generate it
+  b. **MUST contain a (Unix) run script**; for Maven builds, the [appassember plugin](https://www.mojohaus.org/appassembler/appassembler-maven-plugin/) can generate it
   c. **MUST NOT contain any password**, secret or sensitive data (like emails, names, addresses, etc) in clear text; [OpenShift secrets](https://docs.openshift.com/container-platform/latest/dev_guide/secrets.html#dev-guide-secrets-using-secrets) provide a safe way to manage them
 6. Follow the instructions below to define an [OpenShift template](https://docs.openshift.org/latest/architecture/core_concepts/templates.html) called `.openshift-template.yaml`, in the root folder of the GitHub repository
 

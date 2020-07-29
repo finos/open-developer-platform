@@ -3,9 +3,9 @@ id: clojure
 title: Clojure
 ---
 
-[**Clojure**](https://clojure.org/) is a dialect of the Lisp programming language that runs on the Java virtual machine, Common Language Runtime, and JavaScript engines; the Foundation hosts [some Clojure projects](https://finos.github.com/) that can be browsed as examples.
+[**Clojure**](https://clojure.org/) is a dialect of the Lisp programming language that runs on the Java virtual machine, Common Language Runtime, and JavaScript engines; the Foundation hosts [some Clojure projects](https://github.com/finos?q=&type=&language=clojure) that can be browsed as examples.
 
-Clojure code can be built and distributed using different build tools, but [Leiningen](http://leiningen.org/) is the only most commonly used at FINOS.  The deployable unit for Leiningen projects is a JAR file and matching POM, which means that Clojure projects can be deployed to any Maven repository.
+Clojure code can be built and distributed using different build tools, but [Leiningen](https://leiningen.org/) is the only most commonly used at FINOS.  The deployable unit for Leiningen projects is a JAR file and matching POM, which means that Clojure projects can be deployed to any Maven repository.
 
 Wherever appropriate, the Foundation recommends following the [deployment rules for Java](java) (artifact naming and versioning, in particular).
 
@@ -17,7 +17,7 @@ Badges can be added at the top of the project's root-level `README.md` file, usi
 ```
 
 ```
-[![Maven Central](https://img.shields.io/maven-central/v/<group id>/<artifact id>.svg?maxAge=2592000)](http://search.maven.org/#artifactdetails%7C<group id>%7C<artifact id>%7C2%7Cpom)
+[![Maven Central](https://img.shields.io/maven-central/v/<group id>/<artifact id>.svg?maxAge=2592000)](https://search.maven.org/#artifactdetails%7C<group id>%7C<artifact id>%7C2%7Cpom)
 ```
 
 ## Continuous Integration

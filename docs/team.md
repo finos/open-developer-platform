@@ -12,9 +12,9 @@ The ODP Project was approved by the FinServ Developer Experience PMC (now disban
 
 ## Team members
 The team is composed by FINOS staff, bank institutions and software vendors, who help prioritizing, validating, testing and evangelizing the ODP features across FINOS community.
-- [Brian Ingenito](github.com/bingenito) (Morgan Stanley) - Project Lead
-- [Maurizio Pillitu](github.com/maoo) (DevOps Director, FINOS)
-- [James McLeod](github.com/mcleo-d) (Community Director, FINOS)
+- [Brian Ingenito](https://github.com/bingenito) (Morgan Stanley) - Project Lead
+- [Maurizio Pillitu](https://github.com/maoo) (DevOps Director, FINOS)
+- [James McLeod](https://github.com/mcleo-d) (Community Director, FINOS)
 
 ## ODP Mailing-list
 You can subscribe to [fdx-odp@finos.org](mailto:fdx-odp+subscribe@finos.org) to get updates from the team.

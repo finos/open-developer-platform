@@ -39,13 +39,13 @@ Below is a recap of who can do what.
 | Who | What |
 |--- | :----------|
 | Any GitHub user | Fork repository |
-| | Submit a code change via Pull Request (flagged by the <a href="{useBaseUrl('docs/development-infrastructure/code-validation/intro#cla-bot')}">FINOS CLA bot</a>)
+| | Submit a code change via Pull Request (flagged by the <a href="{useBaseUrl('docs/development-infrastructure/code-validation/intro')}">FINOS CLA bot</a>)
 | | Use GitHub Issues to contribute to the discussion |
 | Anyone | Checkout the source code |
 | | Consume any artifact produced by a Project |
 | | Access FINOS issue boards |
 | GitHub user covered by CLA | Become a member of the GitHub FINOS Organization |
-| | Submit a code change via Pull Request (validated by the <a href="{useBaseUrl('docs/development-infrastructure/code-validation/intro#cla-bot')}">FINOS CLA bot</a>) |
+| | Submit a code change via Pull Request (validated by the <a href="{useBaseUrl('docs/development-infrastructure/code-validation/intro')}">FINOS CLA bot</a>) |
 | FINOS Staff | Administration tasks |
 | | Monitoring |
 | Project Maintainer (GitHub User) | Approve Pull Requests |
@@ -56,7 +56,7 @@ Below is a recap of who can do what.
 | Lead Maintainer (GitHub User) | Point of contact with FINOS Staff |
 
 ### GitHub Member VS FINOS Member
-Please note, the term [FINOS Members](http://finos.org/membes) normally refers to the firms that sit on the FINOS Board and provide industrial and financial support to the foundation. Whereas, [GitHub FINOS Organization Members](https://github.com/orgs/finos/people) are individuals, represented by a [GitHub Profile](https://docs.github.com/en/github/setting-up-and-managing-your-github-profile/about-your-profile) and a signed FINOS CLA.
+Please note, the term [FINOS Members](https://finos.org/membes) normally refers to the firms that sit on the FINOS Board and provide industrial and financial support to the foundation. Whereas, [GitHub FINOS Organization Members](https://github.com/orgs/finos/people) are individuals, represented by a [GitHub Profile](https://docs.github.com/en/github/setting-up-and-managing-your-github-profile/about-your-profile) and a signed FINOS CLA.
 
 ### Becoming GitHub FINOS Organization member
 Assuming that you have read our [Contribution Compliance Requirements](https://finosfoundation.atlassian.net/wiki/spaces/FINOS/pages/75530375/Contribution+Compliance+Requirements) and have a CLA signed with FINOS, you can request invitation to [FINOS GitHub Organization](https://github.com/orgs/finos/people) by emailing your GitHub username to [help@finos.org](mailto:help@finos.org).
@@ -108,7 +108,7 @@ A working build process is key to implement more automated processes, such as re
 To know more about build configuration, check the [Languages]() page.
 
 #### Versioning
-Versioning is the process to establish a format to a project version and the rules to update it, preferably integrating with automated build and release systems; the Foundation mandates the use of [Semantic Versioning](http://semver.org/) ("semver") throughout a project's lifecycle:
+Versioning is the process to establish a format to a project version and the rules to update it, preferably integrating with automated build and release systems; the Foundation mandates the use of [Semantic Versioning](https://semver.org/) ("semver") throughout a project's lifecycle:
 
 - for incubating projects, version numbers must be less than 1.0.0
 - for [Active](https://finosfoundation.atlassian.net/wiki/spaces/FINOS/pages/75530371/Active) projects, version numbers can be 1.0.0 or greater
@@ -183,7 +183,7 @@ FINOS uses a framework called Docusaurus to build a website template that any pr
 
 If you want to add a website to an existing project, checkout the [ODP Project Documentation](development-infrastructure/project-documentation); if you are starting a project from scratch, checkout the [FINOS project blueprint](#finos-project-blueprint).
 
-Checkout [FDC3](http://fdc3.finos.org/) and [Financial Objects](http://fo.finos.org/) as other examples.
+Checkout [FDC3](https://fdc3.finos.org/) and [Financial Objects](https://fo.finos.org/) as other examples.
 
 <img alt="fdc3-org" src={useBaseUrl('img/collab/fdc3-org.png')} />
 
@@ -199,7 +199,7 @@ If a `Pull Request` is submitted (related to Docusaurus files) against a FINOS r
 
 **IMPORTANT!** After forking the repository, make sure to enable the action, by accessing the `Actions` tab on your fork; Actions of forked repos are not enabled by default for security reasons.
 
-![Enable GitHub Actions on a forked repo](img/enable-actions.png)
+<img alt="Enable GitHub Actions on a forked repo" src={useBaseUrl('img/enable-actions.png')} />
 
 You will need to either update file in the `docs/` or `website/` folder (only on `master` branch) in order to trigger a build.
 
@@ -317,7 +317,7 @@ Getting started is quite simple:
 1. Make sure that your GitHub repository includes the `docs/` and `website/` folder from the [project-blueprint](https://github.com/finos/project-blueprint)
 2. Read our <a href={useBaseUrl('development-infrastructure/project-documentation')}>getting started guide</a> to understand more about Docusaurus
 3. Edit `website/siteConfig.js` following comments in file
-4. Install the <a href={useBaseUrl('development-infrastructure/project-documentation#docusaurus-build-action')}>Docusaurus Build Action provided by FINOS</a>
+4. Install the <a href="#docusaurus-build-action")}>Docusaurus Build Action provided by FINOS</a>
 5. Make edits on `docs/` files and check changes on `https://finos.github.io/<reposirory name>.`
 
 #### Automated and continuous quality scanning

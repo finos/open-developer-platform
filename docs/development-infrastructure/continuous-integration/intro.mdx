@@ -23,7 +23,7 @@ When using Java, Travis CI can be easily configured to publish new snapshot arti
 
 #### settings.xml sample
 ```
-<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+<settings xmlns="https://maven.apache.org/SETTINGS/1.0.0" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/SETTINGS/1.0.0 https://maven.apache.org/xsd/settings-1.0.0.xsd">
   <servers>
     <server>
       <id>ossrh</id>
@@ -35,10 +35,10 @@ When using Java, Travis CI can be easily configured to publish new snapshot arti
 ```
 
 ### Continuous release in Python
-Travis CI can be configured to use [python-semantic-release](http://python-semantic-release.readthedocs.io/en/latest/), a package that simplifies and automates versioning for python projects; a project lead can email [help@finos.org](mailto:help@finos.org) to request Foundation staff to apply the proper Travis CI project settings; packages will be published on behalf of the FINOS pypi user.
+Travis CI can be configured to use [python-semantic-release](https://python-semantic-release.readthedocs.io/en/latest/), a package that simplifies and automates versioning for python projects; a project lead can email [help@finos.org](mailto:help@finos.org) to request Foundation staff to apply the proper Travis CI project settings; packages will be published on behalf of the FINOS pypi user.
 
 ### Continuous release in NodeJS
-Travis CI can easily publish packages to npm using [semantic-release.org](http://semantic-release.org/), which delegates release operations to your CI environment and allows you to control versioning [using commits (commitizen)](https://www.npmjs.com/package/commitizen); as a result, npm packages will be continuously released on each code repository change.
+Travis CI can easily publish packages to npm using [semantic-release.org](https://semantic-release.org/), which delegates release operations to your CI environment and allows you to control versioning [using commits (commitizen)](https://www.npmjs.com/package/commitizen); as a result, npm packages will be continuously released on each code repository change.
 
 [Follow our instructions](javascript) on how to register a package and user in the Foundation npm organisation.
 
@@ -162,7 +162,7 @@ FINOS can provide projects with Azure Pipelines integration on [https://dev.azur
 You can follow docs on the [Microsoft docs page](https://docs.microsoft.com/en-us/azure/devops/pipelines/create-first-pipeline)
 
 ## MyGet
-[Myget](http://myget.org/) is a friction-free continuous integration & delivery for your nuget, npm, bower and vsix packages; the Foundation provides package repositories, which allow:
+[Myget](https://myget.org/) is a friction-free continuous integration & delivery for your nuget, npm, bower and vsix packages; the Foundation provides package repositories, which allow:
 
 1. **Pre-release build and publishing**, using build environments that are equipped with .NET Framework and Visual Studio (headless); it also features source code tagging and version updates on source code based on incremental build number, to fully automate the package publishing pipeline
 2. **Sync with NuGet**, that can be either manual (promoting pre-releases to releases using MyGet web interface) or automatic (a committer must create a personal account on MyGet and request access from the Foundation in order to be able to push packages)

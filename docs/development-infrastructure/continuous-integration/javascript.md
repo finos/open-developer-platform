@@ -22,7 +22,7 @@ All npm packages released under the FINOS npm organisation should define the @fi
 There are some situations where it is not possible to specify the scope of a package, since scoping maybe used for behaviour-related aspects of the application; for example when [defining typescript typings](https://www.npmjs.com/org/types).
 
 ## Semantic release
-[Semantic release](https://semantic-release.gitbook.io/semantic-release/) is a Node.js library that automates the software release process by parsing commit messages; on every commit, semantic release is executed by Travis CI and - based on the commit message - decides to trigger a release or not; release managers can use [commitizen](http://commitizen.github.io/cz-cli/) (see image below) to simplify their commit process; simply type `npm install -g commitizen` and use `git cz` (instead of `git commit`) to commit your changes.
+[Semantic release](https://semantic-release.gitbook.io/semantic-release/) is a Node.js library that automates the software release process by parsing commit messages; on every commit, semantic release is executed by Travis CI and - based on the commit message - decides to trigger a release or not; release managers can use [commitizen](https://commitizen.github.io/cz-cli/) (see image below) to simplify their commit process; simply type `npm install -g commitizen` and use `git cz` (instead of `git commit`) to commit your changes.
 
 ![Commitizen](https://github.com/commitizen/cz-cli/raw/master/meta/screenshots/add-commit.png)
 
@@ -33,7 +33,7 @@ When a release is performed, your CI environment will do the following:
 - Run all build and validation tasks defined by your build descriptor (ie `.travis.yml`)
 - Create a GitHub tag, labelled after the version specified in `package.json`
   - Include a `CHANGELOG.md` file with a recap of all commits added since last release
-  - Publish (on [npmjs.org/org/finos](npmjs.org/org/finos)) an updated version of the NPM package defined by `package.json`
+  - Publish (on [npmjs.org/org/finos](https://npmjs.org/org/finos)) an updated version of the NPM package defined by `package.json`
 - Increase the the version specified in `package.json` and push changes to `master` branch
 
 ### Release setup
