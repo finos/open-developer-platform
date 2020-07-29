@@ -21,7 +21,7 @@ module.exports = {
         alt: 'ODP Logo',
         src: 'img/favicon/favicon-odp.ico',
       },
-      actions: [
+      items: [
         {to: 'docs/what-is-odp', label: 'Docs', position: 'right'},
         {to: 'docs/roadmap', label: 'Roadmap', position: 'right'},
         {to: 'docs/team', label: 'Team', position: 'right'},
