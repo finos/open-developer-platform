@@ -39,13 +39,13 @@ Below is a recap of who can do what.
 | Who | What |
 |--- | :----------|
 | Any GitHub user | Fork repository |
-| | Submit a code change via Pull Request (flagged by the <a href="{useBaseUrl('docs/development-infrastructure/code-validation/intro')}">FINOS CLA bot</a>)
+| | Submit a code change via Pull Request (flagged by the <a href={useBaseUrl('docs/development-infrastructure/code-validation/intro')}>FINOS CLA bot</a>)
 | | Use GitHub Issues to contribute to the discussion |
 | Anyone | Checkout the source code |
 | | Consume any artifact produced by a Project |
 | | Access FINOS issue boards |
 | GitHub user covered by CLA | Become a member of the GitHub FINOS Organization |
-| | Submit a code change via Pull Request (validated by the <a href="{useBaseUrl('docs/development-infrastructure/code-validation/intro')}">FINOS CLA bot</a>) |
+| | Submit a code change via Pull Request (validated by the <a href={useBaseUrl('docs/development-infrastructure/code-validation/intro')}>FINOS CLA bot</a>) |
 | FINOS Staff | Administration tasks |
 | | Monitoring |
 | Project Maintainer (GitHub User) | Approve Pull Requests |
@@ -189,7 +189,7 @@ Checkout [FDC3](https://fdc3.finos.org/) and [Financial Objects](https://fo.fino
 
 #### Docusaurus Build Action
 
-The [docusaurus workflow](.github/workflows/docusaurus.yml) defines a GitHub Action that automatically builds the Docusaurus website after any commit.
+The [docusaurus workflow](https://github.com/finos/open-developer-platform/blob/master/.github/workflows/docusaurus.yml) defines a GitHub Action that automatically builds the Docusaurus website after any commit.
 
 If a `Push` event occurs on the a Docusaurus file (`website/**`, `docs/**` or `docusaurus.yml`) on a FINOS master branch, the action will simply invoke the `docusaurus-build` command and push the (HTML) result into the `gh-pages` branch.
 
@@ -315,7 +315,7 @@ The project blueprint comes with a pre-definite website that is built using Docu
 Getting started is quite simple:
 
 1. Make sure that your GitHub repository includes the `docs/` and `website/` folder from the [project-blueprint](https://github.com/finos/project-blueprint)
-2. Read our <a href={useBaseUrl('development-infrastructure/project-documentation')}>getting started guide</a> to understand more about Docusaurus
+2. Read our <a href={useBaseUrl('docs/development-infrastructure/project-documentation')}>getting started guide</a> to understand more about Docusaurus
 3. Edit `website/siteConfig.js` following comments in file
 4. Install the <a href="#docusaurus-build-action">Docusaurus Build Action provided by FINOS</a>
 5. Make edits on `docs/` files and check changes on `https://finos.github.io/<reposirory name>.`
