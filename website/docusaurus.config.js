@@ -4,7 +4,7 @@ module.exports = {
   tagline: 'Delivering open source software development best practices whilst enforcing security and legal compliance for the financial services industry',
   url: 'https://odp.finos.org',
   baseUrl: '/',
-  favicon: 'img/favicon/favicon-odp.ico',
+  favicon: 'https://raw.githubusercontent.com/finos/open-developer-platform/master/website/static/img/favicon/favicon-odp.ico',
   projectName: 'open-developer-platform',
   organizationName: 'finos',
   scripts: ['https://buttons.github.io/buttons.js'],
