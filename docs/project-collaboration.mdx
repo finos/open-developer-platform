@@ -22,8 +22,9 @@ In order to configure your GitHub access, it is necessary to:
 2. [Setup a Git client locally](https://help.github.com/en/github/getting-started-with-github/set-up-git)
 3. Ensure that the Git client is configured with your `<username>@users.github.com` email address (you can use `git config --list | grep user.email` command). If you use another email address, you may incur in one of the following issues:
 
-  1. Your corporate firewall blocks Git activity, unless signed with and `@<your company domain>` email address
-  2. GitHub forces you to set the email address as public, or it would reject push operations with the error `push declined due to email privacy restrictions`.
+     1. Your corporate firewall blocks Git activity, unless you have signed in with an `@<your company domain>` email address
+ 
+     2. GitHub forces you to set the email address as public, or it would reject push operations with the error `push declined due to email privacy restrictions`.
   
 ## Access Control
 All repositories managed by the Foundation are open (public); as a consequence, anyone is able to:
@@ -264,7 +265,7 @@ Meetings are one of the most used collaboration channels at FINOS, and minutes a
 
 Although Atlassian Confluence is currently the most used tool, FINOS also provides a way to use GitHub Issues to manage meeting minutes. The person leading the meeting (or meeting leader) can create a new GitHub Issue for each meeting, following the [Meeting template provided by FINOS](https://github.com/finos/open-developer-platform/blob/master/.github/ISSUE_TEMPLATE/Meeting.md) and leverage issue assignees to track meeting participants (see our public activity dashboards).
 
-- *Prior to the meeting) - 48 hours before, as per [meeting best practices](https://finosfoundation.atlassian.net/wiki/spaces/FINOS/pages/92996572/Running+Good+Meetings), the meeting leader creates a new GitHub Issue using...
+- *Prior to the meeting* - 48 hours before, as per [meeting best practices](https://finosfoundation.atlassian.net/wiki/spaces/FINOS/pages/92996572/Running+Good+Meetings), the meeting leader creates a new GitHub Issue using...
  - Meetings issue template
  - `[MEETING]` title prefix
  - `meeting` label
