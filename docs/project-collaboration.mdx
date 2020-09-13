@@ -111,9 +111,7 @@ Code in the Foundation is hosted exclusively on [https://github.com/finos](https
 #### Building and testing
 The build is an end-to-end process that converts source code into reusable artifacts, something that we will refer to as deployable units, which is developed by the project team and hosted in the github repository. It is a particularly important task, as it can centralise and trigger several automated sub-tasks, such as version control, code testing, quality and compliance reports and more.
 
-A working build process is key to implement more automated processes, such as release, [Continuous Integration]() and automated deployments; it is also a requirement for [project activation]().
-
-To know more about build configuration, check the [Languages]() page.
+A working build process is key to implement more automated processes, such as release, [Continuous Integration](developer-infrastructure/continuous-integration/intro) and automated deployments; it is also a requirement for [project activation](https://finosfoundation.atlassian.net/wiki/spaces/FINOS/pages/75530376/Activation).
 
 #### Versioning
 Versioning is the process to establish a format to a project version and the rules to update it, preferably integrating with automated build and release systems; the Foundation mandates the use of [Semantic Versioning](https://semver.org/) ("semver") throughout a project's lifecycle:
@@ -124,7 +122,7 @@ Versioning is the process to establish a format to a project version and the rul
 Every project team is encouraged to define specific criteria by which the MAJOR, MINOR and PATCH components of the semver scheme will be used (keeping in mind the general guidelines semver itself mandates), since this helps to provide clarity to consumers.
 
 #### Release
-The release process allows to publish deployable units into a publicly available artifact repository, by invoking the build process and applying version control to increment the project's version; the Foundation collects guides and best practices on how to release a project, depending on the language and eco-system of choice; browse the [Languages]() page to know more about automated configurations for a given language.
+The release process allows to publish deployable units into a publicly available artifact repository, by invoking the build process and applying version control to increment the project's version; the Foundation collects guides and best practices on how to release a project, depending on the [language and eco-system of choice](developer-infrastructure/continuous-integration/intro).
 
 #### Best practices
 
