@@ -111,7 +111,7 @@ Code in the Foundation is hosted exclusively on [https://github.com/finos](https
 #### Building and testing
 The build is an end-to-end process that converts source code into reusable artifacts, something that we will refer to as deployable units, which is developed by the project team and hosted in the github repository. It is a particularly important task, as it can centralise and trigger several automated sub-tasks, such as version control, code testing, quality and compliance reports and more.
 
-A working build process is key to implement more automated processes, such as release, [Continuous Integration](developer-infrastructure/continuous-integration/intro) and automated deployments; it is also a requirement for [project activation](https://finosfoundation.atlassian.net/wiki/spaces/FINOS/pages/75530376/Activation).
+A working build process is key to implement more automated processes, such as release, <a href={useBaseUrl('docs/development-infrastructure/continuous-integration/intro')}>Continuous Integration</a> and automated deployments; it is also a requirement for [project activation](https://finosfoundation.atlassian.net/wiki/spaces/FINOS/pages/75530376/Activation).
 
 #### Versioning
 Versioning is the process to establish a format to a project version and the rules to update it, preferably integrating with automated build and release systems; the Foundation mandates the use of [Semantic Versioning](https://semver.org/) ("semver") throughout a project's lifecycle:
@@ -187,7 +187,7 @@ FINOS uses a framework called Docusaurus to build a website template that any pr
 3. Automated - any change to the `master` branch version will trigger a deployment of the website, using the [Docusaurus build action](#docusaurus-build-action); also forks can enable this action, so that Pull Request submitters can provide a link to their preview website.
 4. Branded - enforces FINOS graphic guidelines across all websites
 
-If you want to add a website to an existing project, checkout the [ODP Project Documentation](development-infrastructure/project-documentation); if you are starting a project from scratch, checkout the [FINOS project blueprint](#finos-project-blueprint).
+If you want to add a website to an existing project, checkout the <a href={useBaseUrl('docs/development-infrastructure/project-documentation')}>ODP Project Documentation</a>; if you are starting a project from scratch, checkout the [FINOS project blueprint](#finos-project-blueprint).
 
 Checkout [FDC3](https://fdc3.finos.org/) and [Financial Objects](https://fo.finos.org/) as other examples.
 
