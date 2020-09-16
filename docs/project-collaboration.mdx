@@ -7,7 +7,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 FINOS leverages many services offered by [GitHub.com](https://github.com/), which are documented in the [Collaboration Use Cases on GitHub](#collaboration-use-cases-on-github) and [other collaboration use cases](#other-collaboration-use-cases) sections below.
 
-In order to collaborate in a FINOS project, the first thing is to get a GitHub.com account and sign the FINOS CLA; this document will walk you through access control and permissions that are enforced on FINOS GitHub properties.
+In order to collaborate in a FINOS project, the first thing is to get a GitHub.com account and sign the FINOS [Contributor License Agreement (CLA)](https://finosfoundation.atlassian.net/wiki/spaces/FINOS/pages/75530375/Contribution+Compliance+Requirements#ContributionComplianceRequirements-ContributorLicenseAgreement); this document will walk you through access control and permissions that are enforced on FINOS GitHub properties.
 
 :::important
 
@@ -50,7 +50,7 @@ Below is a recap of who can do what.
 | Any GitHub user | Read | Fork repository |
 | | | Submit a code change via Pull Request (flagged by the <a href={useBaseUrl('docs/development-infrastructure/code-validation/intro')}>FINOS CLA bot</a>)
 | | | Use GitHub Issues to contribute to the discussion |
-| GitHub user covered by CLA | Read | Become a member of the GitHub FINOS Organization |
+| GitHub user covered by [CLA](https://finosfoundation.atlassian.net/wiki/spaces/FINOS/pages/75530375/Contribution+Compliance+Requirements#ContributionComplianceRequirements-ContributorLicenseAgreement) | Read | Become a member of the GitHub FINOS Organization |
 | | | Submit a code change via Pull Request (validated by the <a href={useBaseUrl('docs/development-infrastructure/code-validation/intro')}>FINOS CLA bot</a>) |
 | FINOS Staff | Triage | Administration tasks |
 | | | Monitoring |
@@ -64,12 +64,12 @@ Below is a recap of who can do what.
 Checkout the [GitHub docs around roles and permissions](https://docs.github.com/en/github/setting-up-and-managing-organizations-and-teams/repository-permission-levels-for-an-organization#repository-access-for-each-permission-level) to know more about entitlements.
 
 ### GitHub Member VS FINOS Member
-Please note, the term [FINOS Members](https://finos.org/membes) normally refers to the firms that sit on the FINOS Board and provide industrial and financial support to the foundation. Whereas, [GitHub FINOS Organization Members](https://github.com/orgs/finos/people) are individuals, represented by a [GitHub Profile](https://docs.github.com/en/github/setting-up-and-managing-your-github-profile/about-your-profile) and a signed FINOS CLA.
+Please note, the term [FINOS Members](https://finos.org/membes) normally refers to the firms that sit on the FINOS Board and provide industrial and financial support to the foundation. Whereas, [GitHub FINOS Organization Members](https://github.com/orgs/finos/people) are individuals, represented by a [GitHub Profile](https://docs.github.com/en/github/setting-up-and-managing-your-github-profile/about-your-profile) and a signed FINOS [CLA](https://finosfoundation.atlassian.net/wiki/spaces/FINOS/pages/75530375/Contribution+Compliance+Requirements#ContributionComplianceRequirements-ContributorLicenseAgreement).
 
 ### Becoming GitHub FINOS Organization member
-Assuming that you have read our [Contribution Compliance Requirements](https://finosfoundation.atlassian.net/wiki/spaces/FINOS/pages/75530375/Contribution+Compliance+Requirements) and have a CLA signed with FINOS, you can request invitation to [FINOS GitHub Organization](https://github.com/orgs/finos/people) by emailing your GitHub username to [help@finos.org](mailto:help@finos.org).
+Assuming that you have read our [Contribution Compliance Requirements](https://finosfoundation.atlassian.net/wiki/spaces/FINOS/pages/75530375/Contribution+Compliance+Requirements) and have a [CLA](https://finosfoundation.atlassian.net/wiki/spaces/FINOS/pages/75530375/Contribution+Compliance+Requirements#ContributionComplianceRequirements-ContributorLicenseAgreement) signed with FINOS, you can request invitation to [FINOS GitHub Organization](https://github.com/orgs/finos/people) by emailing your GitHub username to [help@finos.org](mailto:help@finos.org).
 
-FINOS uses [GitHub Actions](https://docs.github.com/en/actions) to automatically track new GitHub users (we have on file) which are covered by a CLA, and automatically sends out an invitation to join the FINOS GitHub org.
+FINOS uses [GitHub Actions](https://docs.github.com/en/actions) to automatically track new GitHub users (we have on file) which are covered by a [CLA](https://finosfoundation.atlassian.net/wiki/spaces/FINOS/pages/75530375/Contribution+Compliance+Requirements#ContributionComplianceRequirements-ContributorLicenseAgreement), and automatically sends out an invitation to join the FINOS GitHub org.
 
 The source code is part of the FINOS [Project Quality & Compliance Action](https://github.com/finos/open-developer-platform/blob/master/.github/workflows/project-compliance-quality.yml).
 
@@ -129,7 +129,7 @@ The release process allows to publish deployable units into a publicly available
 ##### Avoid direct changes to GitHub repositories - use Pull Requests
 Making direct changes to repositories is not recommended, for teams bigger than 1, for few reasons, including:
 
-1. Direct commits are not validated, as they cannot be blocked (ie, if CLA is not in place)
+1. Direct commits are not validated, as they cannot be blocked (ie, if [CLA](https://finosfoundation.atlassian.net/wiki/spaces/FINOS/pages/75530375/Contribution+Compliance+Requirements#ContributionComplianceRequirements-ContributorLicenseAgreement) is not in place)
 2. Pull Requests allow to have a conversation with the team
 3. Pull Requests tent to have a more thorough validation pipeline
 
