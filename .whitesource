@@ -1,5 +1,6 @@
 {
   "scanSettings": {
+    "baseBranches": [],
     "configMode": "LOCAL"
   },
   "checkRunSettings": {
