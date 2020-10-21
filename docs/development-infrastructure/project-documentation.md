@@ -38,7 +38,10 @@ To fix it, follow these steps:
 3. Select the `master` branch from the `Source` dropdown
 4. Scroll down again to the `GitHub Pages` section
 5. At the top it should say Your site is published at `https://<org/user name>.github.io/<repository name>`
-6. Select the gh-pages branch from the `Source` dropdown
+6. Select the `gh-pages` branch from the `Source` dropdown
+7. Keep the `root` folder as location to serve contents from
+
+<img alt="public-vs-private-membership" src={useBaseUrl('img/collab/gh-pages-settings.png')} />
 
 It may take 20 to 40 minutes to enable the URL, until then you may get a 404 error.
 
