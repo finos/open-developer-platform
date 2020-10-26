@@ -147,7 +147,13 @@ a project team
 one or more Foundation repositories; if one, project and repository will have the same name.
 In WhiteSource terms, this is called a product and can be accessed directly by the WhiteSource main menu; each WhiteSource product will list below the projects included.
 
-Additionally, a convenience script has been created and saved to [https://github.com/finos/contrib-toolbox/blob/master/scripts/wss-maven-scan.sh](https://github.com/finos/contrib-toolbox/blob/master/scripts/wss-maven-scan.sh) which can be used for simplifying one-off scanning of projects.
+Additionally, a convenience script has been created and saved to [https://github.com/finos/contrib-toolbox/blob/master/scripts/wss-maven-scan.sh](https://github.com/finos/contrib-toolbox/blob/master/scripts/wss-maven-scan.sh) which can be used for simplifying one-off scanning of projects; it requires a WhiteSource API key that must requested via [help@finos.org](help@finos.org), and accepts GitHub repo coordinates, a GitHub user/org name and a GitHub repository name.
+
+Below an example to submit metrics for the Open Developer Platform repo.
+```
+export WSS_API_KEY="xxx"
+curl -L https://raw.githubusercontent.com/finos/contrib-toolbox/master/scripts/wss-maven-scan.sh | bash -s -- finos open-developer-platform
+```
 
 ## Request access
 You can request access to the FINOS WhiteSource dashboard if you're part of a FINOS project team; please send an email to [help@finos.org](mailto:help@finos.org) that specifies:
