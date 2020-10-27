@@ -353,7 +353,9 @@ Getting started is quite simple:
 5. Open the `NOTICE` file in a text editor and either remove the `{Other notices, as necessary}` token, or [add attributions if required by your code's dependencies](https://finosfoundation.atlassian.net/wiki/spaces/FINOS/pages/75530255/License+Categories).
 6. Open the `README.md` file in a text editor and complete the content as appropriate for your project.
 7. Add the [Apache license header to all of your source files](https://www.apache.org/licenses/LICENSE-2.0.html#apply).
-8. Commit and push all of your changes.
+8. (optional) Remove `.whitesource` and `whitesource.config`, if vulnverability detection does not apply to this project
+9. (optional) Remove the `docs/` and `website/` folders, if you're not interested to have a project documentation website in place
+10. Commit and push all of your changes.
 
 ### Automated and continuous quality scanning
 The ODP team is working on a GitHub action to continuously check all FINOS repositories against FINOS bylaws and requirements; see https://github.com/finos/open-developer-platform/issues/31 to know more.
