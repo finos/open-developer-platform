@@ -49,7 +49,7 @@ The CLA bot source code can be found on [https://github.com/finos/cla-bot](https
 If the CLA Bot finds something wrong in a PR, it will fail the validation checks, showing a visible red mark and (optionally, if configured), block anyone to merge the Pull Request.
 
 #### Re summoning the bot
-When a Pull Request gets modified, or a contributors CLA gets added, it can be re-summoned simply adding a comment with the text @finos-cla-bot[bot] check.
+When a Pull Request gets modified, or a contributors CLA gets added, it can be re-summoned simply adding a comment with the text `@cla-bot[bot] check`.
 
 #### GitLab version
 There is a GitLab version of this bot that can be found on [https://github.com/ScottLogic/gitlab-cla-bot](https://github.com/ScottLogic/gitlab-cla-bot); FINOS uses it to run an internal GitLab instance.
