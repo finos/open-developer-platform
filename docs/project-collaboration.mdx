@@ -265,14 +265,14 @@ A project needs:
 
 <img alt="meeting-issue-template-create" src={useBaseUrl('img/collab/issue-template-create.png')} />
 
-Meetings are one of the most used collaboration channels at FINOS, and minutes are very important, as they provide a transparency across all project activities and decisions; you can read more in the [Running Good Meetings](https://finosfoundation.atlassian.net/wiki/spaces/FINOS/pages/92996572/Running+Good+Meetings) page; they are also very important for participants, as they are used to track meeting participation and therefore the activity of each individual and firm; all data is publicly available at metrics.finos.org
+Meetings are one of the most used collaboration channels at FINOS, and minutes are very important, as they provide transparency across all project activities and decisions; you can read more in the [Running Good Meetings](https://github.com/finos/community/blob/master/governance/Meeting-Procedures.md) page; they are also very important for participants, as they are used to track meeting participation and therefore the activity of each individual and firm; all data is publicly available at metrics.finos.org
 
-Although Atlassian Confluence is currently the most used tool, FINOS also provides a way to use GitHub Issues to manage meeting minutes. The person leading the meeting (or meeting leader) can create a new GitHub Issue for each meeting, following the [Meeting template provided by FINOS](https://github.com/finos/open-developer-platform/blob/master/.github/ISSUE_TEMPLATE/Meeting.md) and leverage issue assignees to track meeting participants (see our public activity dashboards).
+FINOS provides a way to use GitHub Issues to manage meeting minutes. The person leading the meeting (or meeting leader) can create a new GitHub Issue for each meeting, following the [Meeting template provided by FINOS](https://github.com/finos/project-blueprint/issues/new?template=meeting-minutes.md) and leverage issue assignees to track meeting participants (see our public activity dashboards).
 
-- *Prior to the meeting* - 48 hours before, as per [meeting best practices](https://finosfoundation.atlassian.net/wiki/spaces/FINOS/pages/92996572/Running+Good+Meetings), the meeting leader creates a new GitHub Issue using...
- - Meetings issue template
- - `[MEETING]` title prefix
- - `meeting` label
+- *Prior to the meeting* - 48 hours before, as per [meeting best practices](https://github.com/finos/community/blob/master/governance/Meeting-Procedures.md), the meeting leader creates a new GitHub Issue using...
+    - Meetings issue template
+    - `[MEETING]` title prefix
+    - `meeting` label
 - *At the beginning of the meeting* - the meeting leader posts the issue URL on the meeting chat and asks all participants to add a comment on the issue
 - *At the end of the meeting* - the meeting leader closes the issue, which will trigger the attendants the indexing process; when indexing is completed, the label indexed will be added to the issue.
 - *(Optional) After the meeting* - the meeting leader can remove the `indexed` label in order to remove meeting attendance from the index and make changes; in order to reindex the meeting, the `indexed` label can be re-added.
