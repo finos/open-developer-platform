@@ -18,7 +18,7 @@ The team is composed by FINOS staff, bank institutions and software vendors, who
 You can subscribe to [odp@finos.org](mailto:odp+subscribe@finos.org) to get updates from the team.
 
 ## On-demand meetings
-ODP meetings can be setup on demand by accessing https://app.hubspot.com/meetings/maoo/odp to:
+ODP meetings can be setup on demand by accessing https://app.hubspot.com/meetings/maoo to:
 - Discuss any ongoing project contributions (reminder that you can submit a new contribution on github.com/finos/community/issues/new)
 - Ask questions about ODP and/or propose changes and improvements for hosted projects
 
