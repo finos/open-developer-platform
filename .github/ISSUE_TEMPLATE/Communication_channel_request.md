@@ -9,7 +9,7 @@ assignees: 'mcleo-d'
 
 ## Slack Channel Request
 
-Let us know if your FINOS project needs a dedicated public channel on https://finos-lf.slack.com/ for real-time, synchronous project team communications.
+Let us know if your FINOS project needs a dedicated _**"public"**_ channel on https://finos-lf.slack.com/ for real-time, synchronous project team communications.
 
 **Please note** : All FINOS project channels in https://finos-lf.slack.com/ are _**"public"**_, unless explicitly stated why a _**"private"**_ channel is required.
 
