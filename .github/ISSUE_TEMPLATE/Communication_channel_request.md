@@ -18,3 +18,11 @@ Let us know if your FINOS project needs a dedicated _**"public"**_ channel on ht
 Let us know if your FINOS project needs a [GitHub Team](https://docs.github.com/en/github/setting-up-and-managing-organizations-and-teams/about-teams) created in the [FINOS Organisation](https://github.com/finos/) to enable [GitHub Team Discussions](https://docs.github.com/en/github/building-a-strong-community/about-team-discussions). Information on GitHub Team Discussions for asynchronous team communication is found in the [Communications Section](https://odp.finos.org/docs/project-collaboration#conversations) of the ODP Microsite.
 
 **Please note** : Only team members who have accepted an invitation to join the [FINOS Organisation](https://github.com/orgs/finos/people) can view and partake in GitHub Team Discussions. This is also subject to [FINOS CCLA and ICLA requirements](https://finosfoundation.atlassian.net/wiki/spaces/FINOS/pages/75530375/Contribution+Compliance+Requirements#ContributionComplianceRequirements-ContributorLicenseAgreement).
+
+## Required Information
+Please provide the following information for each request made.
+
+- Provide the name of the FINOS project making the request.
+- Is this a **Slack Channel** _or_ **GitHub Team Discussions** request?
+- Provide Lead Maintainer appoval by tagging them in the issue and asking them to approve in the comments.
+- Please provide other details that might be required.
