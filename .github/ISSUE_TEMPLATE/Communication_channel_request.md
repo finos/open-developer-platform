@@ -1,5 +1,5 @@
 ---
-name: "🗣 FINOS Project Comms Channel Request"
+name: "🗣 FINOS Communications Channel Request"
 about: "My FINOS project team needs a dedicated Slack Channel or GitHub Team Discussions"
 title: ''
 labels: 'communications-request'
