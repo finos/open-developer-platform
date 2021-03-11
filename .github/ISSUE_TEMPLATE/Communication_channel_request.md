@@ -2,7 +2,7 @@
 name: "🗣 FINOS Communications Channel Request"
 about: "My FINOS project team needs a dedicated Slack Channel or GitHub Team Discussions"
 title: ''
-labels: 'communications-request'
+labels: 'comms-channel-request'
 assignees: 'mcleo-d'
 
 ---
