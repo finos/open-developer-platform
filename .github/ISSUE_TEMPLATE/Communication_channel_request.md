@@ -15,6 +15,4 @@ Let us know if your FINOS project needs a dedicated public channel on https://fi
 
 ## GitHub Team Discussions Request
 
-Let us know if your FINOS project needs a GitHub Team created in the FINOS Organisation for [GitHub Team Discussions](https://docs.github.com/en/github/building-a-strong-community/about-team-discussions). 
-
-Information on how GitHub Team Discussions enables asynchrounous team communication is found in the [Communications Section](https://odp.finos.org/docs/project-collaboration#conversations) of the [ODP Microsite](https://odp.finos.org/).
+Let us know if your FINOS project needs a GitHub Team created in the FINOS Organisation for [GitHub Team Discussions](https://docs.github.com/en/github/building-a-strong-community/about-team-discussions). Information on how GitHub Team Discussions enables asynchrounous team communication is found in the [Communications Section](https://odp.finos.org/docs/project-collaboration#conversations) of the [ODP Microsite](https://odp.finos.org/).
