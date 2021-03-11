@@ -24,5 +24,5 @@ Please provide the following information for every request made.
 
 - The name of the FINOS project making the request.
 - State if a **Slack Channel** _or_ **GitHub Team Discussions** is needed.
-- Tag the Project Lead Maintainer and seek request approval in the issue comments.
-- Please provide other details that might be required.
+- Tag the FINOS Project Lead Maintainer and request their direct approval in the issue comments.
+- _Optional_ : Any other requests or considerations that might be required.
