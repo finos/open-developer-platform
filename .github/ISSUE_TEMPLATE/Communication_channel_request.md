@@ -22,7 +22,7 @@ Let us know if your FINOS project needs a [GitHub Team](https://docs.github.com/
 ## Required Information
 Please provide the following information for every request made.
 
-- Provide the name of the FINOS project making the request.
+- The name of the FINOS project making the request.
 - Is this a **Slack Channel** _or_ **GitHub Team Discussions** request?
 - Provide Lead Maintainer appoval by tagging them in the issue and asking them to approve in the comments.
 - Please provide other details that might be required.
