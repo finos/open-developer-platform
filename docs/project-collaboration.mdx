@@ -218,20 +218,36 @@ You will need to either update file in the `docs/` or `website/` folder (only on
 No other configuration is needed (no Personal Tokens, as done in Travis CI), this should work out of the box; you can track builds on https://github.com/maoo/finos-fo/actions .
 
 ### Conversations
-In order to track threaded conversations - among project team members, external collaborators and consumers - it is possible to use [**GitHub Issues**](https://help.github.com/en/github/managing-your-work-on-github/about-issues), with the following limitations:
+In order to track threaded conversations - among FINOS Project / SIG team members, external collaborators and consumers - it is possible to use [GitHub Issues](https://help.github.com/en/github/managing-your-work-on-github/about-issues), with the following limitations:
 
 1. The scope of the conversations is always public, whereas there may be sensitive conversations across project leaders that may require to be confidential
 2. Issue comments are flat, although mentions and quoting can be used to follow multiple conversation threads.
 
-A more advanced way (currently being investigated at FINOS) is to use [**GitHub team discussions**](https://help.github.com/en/articles/about-team-discussions):
+### GitHub Team Discussions
+
+A more advanced way is to use [GitHub Team Discussions](https://help.github.com/en/articles/about-team-discussions):
 
 1. Can be created as private, which are accessible only by team members
 2. Can be created as public to all GitHub FINOS org members
 3. Cannot be created at public to non FINOS member or unauthenticated visitors, so GitHub Issues is the only option for that.
 
-Both features **support email notifications** and the ability to post a comment by answering to it.
+Both features **support email notifications** and the ability to post a comment by answering to it. Simply raise a [FINOS Slack Channel / GitHub Team Discussions Request](https://github.com/finos/open-developer-platform/issues/new?assignees=mcleo-d&labels=comms-channel-request&template=Communication_channel_request.md&title=) to enable GitHub Team Discussions for FINOS Project and SIG teams. 
 
 <img alt="team-page-discussions-tab" src={useBaseUrl('img/collab/team-page-discussions-tab.png')} />
+
+### FINOS Slack
+
+The [FINOS Slack](https://finos-lf.slack.com/) brings the FINOS Community together in a Slack Workspace dedicated to **_"public"_** conversations and made available to all FINOS Projects and Special Interest Groups. 
+
+The FINOS Community can access the FINOS Slack by emailing help@finos.org for an invitation or by visiting https://finos-lf.slack.com/ if you're a FINOS or Linux Foundation team member.
+
+FINOS Project and SIG Leads, simply raise a [FINOS Slack Channel / GitHub Team Discussions Request](https://github.com/finos/open-developer-platform/issues/new?assignees=mcleo-d&labels=comms-channel-request&template=Communication_channel_request.md&title=) to create a Slack Channel for your FINOS Project or Special Interest Group.
+
+<img alt="finos-slack-workspace" src={useBaseUrl('img/collab/finos-slack-workspace.png')} />
+
+All participants in the FINOS Slack are subject to the [LF Antitrust Policy](https://www.linuxfoundation.org/antitrust-policy/), the [FINOS Community Code of Conduct](https://github.com/finos/community/blob/master/governance/Code-of-Conduct.md) and all other [FINOS policies](https://github.com/finos/community/tree/master/governance#policies). 
+
+It's extremely important that all participants in the FINOS Slack do not participate in any activities that are prohibited under applicable US state, federal or foreign antitrust and competition laws.
 
 ### Voting
 FINOS Governance processes require voting at different levels (and publicly available), including but not limited to:
