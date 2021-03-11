@@ -7,4 +7,14 @@ assignees: 'mcleo-d'
 
 ---
 
-## Communication Channel Request
+## Slack Channel Request for FINOS Projects
+
+Let FINOS know if your FINOS project needs a dedicated public channel on https://finos-lf.slack.com/ for real-time, synchronous project team communications.
+
+**Please note** : All FINOS project channels in https://finos-lf.slack.com/ are _publically accessible_, unless explicitly stated why a _private channel_ is required.
+
+## GitHub Team Discussions Request for FINOS Projects
+
+Let FINOS know if your FINOS project needs a GitHub Team created in the FINOS Organisation for [GitHub Team Discussions](https://docs.github.com/en/github/building-a-strong-community/about-team-discussions). 
+
+Information on how GitHub Team Discussions enables asynchrounous team communication is found in the [Communications Section](https://odp.finos.org/docs/project-collaboration#conversations) of the [ODP Microsite](https://odp.finos.org/).
