@@ -20,7 +20,7 @@ Let us know if your FINOS project needs a [GitHub Team](https://docs.github.com/
 **Please note** : Only team members who have accepted an invitation to join the [FINOS Organisation](https://github.com/orgs/finos/people) can view and partake in GitHub Team Discussions. This is also subject to [FINOS CCLA and ICLA requirements](https://finosfoundation.atlassian.net/wiki/spaces/FINOS/pages/75530375/Contribution+Compliance+Requirements#ContributionComplianceRequirements-ContributorLicenseAgreement).
 
 ## Required Information
-Please provide the following information for each request made.
+Please provide the following information for every request made.
 
 - Provide the name of the FINOS project making the request.
 - Is this a **Slack Channel** _or_ **GitHub Team Discussions** request?
