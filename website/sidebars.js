@@ -1,6 +1,6 @@
 module.exports = {
   mainSidebar: {
-    'Getting Started': ["what-is-odp", "project-collaboration", "finos-maintainers-cheatsheet"],
+    'Getting Started': ["what-is-odp", "project-collaboration"],
     'Development Infrastructure': [
       {
         type: 'category',
@@ -30,6 +30,7 @@ module.exports = {
       'development-infrastructure/project-documentation',
       'development-infrastructure/continuous-delivery'
     ],
+    'Platforms': ["platforms/legend-studio-shared", "platforms/symphony-dev-pod"],
     'About ODP': ["contributing","team","roadmap"],
   },
 }
