@@ -13,9 +13,9 @@ const projects = [
     "url": "https://fdc3.org"
   },
   {
-    "name": "Alloy",
-    "imageUrl": "https://raw.githubusercontent.com/finos/finos-landscape/master/hosted_logos/alloy.svg",
-    "url": "https://alloy.finos.org"
+    "name": "Legend",
+    "imageUrl": "https://raw.githubusercontent.com/finos/finos-landscape/master/hosted_logos/legend.svg",
+    "url": "https://legend.finos.org"
   },
   {
     "name": "Plexus Interop",

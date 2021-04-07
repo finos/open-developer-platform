@@ -2,7 +2,7 @@
   "scripts": {
     "start": "docusaurus start",
     "swizzle": "docusaurus swizzle",
-    "build": "docusaurus build",
+    "build": "cd .. ; ./scripts/build-contribute-page.sh ; cd - ; docusaurus build",
     "publish-gh-pages": "docusaurus deploy"
   },
   "devDependencies": {

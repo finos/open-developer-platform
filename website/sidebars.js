@@ -1,6 +1,6 @@
 module.exports = {
   mainSidebar: {
-    'Getting Started': ["what-is-odp", "project-collaboration"],
+    'Getting Started': ["what-is-odp", "project-collaboration", "finos-maintainers-cheatsheet"],
     'Development Infrastructure': [
       {
         type: 'category',
