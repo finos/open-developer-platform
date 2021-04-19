@@ -9,12 +9,25 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 **Learn more about Legend at [legend.finos.org](https://legend.finos.org).**
 
-# Shared Public Instance of Legend Studio
+## Shared Public Instance of Legend Studio
 FINOS hosts a shared instance of Legend Studio at [https://legend.finos.org/studio](https://legend.finos.org/studio). The shared instance of Legend Studio is provided free-of-charge and as-is. It is primarily intended to be used for shared modeling efforts conducted by FINOS members and other non-member community participants as part of [FINOS hosted projects or initiatives](https://landscape.finos.org/).
 
 Learn about the projects that are currently leveraging the shared instance of Legend Studio in the "modeling initiatives" section of the [FINOS Landscape](https://landscape.finos.org/). The shared instance was also used by participants in the [FINOS Legend Studio pilot (April-September 2020)](https://www.finos.org/press/goldman-sachs-open-sources-its-data-modeling-platform-through-finos). 
 
 Anyone is welcome to [request an account on the shared instance](https://www.finos.org/legend). Requests for accounts will be fulfilled based on FINOS staff availability as well as the rationale stated below for wanting an account and/or any connection between a request and the work of an ongoing FINOS project. Additional consideration will be also given to account requests from FINOS members.
 
-# Background
+### Default project configuration and permissions
+
+Any modeling initiative that is accessible by the FINOS Shared instance is hosted on a GitLab project within the https://gitlab.com/finosfoundation/Legend group.
+
+The following configurations are enforced across all projects:
+- `master` branch is protected by direct commits, only Merge Requests are allowed
+- Merge Requests must be approved by at least one [Code Owner](https://docs.gitlab.com/ee/user/project/code_owners.html)
+
+The following permissions are applied:
+- `Reporters` can read [Legend workspaces](https://legend.finos.org/docs/studio/create-workspace); everyone can apply to become a `Reporter` on any of the modeling initiatives hosted in FINOS, just [request an account](https://www.finos.org/legend).
+- `Developers` can create workspaces and submit changes; they must be covered by [FINOS CLA](https://finosfoundation.atlassian.net/wiki/spaces/FINOS/pages/75530375/Contribution+Compliance+Requirements)
+- `Maintainers` can review and merge changes; they must be covered by [FINOS CLA](https://finosfoundation.atlassian.net/wiki/spaces/FINOS/pages/75530375/Contribution+Compliance+Requirements) and are elected following the [standard FINOS Governance Policies](https://github.com/finos/community/blob/master/governance/Software-Projects/CONTRIBUTING.template.md)
+
+## Background
 [Legend](https://github.com/finos/legend) was originally developed by Goldman Sachs and contributed to FINOS in October 2020. See the October 2020 [Open Sourcing Press Release](https://www.finos.org/press/goldman-sachs-open-sources-its-data-modeling-platform-through-finos), and coverage in Business Insider ["Code for Goldman Sachs' internal data platform is now open for anyone to use"](https://www.businessinsider.com/code-for-goldmans-data-platform-legend-open-sharing-github-2020-10), and Bloomberg ["Goldman Sachs Open Sources its Data Modeling Platform through FINOS"](https://www.bloomberg.com/press-releases/2020-10-19/goldman-sachs-open-sources-its-data-modeling-platform-through-finos).
