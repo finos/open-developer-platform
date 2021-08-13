@@ -13,7 +13,7 @@ ODP leverages GitHub as project collaboration platform to deliver a software dev
 You can find more info on our website, [odp.finos.org](https://odp.finos.org).
 
 
-## Contributing is a good idea
+## Contributing is a very good idea
 
 1. Fork it (<https://github.com/finos/open-developer-platform/fork>)
 2. Create your feature branch (`git checkout -b feature/fooBar`)
