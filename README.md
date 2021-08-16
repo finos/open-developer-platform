@@ -8,7 +8,7 @@ The Open Developer Platform (ODP) is a collection of services, tools and best pr
 
 ODP leverages GitHub as project collaboration platform to deliver a software development workflow with continuous legal, security, quality scanning and a set of communication tools that comply with financial institutions regulations.
 
-![odp-landscape](website/static/img/odp-landscape-2020.png)
+![odp-landscape](website/static/img/odp-landscape-2020.png "Illustration of ODP workflow via GitHub: security -> compliance -> quality -> containerized runtime -> meetings -> discussion -> issues and tasks")
 
 You can find more info on our website, [odp.finos.org](https://odp.finos.org).
 
