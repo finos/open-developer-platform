@@ -6,7 +6,7 @@ Welcome to the Open Developer Platform project, hosted and led by [FINOS, The Fi
 
 The Open Developer Platform (ODP) is a collection of services, tools and best practices that deliver a secure and compliant collaboration across all FINOS hosted projects.
 
-ODP leverages GitHub as project collaboration platform to deliver a software development workflow with continuous legal, security, quality scanning and a set of communication tools that comply with financial institutions regulations.
+ODP leverages GitHub as project collaboration platform to deliver a software development workflow with continuous legal, security, quality scanning, and a set of communication tools that comply with financial institutions regulations.
 
 ![odp-landscape](website/static/img/odp-landscape-2020.png "Illustration of ODP workflow via GitHub: security -> compliance -> quality -> containerized runtime -> meetings -> discussion -> issues and tasks")
 
