@@ -1,6 +1,8 @@
 name: meeting-minutes-action
 
-
+# DEPRECATED! This GitHub Action is deprecated in favour of a GitHub App (developed and run by FINOS) that is deployed 
+# on all github.com/finos repositories, and serves the same purporse of this script.
+# 
 # This GitHub action is used to manage meeting minutes via GitHub Issues:
 # - The issue description contains minutes and other meeting meta info (see .github/ISSUE_TEMPLATE/Meeting.md)
 # - Issue commenters are tracked as meetings attendants, and (eventually, not real time) published on metrics.finos.org
