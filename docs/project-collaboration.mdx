@@ -295,17 +295,14 @@ FINOS provides a way to use GitHub Issues to manage meeting minutes. The person 
     - `[MEETING]` title prefix
     - `meeting` label
 - *At the beginning of the meeting* - the meeting leader posts the issue URL on the meeting chat and asks all participants to add a comment on the issue
-- *At the end of the meeting* - the meeting leader closes the issue, which will trigger the attendants the indexing process; when indexing is completed, the label indexed will be added to the issue.
-- *(Optional) After the meeting* - the meeting leader can remove the `indexed` label in order to remove meeting attendance from the index and make changes; in order to reindex the meeting, the `indexed` label can be re-added.
+- *At the end of the meeting* - the meeting leader closes the issue, which will trigger the attendants the indexing process
 
 <img alt="meeting-issue" src={useBaseUrl('img/collab/meeting-issue.png')} />
 
 #### Corner cases
 
-- If a GitHub username cannot be added as issue assignee, it means that is not part of github.com/orgs/finos/people (the GitHub FINOS Org members); to work around this restriction, the GitHub user can add a hello comment to the issue, which will allow the meeting leader to do the assignment. In parallel, the GitHub user can sign a CLA with FINOS and request GitHub Org membership.
 - If a participant doesn't have a GitHub account, the meeting leader can add full name and affiliation in the issue description (see issue template).
-- If a GitHub username is not registered on FINOS internal database, it won't be indexed; in that case, the action will add a comment to the issue, with the list of users not being indexed and a mention to FINOS staff team.
-- Never reopen and close a meeting minutes issue! If a meeting issue is reopened and closed, after the meeting is held, the meeting date will be overridden with the current one ; if you need to reindex a meeting, indexed label as described above. If you're uncertain or want to revert changes, get in touch with FINOS staff via [help@finos.org](mailto:help@finos.org).
+- Never reopen and close a meeting minutes issue, to avoid duplicative entries. If you're uncertain or want to revert changes, get in touch with FINOS staff via [help@finos.org](mailto:help@finos.org).
 
 #### Project setup
 A project needs:
