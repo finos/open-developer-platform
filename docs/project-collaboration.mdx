@@ -97,7 +97,7 @@ Given that all project contributors have the ability to follow the standard GitH
 
 <img alt="finos-teams" src={useBaseUrl('img/collab/finos-teams.png')} />
 
-### Other resources
+### Useful links
 - [About permissions on GitHub](https://help.github.com/en/github/getting-started-with-github/access-permissions-on-github#organization-accounts)
 - [About GitHub Teams](https://help.github.com/en/github/setting-up-and-managing-organizations-and-teams/about-teams)
 - [Other GitHub guides](https://guides.github.com/)
@@ -113,6 +113,13 @@ Code in the Foundation is hosted exclusively on [https://github.com/finos](https
 | Hadouken | https://github.com/HadoukenIO |
 | Symphony | https://github.com/symphonyoss |
 | *others* | https://github.com/finos |
+
+#### Repository setup
+The Foundation encourages the thoughtful design of projects such that they result in multiple functionally independent, decoupled libraries. One of the ways this can be done is by using multiple GitHub repositories per project (one per decoupled library).
+
+If you have an existing project and you'd like to add more repositories to it, you should have all permissions to be able to do it. If you'd like any advanced configuration for your repository, build or release process, please reach out to [help@finos.org](mailto:help@finos.org). 
+
+Although GitHub doesn't directly support the concept of a "project" (a group of related repositories), the Foundation keeps track of this information, and uses it in our [landscape](landscape.finos.org) and [metrics](metrics.finos.org) dashboards.
 
 #### Building and testing
 The build is an end-to-end process that converts source code into reusable artifacts, something that we will refer to as deployable units, which is developed by the project team and hosted in the github repository. It is a particularly important task, as it can centralise and trigger several automated sub-tasks, such as version control, code testing, quality and compliance reports and more.
@@ -139,7 +146,19 @@ Making direct changes to repositories is not recommended, for teams bigger than 
 2. Pull Requests allow to have a conversation with the team
 3. Pull Requests tent to have a more thorough validation pipeline
 
-### Issues
+### Accepting Code Contributions
+Project teams are required to review contributions from non-committer community members (i.e. PRs) in a timely fashion. While this does not mean that all such contributions need to be accepted, they must be reviewed conscientiously and only rejected if there are legitimate reasons to do so. Those reasons must be clearly documented in the PR at the time of rejection, and any resubmissions re-reviewed in good faith.
+
+In addition to the usual code-level checks a project team may choose to perform on contributions (for code quality, roadmap alignment, etc.), it is also critically important that the legal requirements of the Foundation are met.  This involves:
+
+1. Confirming that the person providing the contribution has a Contributor Licensing Agreement in place with the Foundation (though [EasyCLA](https://github.com/maoo/community/blob/migrate-wiki-contents/governance/Software-Projects/EasyCLA.md) will run an automatic scan of all Pull Requests).
+2. Confirming that their change doesn't introduce new code or dependencies that are incompatible with the Apache Software License.
+
+The Foundation's project infrastructure automatically checks for CLA compliance for pull requests only. Unfortunately it's not currently possible to check for CLA compliance of commits that are directly pushed to a master branch by a committer (this is a GitHub limitation).  For that reason, we strongly recommend that project teams do not add new project team members until they've verified that those contributors have a CLA in place with the Foundation.  In the meantime, you can encourage contributors to fork your project and contribute via pull requests, until such time as you've confirmed their CLA status with the Foundation's legal counsel.
+
+Confirming that contributions haven't introduced incompatibly licensed code is inherently build tool specific, and so we are unable to provide instructions that cover all possible development setups. Check the list of <a href={useBaseUrl('docs/development-infrastructure/code-validation/intro')}>code validation tools</a> available to FINOS hosted projects.
+
+### Managing Issues
 [**GitHub Issues**](https://guides.github.com/features/issues/) provides a simple and flexible way to track task lists; issues can also include list of checkboxes, as shown in the image.
 
 Labels can be useful to add meta information to tasks, like type, audience and more.
@@ -241,7 +260,7 @@ The [FINOS Slack](https://finos-lf.slack.com/) brings the FINOS Community togeth
 
 [<img src="https://img.shields.io/badge/slack-@finos/community-green.svg?logo=slack" />](https://finos-lf.slack.com/messages/finos-community/)
 
-Join the FINOS Project, SIG and wider community conversation in the FINOS Community Slack. If you are an employee of a [FINOS Member](https://finos.org/members), corporate firewall restrictions allowing, you should be able to self-subscribe at https://finos-lf.slack.com/signup. If you are not a FINOS Member or have any trouble joining, please email to help@finos.org with your desired email address and we'll set you up.
+Join the FINOS Project, SIG and wider community conversation in the FINOS Community Slack. If you are an employee of a [FINOS Member](https://finos.org/members), corporate firewall restrictions allowing, you should be able to self-subscribe at https://finos-lf.slack.com/signup. If you are not a FINOS Member or have any trouble joining, please email to [help@finos.org](mailto:help@finos.org) with your desired email address and we'll set you up.
 
 The FINOS Community wide channel on Slack is reachable directly at https://finos-lf.slack.com/messages/finos-community/. We warmly encourage existing community contributors to invite their peers to join the collaboration and the open source fun :)
 
@@ -420,7 +439,7 @@ Please be aware that several eployees of financial institutions have experienced
 The Project Website section documents how to 
 Teams can also decide to use GitHub Wiki to document their project activity and publish documentation, you can read more on https://help.github.com/en/articles/about-wikis or see how some FINOS hosted projects, like the GreenKey Discovery SDK, are using it today.
 
-## Minuting Services
+### Minuting Services
 The Foundation offers a dedicated scribe who is available to capture the minutes of online meetings.  These minutes include:
 
 1. the list of attendees, provided a formal roll call is conducted by the host at the commencement of the call
