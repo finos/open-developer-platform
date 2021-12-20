@@ -139,7 +139,19 @@ Making direct changes to repositories is not recommended, for teams bigger than 
 2. Pull Requests allow to have a conversation with the team
 3. Pull Requests tent to have a more thorough validation pipeline
 
-### Issues
+### Accepting Code Contributions
+Project teams are required to review contributions from non-committer community members (i.e. PRs) in a timely fashion. While this does not mean that all such contributions need to be accepted, they must be reviewed conscientiously and only rejected if there are legitimate reasons to do so. Those reasons must be clearly documented in the PR at the time of rejection, and any resubmissions re-reviewed in good faith.
+
+In addition to the usual code-level checks a project team may choose to perform on contributions (for code quality, roadmap alignment, etc.), it is also critically important that the legal requirements of the Foundation are met.  This involves:
+
+1. Confirming that the person providing the contribution has a Contributor Licensing Agreement in place with the Foundation (though [EasyCLA](https://github.com/maoo/community/blob/migrate-wiki-contents/governance/Software-Projects/EasyCLA.md) will run an automatic scan of all Pull Requests).
+2. Confirming that their change doesn't introduce new code or dependencies that are incompatible with the Apache Software License.
+
+The Foundation's project infrastructure automatically checks for CLA compliance for pull requests only. Unfortunately it's not currently possible to check for CLA compliance of commits that are directly pushed to a master branch by a committer (this is a GitHub limitation).  For that reason, we strongly recommend that project teams do not add new project team members until they've verified that those contributors have a CLA in place with the Foundation.  In the meantime, you can encourage contributors to fork your project and contribute via pull requests, until such time as you've confirmed their CLA status with the Foundation's legal counsel.
+
+Confirming that contributions haven't introduced incompatibly licensed code is inherently build tool specific, and so we are unable to provide instructions that cover all possible development setups. Check the list of <a href={useBaseUrl('docs/development-infrastructure/code-validation/intro')}>code validation tools</a> available to FINOS hosted projects.
+
+### Managing Issues
 [**GitHub Issues**](https://guides.github.com/features/issues/) provides a simple and flexible way to track task lists; issues can also include list of checkboxes, as shown in the image.
 
 Labels can be useful to add meta information to tasks, like type, audience and more.
