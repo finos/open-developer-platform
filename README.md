@@ -10,7 +10,7 @@ ODP leverages GitHub as project collaboration platform to deliver a software dev
 
 ![odp-landscape](website/static/img/odp-landscape-2020.png "Illustration of ODP workflow via GitHub: security -> compliance -> quality -> containerized runtime -> meetings -> discussion -> issues and tasks")
 
-You can find more info on our website, [odp.finos.org](https://odp.finos.org).
+You can find more info on our website, [community.finos.org](https://community.finos.org/docs/collaboration-infrastructure).
 
 
 ## Contributing
