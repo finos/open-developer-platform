@@ -2,7 +2,7 @@
 
 [![FINOS - Incubating](https://cdn.jsdelivr.net/gh/finos/contrib-toolbox@master/images/badge-incubating.svg)](https://finosfoundation.atlassian.net/wiki/display/FINOS/Incubating)
 
-Welcome to the Open Developer Platform project, hosted and led by [FINOS, The Fintech Open Source Foundation](https://www.finos.org).
+Welcome to the Open Developer Platform project, hosted and led by [FINOS, The Fintech Open Source Foundation](https://www.finos.org)!
 
 The Open Developer Platform (ODP) is a collection of services, tools and best practices that deliver a secure and compliant collaboration across all FINOS hosted projects.
 
