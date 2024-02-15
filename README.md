@@ -1,6 +1,12 @@
+> [!CAUTION]
+> **This project is inactive and not maintained.**
+> 
+> The documentation was moved under https://community.finos.org/docs/governance/collaborative-principles (and sibling pages)
+> If you want to onboard on EasyCLA, you can submit a mock change to [software-project-blueprint](https://github.com/finos/software-project-blueprint/blob/main/EASYCLA_CHANGEME.md).
+
 # Open Developer Platform
 
-[![FINOS - Incubating](https://cdn.jsdelivr.net/gh/finos/contrib-toolbox@master/images/badge-incubating.svg)](https://finosfoundation.atlassian.net/wiki/display/FINOS/Incubating)
+[![FINOS - Archived](https://cdn.jsdelivr.net/gh/finos/contrib-toolbox@master/images/badge-archived.svg)]([https://finosfoundation.atlassian.net/wiki/display/FINOS/Incubating](https://community.finos.org/docs/governance/Software-Projects/stages/archived))
 
 Welcome to the Open Developer Platform project, hosted and led by [FINOS, The Fintech Open Source Foundation](https://www.finos.org).
 
